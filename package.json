@@ -8,6 +8,7 @@
   "author": "yuch",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -19,10 +20,10 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
     "gulp-uglifyjs": "^0.6.2",
-    "imagemin-pngquant": "^5.0.0"
+    "gulp.spritesmith": "^6.5.1",
+    "imagemin-pngquant": "^5.0.1"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglifyjs": "^0.6.2"

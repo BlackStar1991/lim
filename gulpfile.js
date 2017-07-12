@@ -9,6 +9,8 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     prefix = require('gulp-autoprefixer'),
     del = require('del'),
+    browserSync = require('browser-sync').create(),
+    spritesmith = require('gulp.spritesmith'),
     cache = require('gulp-cache');
 
 
@@ -21,6 +23,7 @@ gulp.task('html', function () {
     gulp.src('app/html/*.html')
         .pipe(rigger())
         .pipe(gulp.dest('app'))
+        .pipe(browserSync.stream())
 });
 
 gulp.task('sass', function () {
@@ -28,6 +31,7 @@ gulp.task('sass', function () {
         .pipe(sass())
         .pipe(prefix(['last 20 versions', '> 1%', 'ie 8', "ie 7"]))
         .pipe(gulp.dest('app/css'))
+        .pipe(browserSync.stream())
 });
 
 gulp.task('img', function () {
@@ -40,6 +44,7 @@ gulp.task('img', function () {
         })))
         .pipe(gulp.dest('dist/img'));
 });
+
 
 
 gulp.task('watch', ['sass', 'css-min', 'css-min-style', 'libjs', 'html'], function () {
@@ -94,7 +99,7 @@ gulp.task('build', ['del', 'minjs', 'img'], function () {
     var buildCss = gulp.src([
         'app/css/style.css',
         'app/css/style.min.css',
-        'app/css/libs.min.css',
+        'app/css/libs.min.css'
     ])
         .pipe(gulp.dest('dist/css'));
 
@@ -107,3 +112,53 @@ gulp.task('build', ['del', 'minjs', 'img'], function () {
     var buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('dist/'));
 });
+
+
+gulp.task('default', ['watch'], function () {           // start server
+    browserSync.init({
+        server: {baseDir: "./app/"}                     // base dir
+    });
+});
+
+/*********************************************/
+/*IMAGES TASKS*/
+/*********************************************/
+
+gulp.task('sprite', function (done) {
+    buildSprite().on('end', done);
+});
+
+gulp.task('images', ['sprite'], function () {
+    return gulp.src('./app/img/**/*')                   // get the files
+        .pipe(imagemin({                                // minify images
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }, {
+                cleanupIDs: false
+            }],
+            use: [pngquant({                            // minify png-format images
+                quality: '50-70',
+                speed: 4
+            })],
+            interlaced: true
+
+        }))
+        .pipe(gulp.dest('dist/img'));                   // where to put the files
+});
+
+
+
+
+function buildSprite() {
+    var spriteData = gulp.src('./app/img/sprite/*.*')
+        .pipe(spritesmith({
+            imgName: '../img/sprite.png',
+            cssName: '_sprite.scss',
+            cssFormat: 'scss',
+            padding: 5
+        }));
+
+    spriteData.img.pipe(gulp.dest('./app/img'));
+    return spriteData.css.pipe(gulp.dest('./app/sass/components'));
+}

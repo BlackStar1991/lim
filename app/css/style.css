@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   font-size: 15px;
-  color: #202020;
+  color: #000;
   font-weight: 400;
   background: #fff;
   font-family: 'Tahoma', sans-serif;
@@ -92,6 +92,13 @@ html {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/FontAwesome/FontAwesome.eot");
+  src: url("../fonts/FontAwesome/FontAwesome.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/FontAwesome.woff") format("woff"), url("../fonts/FontAwesome/FontAwesome.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 .top-head-baner {
   padding: 10px 0;
   font-size: 24rem;
@@ -118,7 +125,7 @@ html {
   text-transform: lowercase; }
 
 .top-head-baner__text-sale {
-  color: #ee4037; }
+  color: #FF4E54; }
 
 .top-head-baner__desc {
   margin-right: 46px;
@@ -142,7 +149,7 @@ html {
   text-transform: capitalize;
   text-decoration: underline;
   color: #fff;
-  background: #ee4037;
+  background: #FF4E54;
   padding: 0 9px;
   cursor: pointer;
   -webkit-transition: color .3s;
@@ -151,7 +158,7 @@ html {
     color: #000; }
 
 .open-btn__ico {
-  background-image: url("../img/sprite/main-ico.png");
+  background-image: url("../img/sprite2/main-ico.png");
   background-repeat: no-repeat;
   display: block;
   width: 17px;
@@ -190,7 +197,7 @@ html {
           align-items: center; }
 
 .serv-baner-item__ico {
-  background-image: url("../img/sprite/main-ico.png");
+  background-image: url("../img/sprite2/main-ico.png");
   background-repeat: no-repeat;
   display: block;
   margin-right: 10px; }
@@ -324,7 +331,7 @@ html {
 
 .logo__name {
   display: block;
-  color: #737373;
+  color: #000;
   font-size: 72px;
   text-transform: uppercase;
   font-weight: 600; }
@@ -377,12 +384,12 @@ html {
     bottom: 0;
     left: 15px;
     margin: auto;
-    background-position: -207px -135px;
-    background-image: url("../img/sprite/main-ico.png");
-    background-repeat: no-repeat;
-    z-index: 1;
+    cursor: pointer;
+    background-image: url(../img/sprite.png);
+    background-position: -56px 0px;
     width: 16px;
-    height: 16px; }
+    height: 16px;
+    z-index: 5; }
 
 ::-webkit-input-placeholder {
   color: #202020;
@@ -442,8 +449,7 @@ html {
   top: 0;
   left: 0;
   cursor: pointer;
-  font-size: 0;
-  opacity: 0;
+  background: none;
   border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -466,11 +472,10 @@ html {
 .open-call__ico {
   display: block;
   margin-right: 8px;
-  background-image: url("../img/sprite/main-ico.png");
-  background-repeat: no-repeat;
+  background-image: url(../img/sprite.png);
+  background-position: -35px 0px;
   width: 16px;
-  height: 17px;
-  background-position: -90px -80px; }
+  height: 17px; }
 
 .open-call__text {
   font-size: 15rem;
@@ -479,7 +484,7 @@ html {
   text-decoration: underline;
   letter-spacing: .01em; }
   .open-call__text:hover {
-    color: #ee4037; }
+    color: #FF4E54; }
 
 .header-desc__open-call {
   margin-bottom: 14px; }
@@ -516,7 +521,7 @@ html {
   -webkit-transition: color .3s;
   transition: color .3s; }
   .open-office:hover {
-    color: #ee4037;
+    color: #FF4E54;
     text-decoration: underline; }
 
 .cart-head {
@@ -540,12 +545,10 @@ html {
   margin-bottom: 5px; }
 
 .cart-head__ico {
-  background-image: url("../img/sprite/main-ico.png");
-  background-repeat: no-repeat;
-  display: block;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
   width: 30px;
   height: 31px;
-  background-position: -20px -20px;
   margin-bottom: 10px; }
 
 .cart-head__link {
@@ -553,7 +556,7 @@ html {
   -webkit-transition: color .3s;
   transition: color .3s; }
   .cart-head__link:hover {
-    color: #ee4037; }
+    color: #FF4E54; }
 
 .header-desc__cart-head {
   max-width: 150px; }
@@ -1057,8 +1060,8 @@ html {
   font-size: 14px;
   background-color: transparent;
   border: 1px solid #202020;
-  -webkit-transition: color .3s , background-color .3s;
-  transition: color .3s , background-color .3s; }
+  -webkit-transition: color .3s, background-color .3s;
+  transition: color .3s, background-color .3s; }
   .btn-banner:hover {
     background-color: #202020;
     color: #fff; }
@@ -1159,7 +1162,7 @@ html {
 .description-sect {
   padding-top: 15rem;
   padding-bottom: 30rem;
-  border-top: 1px solid #ee4037; }
+  border-top: 1px solid #FF4E54; }
   .description-sect h1, .description-sect h2, .description-sect h3, .description-sect div {
     margin-bottom: 1.3em;
     font-size: 24rem;
@@ -1198,7 +1201,7 @@ html {
   height: 30px;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../img/sprite/soc.png");
+  background-image: url("../img/sprite2/soc.png");
   position: relative; }
   .social-btn:before {
     content: '';
@@ -1306,7 +1309,7 @@ html {
   transition: background-color 0.3s; }
 
 .mail-btn:hover {
-  background: #ee4037;
+  background: #FF4E54;
   text-decoration: underline; }
 
 .mail-btn__ico {
@@ -1314,7 +1317,7 @@ html {
   display: block;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../img/sprite/main-ico.png");
+  background-image: url("../img/sprite2/main-ico.png");
   width: 23px;
   height: 15px;
   background-position: -150px -20px; }
