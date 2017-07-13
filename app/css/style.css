@@ -1465,7 +1465,44 @@ html {
       position: absolute;
       left: -15px; }
   .bl_breadcrumds__link {
-    display: block; }
+    display: block;
+    width: 100%; }
+    .bl_breadcrumds__link:hover {
+      color: #000; }
+
+.rubric__title {
+  margin-top: 19px;
+  text-align: left;
+  font-family: "Tahoma", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px; }
+
+.bl_filters {
+  position: relative;
+  margin-top: 20px;
+  font-family: "Tahoma", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid red; }
+
+.bl_filters__caterogyName {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px; }
+  .bl_filters__caterogyName:before {
+    position: absolute;
+    content: ""; }
+
+.bl_filters__item {
+  position: relative;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400; }
+
+.bl_filters__caterogyName_subName {
+  font-weight: 400; }
 
 @media (max-width: 1300px) {
   html {
