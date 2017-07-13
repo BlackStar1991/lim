@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -96,6 +97,20 @@ html {
   font-family: 'FontAwesome';
   src: url("../fonts/FontAwesome/FontAwesome.eot");
   src: url("../fonts/FontAwesome/FontAwesome.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/FontAwesome.woff") format("woff"), url("../fonts/FontAwesome/FontAwesome.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GeorgiaItal';
+  src: url("../fonts/Georgia/GeorgiaItal.eot");
+  src: url("../fonts/Georgia/GeorgiaItal.eot?#iefix") format("embedded-opentype"), url("../fonts/Georgia/GeorgiaItal.woff") format("woff"), url("../fonts/Georgia/GeorgiaItal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic/GOTHIC.eot");
+  src: url("../fonts/CenturyGothic/GOTHIC.eot?#iefix") format("embedded-opentype"), url("../fonts/CenturyGothic/GOTHIC.woff") format("woff"), url("../fonts/CenturyGothic/GOTHIC.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -1434,6 +1449,23 @@ html {
 .link-top__text {
   font-size: 14px;
   margin-right: 8px; }
+
+.bl_breadcrumds {
+  margin-top: 14px;
+  width: 100%; }
+  .bl_breadcrumds__item {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    color: #6f6f6f;
+    font-family: "Tahoma", sans-serif;
+    font-size: 12px; }
+    .bl_breadcrumds__item:not(:nth-of-type(1)):before {
+      content: "»";
+      position: absolute;
+      left: -15px; }
+  .bl_breadcrumds__link {
+    display: block; }
 
 @media (max-width: 1300px) {
   html {

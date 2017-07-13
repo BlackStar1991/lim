@@ -734,3 +734,40 @@
   font-size: 14px;
   margin-right: 8px;
 }
+
+
+// CATEGORY
+$color_orange: #ed7d31;
+$color_grey: #6f6f6f;
+$Tahoma: "Tahoma", sans-serif;
+
+
+
+.bl_breadcrumds{
+  margin-top: 14px;
+  width: 100%;
+  &__item{
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+    color: $color_grey;
+    font-family: $Tahoma;
+    font-size: 12px;
+
+
+    &:not(:nth-of-type(1)):before{
+      content: "»";
+      position: absolute;
+      left: -15px;
+
+    }
+  }
+  &__link{
+
+    display: block;
+    //width: 100%;
+    //height: 100%;
+
+
+  }
+}
