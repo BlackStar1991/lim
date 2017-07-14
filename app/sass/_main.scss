@@ -1,3 +1,10 @@
+$color_orange: #ed7d31;
+$color_grey: #6f6f6f;
+
+$color_pink: #ff4e54;
+$color_pink2: #ec5d5d;
+
+$Tahoma: "Tahoma", sans-serif;
 
 
 .main {
@@ -737,9 +744,7 @@
 
 
 // CATEGORY
-$color_orange: #ed7d31;
-$color_grey: #6f6f6f;
-$Tahoma: "Tahoma", sans-serif;
+
 
 
 
@@ -791,25 +796,61 @@ $Tahoma: "Tahoma", sans-serif;
   margin-top: 20px;
   font-family:$Tahoma;
   box-sizing: border-box;
-  border: 1px solid red;
+  //border: 1px solid red;
 }
 .bl_filters__caterogyName{
   position: relative;
-  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+  cursor:pointer;
+  &:hover{
+    color: $color_pink;
+    transition: all 0.2s;
+  }
+
+}
+.bl_filters__triangle{
+  font-size: 16px;
+  color: #333;
+  &_red{
+    color:$color_pink;
+  }
 
   &:before{
     position: absolute;
-    content: "";
+    left: -15px;
+    top: 0;
+    content: "\f0d7";
+    font-family: "FontAwesome";
   }
+
 }
+
+
 
 .bl_filters__item{
   position: relative;
+  padding-left: 10px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  cursor:pointer;
+  &:hover{
+    color: $color_pink;
+    transition: all 0.2s;
+  }
+
+
+  &:before{
+    position:absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $color_pink2;
+  }
 }
 
 .bl_filters__caterogyName_subName{

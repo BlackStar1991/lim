@@ -29,7 +29,7 @@ gulp.task('html', function () {
 gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.scss')
         .pipe(sass())
-        .pipe(prefix(['last 20 versions', '> 1%', 'ie 8', "ie 7"]))
+        // .pipe(prefix(['last 20 versions', '> 1%', 'ie 8', "ie 7"]))
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.stream())
 });
