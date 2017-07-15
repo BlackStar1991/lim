@@ -1,123 +1,74 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    uglify = require('gulp-uglifyjs'),
-    concat = require('gulp-concat'),
-    cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    rigger = require('gulp-rigger'),
-    prefix = require('gulp-autoprefixer'),
-    del = require('del'),
-    browserSync = require('browser-sync').create(),
-    spritesmith = require('gulp.spritesmith'),
-    cache = require('gulp-cache');
+/*********************************************/
+/*DEPENDENCIES*/
+/*********************************************/
 
+var gulp = require("gulp"),                             // gulp core
+    sass = require('gulp-sass'),                        // sass compiler
+    gulpif = require('gulp-if'),                        // conditionally run a task
+    clean = require('gulp-clean'),                      // removing files and folders
+    uglify = require('gulp-uglify'),                    // uglifies the js
+    rename = require('gulp-rename'),                    // rename files
+    useref = require('gulp-useref'),                    // parse build blocks in HTML files to replace references
+    minifyCss = require('gulp-minify-css'),             // minify the css files
+    autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
+    browserSync = require('browser-sync').create(),     // inject code to all devices
+    imagemin = require('gulp-imagemin'),                // minify images
+    pngquant = require('imagemin-pngquant'),            // minify png-format images
+    spritesmith = require('gulp.spritesmith');          // create sprites
 
-gulp.task('del', function () {
-    return del.sync('dist');
-});
-
-
-gulp.task('html', function () {
-    gulp.src('app/html/*.html')
-        .pipe(rigger())
-        .pipe(gulp.dest('app'))
-        .pipe(browserSync.stream())
-});
-
-gulp.task('sass', function () {
-    return gulp.src('app/sass/**/*.scss')
-        .pipe(sass())
-        // .pipe(prefix(['last 20 versions', '> 1%', 'ie 8', "ie 7"]))
-        .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.stream())
-});
-
-gulp.task('img', function () {
-    return gulp.src('app/img/**/*')
-        .pipe(cache(imagemin({
-            interlaced: true,
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        })))
-        .pipe(gulp.dest('dist/img'));
-});
-
-
-
-gulp.task('watch', ['sass', 'css-min', 'css-min-style', 'libjs', 'html'], function () {
-    gulp.watch('app/html/**/*.html', ['html']);
-    gulp.watch('app/sass/**/*.scss', ['sass']);
-    gulp.watch('app/css/**/*.css', ['css-min']);
-    gulp.watch('app/css/**/*.css', ['css-min-style']);
-    gulp.watch('app/libsjs/*.js', ['libjs']);
-});
-
-gulp.task('libjs', function () {
-    return gulp.src([
-        'app/libs-js/jquery-1.11.0.min.js',
-//		'app/libs-js/owl.carousel.js',
-        'app/libs-js/slick.min.js'
-
-//		LIBJS
-    ])
-        .pipe(concat('libs.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js'));
-});
-
-gulp.task('minjs', function () {
-    return gulp.src([
-        'app/js/main.js'
-    ])
-        .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/js'))
-});
-
-
-gulp.task('css-min', ['sass'], function () {
-    return gulp.src('app/css/libs.css')
-        .pipe(cssnano())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('app/css'));
-});
-
-
-gulp.task('css-min-style', function () {
-    return gulp.src('app/css/style.css')
-        .pipe(cssnano())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('app/css'));
-});
-
-
-gulp.task('build', ['del', 'minjs', 'img'], function () {
-
-    var buildCss = gulp.src([
-        'app/css/style.css',
-        'app/css/style.min.css',
-        'app/css/libs.min.css'
-    ])
-        .pipe(gulp.dest('dist/css'));
-
-    var buildFonts = gulp.src('app/fonts/**/*')
-        .pipe(gulp.dest('dist/fonts'));
-
-    var buildJS = gulp.src('app/js/**/*')
-        .pipe(gulp.dest('dist/js'));
-
-    var buildHtml = gulp.src('app/*.html')
-        .pipe(gulp.dest('dist/'));
-});
-
+/*********************************************/
+/*BROWSERSYNC (LOCAL SERVER)*/
+/*********************************************/
 
 gulp.task('default', ['watch'], function () {           // start server
     browserSync.init({
         server: {baseDir: "./app/"}                     // base dir
     });
+});
+
+/*********************************************/
+/*WATCHER (WATCHING FILE CHANGES)*/
+/*********************************************/
+
+gulp.task('watch', function () {
+    gulp.watch(['./app/**/*.html'], ['html']);          // watching changes in HTML
+    gulp.watch(['./app/sass/**/*.scss'], ['sass']);     // watching changes in SASS
+    gulp.watch(['./app/js/**/*.js'], ['js']);           // watching changes in JS
+    gulp.watch(['./app/img/sprite/*.*'], ['sprite']);   // watching changes in IMAGES
+});
+
+/*********************************************/
+/*HTML TASKS*/
+/*********************************************/
+
+gulp.task('html', function () {
+    gulp.src('./app/index.html')                        // get the files
+        .pipe(gulp.dest('./app/'))                      // where to put the file
+        .pipe(browserSync.stream());                    // browsersync stream
+});
+
+/*********************************************/
+/*SASS TASKS*/
+/*********************************************/
+
+gulp.task('sass', ['sprite'], function () {
+    gulp.src('./app/sass/**/*')                         // get the files
+        .pipe(sass().on('error', sass.logError))        // add prefixes
+        .pipe(autoprefixer({
+            browsers: ['last 5 versions'],
+            cascade: true
+        }))
+        .pipe(gulp.dest('app/css'))                     // where to put the file
+        .pipe(browserSync.stream());                    // browsersync stream
+});
+
+/*********************************************/
+/*JS TASKS*/
+/*********************************************/
+
+gulp.task('js', function () {
+    return gulp.src('./app/js/**/*.js')                 // get the files
+        .pipe(browserSync.stream());                    // browsersync stream
 });
 
 /*********************************************/
@@ -147,8 +98,63 @@ gulp.task('images', ['sprite'], function () {
         .pipe(gulp.dest('dist/img'));                   // where to put the files
 });
 
+/*********************************************/
+/*FONTS TASKS*/
+/*********************************************/
+
+gulp.task('fonts', function () {
+    return gulp.src('./app/fonts/**/*')                 // get the files
+        .pipe(gulp.dest('dist/fonts'));                 // where to put the files
+});
+
+/*********************************************/
+/*LIBS TASKS (PERSONAL DEVELOPER LIBS)*/
+/*********************************************/
+
+gulp.task('libs', function () {
+    return gulp.src('./app/libs/**/*')                  // get the files
+        .pipe(gulp.dest('dist/libs'));                  // where to put the files
+});
+
+/*********************************************/
+/*EXTRASS TASKS (ROOT FILES, EXCEPT HTML)*/
+/*********************************************/
+
+gulp.task('extrass', function () {
+    return gulp.src([                                   // get the files
+        'app/*.*',
+        '!app/*.html'                                   // except '.html'
+    ]).pipe(gulp.dest('dist'));                         // where to put the files
+});
 
 
+/*********************************************/
+/*BUILD TASKS*/
+/*********************************************/
+
+gulp.task('clean', function () {
+    return gulp.src('dist', {read: false})
+        .pipe(clean());                                 // clean dir
+});
+
+
+gulp.task('build', ['clean'], function () {
+    gulp.start('images');                               // images task
+    gulp.start('fonts');                                // fonts task
+    gulp.start('libs');                                 // libs task
+    gulp.start('extrass');                              // extras task
+
+    return gulp.src('app/*.html')
+
+        .pipe(gulpif('*.js', uglify()))                 // uglify js-files
+        .pipe(gulpif('*.css', minifyCss()))             // minify css-files
+        .pipe(useref())
+        .pipe(gulp.dest('./dist'));                     // where to put the files
+});
+
+/*********************************************/
+/*FUNCTIONS*/
+/*********************************************/
 
 function buildSprite() {
     var spriteData = gulp.src('./app/img/sprite/*.*')
