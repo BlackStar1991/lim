@@ -160,10 +160,42 @@ $('.footer-page').on('click', '.h3-title', function () {
 
 // SLIDER show
 
-var blockClutch = $(".bl_filters__mensClutch"),
-    blockBags = $(".bl_filters__mensBags"),
-    blockBriefcases = $(".bl_filters__mensBriefcases"),
-    blockPurse = $(".bl_filters__mensPurse");
+ function sliderShow() {
+     var sliderName = $(".code_sliderName");
+
+
+     sliderName.on("click", function () {
+
+         sliderName.removeClass("decor_triangle__red");
+         $(this).addClass("decor_triangle__red");
+
+            $(this).next().toggleClass("hidden");
+            $(this).toggleClass("decor_triangle decor_triangle__active");
+
+     })
+
+ }sliderShow();
+
+   function activateFilterByName() {
+
+       var caterogyName = $(".bl_filters__caterogyName");
+       var filter_text = $(".filter_text");
+
+
+       caterogyName.on("click", function(){
+
+           caterogyName.removeClass("bl_filters__caterogyName_active");
+           $(this).toggleClass("bl_filters__caterogyName_active bl_filters__caterogyName");
+       });
+
+       filter_text.on("click", function(){
+
+           $(this).toggleClass("filter_text__active");
+       });
+
+
+
+   } activateFilterByName();
 
 
 
