@@ -1224,7 +1224,7 @@ button {
     background-position: -56px 0px;
     width: 16px;
     height: 16px;
-    z-index: 5; }
+    z-index: 4; }
 
 ::-webkit-input-placeholder {
   color: #202020;
@@ -1504,58 +1504,10 @@ button {
   z-index: 3;
   width: 200px;
   text-transform: uppercase;
-  bottom: 25px; }
+  bottom: 7%; }
 
 .prev-banner {
   position: relative; }
-
-.slick-prev, .slick-next {
-  font-size: 1px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  height: 50em;
-  width: 30em;
-  background: #202020;
-  z-index: 2;
-  margin: auto;
-  transition: background .3s;
-  border: none;
-  cursor: pointer;
-  outline: none; }
-  .slick-prev:hover, .slick-next:hover {
-    background: #fff; }
-    .slick-prev:hover:before, .slick-next:hover:before {
-      border-color: #202020; }
-  .slick-prev:before, .slick-next:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    border: 6em solid #fff;
-    -webkit-transform: rotate(-134deg);
-        -ms-transform: rotate(-134deg);
-            transform: rotate(-134deg);
-    width: 8em;
-    height: 8em;
-    transition: border-color .3s; }
-
-.slick-prev {
-  left: 0; }
-  .slick-prev:before {
-    border-bottom: none;
-    border-left: none;
-    left: 4px; }
-
-.slick-next {
-  right: 0; }
-  .slick-next:before {
-    border-top: none;
-    border-right: none;
-    left: -4px; }
 
 .prev-banner {
   display: -webkit-flex;
@@ -1656,6 +1608,7 @@ button {
 
 .brand-baner__wp-img {
   padding-bottom: 40%;
+  width: 60%;
   position: relative; }
 
 .brand-baner__pic {
@@ -1741,6 +1694,8 @@ button {
 
 .brand-baner__slider {
   position: relative; }
+  .brand-baner__slider.owl-carousel .owl-stage-outer {
+    padding: 0 30px; }
   .brand-baner__slider .owl-nav {
     position: absolute;
     width: 100%;
@@ -2025,14 +1980,19 @@ button {
   margin-bottom: 20px; }
 
 .description-sect {
+  width: 100%;
+  margin-top: 53px;
+  box-sizing: border-box;
   padding-top: 15rem;
   padding-bottom: 30rem;
-  border-top: 1px solid #FF4E54; }
+  border-top: 1px solid #ff4e54; }
   .description-sect h1, .description-sect h2, .description-sect h3, .description-sect div {
+    font-family: "Tahoma", sans-serif;
     margin-bottom: 1.3em;
     font-size: 24rem;
     line-height: 1.4; }
   .description-sect p {
+    font-family: "Tahoma", sans-serif;
     font-size: 16rem;
     line-height: 1.4;
     margin-bottom: 1.2em; }
@@ -2605,34 +2565,20 @@ button {
 .bl_pagination__link {
   display: block;
   width: 100%;
+  height: 34px;
   color: #000;
+  box-sizing: border-box;
   font-family: "Tahoma", sans-serif;
-  font-size: 14px; }
+  font-size: 16px;
+  line-height: 34px; }
   .bl_pagination__link:hover {
     color: #ff4e54; }
 
+.bl_pagination__link_number {
+  width: 34px; }
+
 .bl_pagination__link_number__active {
   color: #ff4e54; }
-
-.bl_aboutSite {
-  margin: 53px 10px 34px;
-  box-sizing: border-box;
-  width: 100%;
-  border-top: 1px solid #ff4e54; }
-
-.bl_aboutSite__title {
-  margin-top: 14px;
-  color: black;
-  font-family: "Tahoma", sans-serif;
-  font-weight: 400;
-  font-size: 24px; }
-
-.bl_aboutSite__paragraph {
-  margin-top: 10px;
-  font-size: 16px;
-  color: black;
-  font-family: "Tahoma", sans-serif;
-  font-weight: 400; }
 
 /*********************************************/
 /*FOOTER*/
@@ -2652,6 +2598,11 @@ button {
 /*********************************************/
 /*Desktop First Method*/
 /*********************************************/
+@media (min-width: 1300px) {
+  .container {
+    width: 1300px;
+    max-width: 100%; } }
+
 @media (max-width: 1300px) {
   html {
     font-size: .9px; }
@@ -2698,7 +2649,7 @@ button {
     font-weight: 400;
     line-height: 1.2; }
   .main-banner__img {
-    padding-bottom: 80%; }
+    padding-bottom: 60%; }
   .brand-baner__pic {
     max-width: 80%; }
   .banner-list__img {
@@ -2743,7 +2694,7 @@ button {
   .header-desc__services-menu, .main-menu {
     position: fixed;
     width: 50%;
-    height: calc( 100% - 46px);
+    height: calc(100% - 46px);
     left: 0;
     top: 46px;
     padding: 20px;
@@ -2765,7 +2716,8 @@ button {
     padding: 0;
     padding-left: 5px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.43); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.43);
+    color: #fff; }
     .services-menu__link:after, .main-menu__link:after {
       display: none; }
   .services-menu__item:not(:last-child) {
@@ -3052,6 +3004,8 @@ button {
     padding-bottom: 70%; }
   .banner-list__link, .banner-list__item.banner-list__item--full-w .banner-list__link {
     padding-bottom: 50%; }
+  .link-btn-categ.main-banner__btn {
+    bottom: 4%; }
   .banner-list__desc {
     font-size: 18px; }
   .banner-list__sub {
@@ -3064,3 +3018,7 @@ button {
     font-size: 18px; }
   .banner-bnt-text__title {
     font-size: 18px; } }
+
+@media (max-width: 320px) {
+  .link-btn-categ.main-banner__btn {
+    bottom: 2%; } }

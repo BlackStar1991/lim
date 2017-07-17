@@ -3,12 +3,42 @@
 /*Desktop First Method*/
 /*********************************************/
 
+
+@media (min-width: 676px) {
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 868px) {
+  .container {
+    width: 820px;
+    max-width: 100%;
+  }
+}
+
+
+@media (min-width: 1100px) {
+  .container {
+    width: 1100px;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: 1300px) {
   .container {
     width: 1300px;
     max-width: 100%;
+
+
   }
 }
+
+
+
 
 
 
