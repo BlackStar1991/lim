@@ -1,23 +1,5 @@
 $(document).ready(function () {
 
-
-console.log("ok");
-
-    // function owlSlider(slider){
-    //     slider.owlCarousel({
-    //         items: 1,
-    //         loop:true, //Зацикливаем слайдер
-    //         nav:true, //Отключение навигации
-    //         dots:false,
-    //         margin:20,
-    //         autoplay:false, //Автозапуск слайдера
-    //         stopOnHover:true,
-    //         smartSpeed:1000, //Время движения слайда
-    //         autoplayTimeout:4000 //Время смены слайда
-    //
-    //     });
-    // }
-
     // LENG
     $('.leng-item').click(function () {
         $(this).closest('.leng-list__item').addClass('active').siblings().removeClass('active');
@@ -28,22 +10,7 @@ console.log("ok");
     $('.leng__active').text(leng);
 
 
-    //
-    // $(".owl-carousel-1").slick({
-    //     infinite: true,
-    //     slidesToScroll: 1,
-    //     centerMode: true,
-    //     slidesToShow: 1,
-    //     responsive: [{
-    //         breakpoint: 600,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1,
-    //             centerMode: false,
-    //             infinite: true
-    //         }
-    //     }]
-    // });
+
 
 
 
@@ -54,7 +21,7 @@ console.log("ok");
         nav: true,
         navText: true,
         dots: false,
-        autoplay: false,
+        autoplay: true,
         stopOnHover: true,
         smartSpeed: 1000, //Время движения слайда
         autoplayTimeout: 4000, //Время смены слайда
@@ -70,30 +37,13 @@ console.log("ok");
 
 
 
-
-// BRaND-SLIDER
-// $(".owl-carousel-2").slick({
-//     infinite: true,
-//     slidesToScroll: 1,
-//     slidesToShow: 8,
-//     responsive: [{
-//         breakpoint: 992,
-//         settings: {
-//             slidesToShow: 4,
-//             slidesToScroll: 1,
-//             centerMode: false,
-//             infinite: true
-//         }
-//     }]
-// });
-
-
     $(".owl-carousel-2").owlCarousel({
-        items: 8,
+
         loop: true,
         nav: true,
         dots: false,
-        autoplay: false,
+        autoplay: true,
+        margin: 5,
         navText: true,
         stopOnHover: true,
         smartSpeed: 1000, //Время движения слайда
@@ -101,8 +51,11 @@ console.log("ok");
         pagination: false,
         responsiveClass: true,
         responsive: {
+            1200: {
+                items: 8
+            },
             992: {
-                items: 4
+                items: 6
             },
             320: {
                 items: 4
@@ -166,8 +119,8 @@ $('.footer-page').on('click', '.h3-title', function () {
 
      sliderName.on("click", function () {
 
-         sliderName.removeClass("decor_triangle__red");
-         $(this).addClass("decor_triangle__red");
+         // sliderName.removeClass("decor_triangle__red");
+         // $(this).addClass("decor_triangle__red");
 
             $(this).next().toggleClass("hidden");
             $(this).toggleClass("decor_triangle decor_triangle__active");

@@ -50,7 +50,7 @@
 }
 
 .open-btn__ico {
-  background-image: url('../img/sprite2/main-ico.png');
+  background-image: url('../image/sprite2/main-ico.png');
   background-repeat: no-repeat;
   display: block;
   width: 17px;
@@ -79,7 +79,7 @@
 }
 
 .serv-baner-item__ico {
-  background-image: url('../img/sprite2/main-ico.png');
+  background-image: url('../image/sprite2/main-ico.png');
   background-repeat: no-repeat;
   display: block;
   margin-right: 10px;
@@ -187,11 +187,11 @@
 }
 
 .leng-item__ico.leng-item__ico--ua {
-  background-image: url('../img/leng/ua.png');
+  background-image: url('../image/leng/ua.png');
 }
 
 .leng-item__ico.leng-item__ico--ru {
-  background-image: url('../img/leng/ru.png');
+  background-image: url('../image/leng/ru.png');
 }
 
 .header-desc {
@@ -280,12 +280,7 @@
     margin: auto;
     cursor: pointer;
     @include sprite($search);
-    //width: 16px;
-    //height: 16px;
-    //background-position: -207px -135px;
-    //background-image: url('../img/sprite2/main-ico.png');
-    //background-repeat: no-repeat;
-    z-index: 5;
+    z-index: 4;
 
   }
 
@@ -373,7 +368,7 @@
 .open-call__ico {
   display: block;
   margin-right: 8px;
-  //background-image: url('../img/sprite2/main-ico.png');
+  //background-image: url('../image/sprite2/main-ico.png');
   //background-repeat: no-repeat;
   //width: 16px;
   //height: 17px;
@@ -443,7 +438,7 @@
 }
 
 .cart-head__ico {
-  //background-image: url('../img/sprite2/main-ico.png');
+  //background-image: url('../image/sprite2/main-ico.png');
   //background-repeat: no-repeat;
   //display: block;
   //width: 30px;

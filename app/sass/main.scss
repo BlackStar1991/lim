@@ -116,7 +116,7 @@ a {
   &:focus,
   &:active {
     text-decoration: none;
-    color: white;
+    color: #000;
   }
 }
 
@@ -189,7 +189,7 @@ button {
   z-index: 3;
   width: 200px;
   text-transform: uppercase;
-  bottom: 25px;
+  bottom: 7%;  /////25px
 }
 
 .prev-banner {
@@ -332,6 +332,7 @@ button {
 
 .brand-baner__wp-img {
   padding-bottom: 40%;
+  width:35%;
   position: relative;
 }
 
@@ -381,10 +382,13 @@ button {
 
       width: 20px;
       height: 40px;
-      transform: translateY(50%);
-
       background-color: #000;
-      font-size: 30px;
+
+      font-weight: bold;
+      line-height: 1;
+      font-size: 38px;
+      transition: all 0.2s;
+
       &:before {
         position: relative;
         display: block;
@@ -393,7 +397,15 @@ button {
         content: '\f104';
         font-family: $FontAwesom;
         color: #fff;
+        margin-top: -2px;
+      }
 
+      &:hover {
+        transition: all 0.2s;
+        background-color: #fff;
+        &:before {
+          color: #000;
+        }
       }
 
     }
@@ -403,10 +415,13 @@ button {
 
       width: 20px;
       height: 40px;
-      transform: translateY(50%);
+
+      font-weight: bold;
+      line-height: 1;
+      font-size: 38px;
 
       background-color: #000;
-      font-size: 30px;
+
       &:before {
         position: relative;
         display: block;
@@ -416,6 +431,16 @@ button {
         font-family: $FontAwesom;
         color: #fff;
 
+        margin-top: -2px;
+
+      }
+
+      &:hover {
+        transition: all 0.2s;
+        background-color: #fff;
+        &:before {
+          color: #000;
+        }
       }
 
     }
@@ -429,8 +454,8 @@ button {
   .owl-nav {
     position: absolute;
     width: 100%;
-    top: 25%;
-    z-index: 999;
+    top: 10%;
+    z-index: 998;
 
     .owl-prev {
       float: left;
@@ -439,7 +464,11 @@ button {
       height: 40px;
 
       background-color: #000;
-      font-size: 30px;
+
+      font-weight: bold;
+      line-height: 1;
+      font-size: 38px;
+
       &:before {
         position: relative;
         display: block;
@@ -449,20 +478,37 @@ button {
         font-family: $FontAwesom;
         color: #fff;
 
+        margin-top: -2px;
+
       }
 
+
+      &:hover {
+        transition: all 0.2s;
+        background-color: #fff;
+        &:before {
+          color: #000;
+        }
+      }
     }
 
     .owl-next {
       float: right;
-      margin-right: 20px;
+      margin-right: 40px;
       width: 20px;
       height: 40px;
 
       background-color: #000;
-      font-size: 30px;
+
+      font-weight: bold;
+      line-height: 1;
+      font-size: 38px;
+
       &:before {
         position: relative;
+
+        margin-top: -2px;
+
         display: block;
         width: 100%;
         text-align: center;
@@ -472,13 +518,21 @@ button {
 
       }
 
+      &:hover {
+        transition: all 0.2s;
+        background-color: #fff;
+        &:before {
+          color: #000;
+        }
+      }
+
     }
 
   }
 
-  .owl-carousel .owl-item img {
+  .brand-baner__slider.owl-carousel .owl-item img {
     display: inline-block;
-    width: auto !important;
+    //width: 75%;
   }
 
 }
@@ -754,7 +808,7 @@ button {
   height: 30px;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url('../img/sprite2/soc.png');
+  background-image: url('../image/sprite2/soc.png');
   position: relative;
 
   &:before {
@@ -872,9 +926,9 @@ button {
 .mail-btn__ico {
   margin-right: 16px;
   display: block;
-  background-position: center;
+  //background-position: center;
   background-repeat: no-repeat;
-  background-image: url('../img/sprite2/main-ico.png');
+  background-image: url('../image/sprite2/main-ico.png');
   width: 23px;
   height: 15px;
   background-position: -150px -20px;
@@ -963,7 +1017,7 @@ button {
   display: flex;
   height: 40px;
   border-top: 1px solid #dfdfdf;
-  background-image: url('../img/up_background.png');
+  background-image: url('../image/up_background.png');
   & > .container {
     display: flex;
     align-items: center;
@@ -1021,8 +1075,11 @@ button {
     &:hover {
       color: #000;
     }
-
   }
+  &__active {
+    font-weight: bold;
+  }
+
 }
 
 .rubric__title {
@@ -1044,7 +1101,7 @@ button {
 }
 
 .bl_filters__caterogyName,
-.bl_filters__caterogyName_active{
+.bl_filters__caterogyName_active {
   position: relative;
   font-size: 14px;
   color: #000;
@@ -1055,13 +1112,11 @@ button {
     transition: all 0.2s;
   }
 }
+
 .bl_filters__caterogyName_active {
   color: $color_pink;
   font-size: 14px;
 }
-
-
-
 
 .filter_name {
   position: relative;
@@ -1074,15 +1129,14 @@ button {
 
 .decor_triangle {
   position: relative;
-  &__red {
-    &:before{
-      color: $color_pink;
-    }
+  //&__red {
+  //  &:before{
+  //    color: $color_pink;
+  //  }
 
-  }
   &:before {
     font-size: 16px;
-    color: #333;
+    color: inherit;
     position: absolute;
     left: -15px;
     top: 0;
@@ -1095,7 +1149,7 @@ button {
     position: relative;
     &:before {
       font-size: 16px;
-      color: #333;
+      color: inherit;
       position: absolute;
       left: -15px;
       top: 0;
@@ -1203,34 +1257,36 @@ button {
   }
 }
 
-
-
-.bl_view{
+.bl_view {
   margin-top: 16px;
   width: 100%;
 
 }
-.bl_sorter{
+
+.bl_sorter {
   display: inline-block;
 }
 
-
-.bl_numberOfItemShow{
+.bl_numberOfItemShow {
   margin-left: 69px; ////////
   display: inline-block;
 }
 
+.bl_numberOfItemShow__select {
+  width: 162px;
+  text-indent: 10px;
+}
 
-.bl_positionSorted{
+.bl_positionSorted {
   position: relative;
   float: right;
 
-  &__ratio{
+  &__ratio {
     position: absolute;
-    opacity:0;
+    opacity: 0;
   }
 
-  &__button{
+  &__button {
     position: relative;
     display: inline-block;
     width: 24px;
@@ -1238,44 +1294,42 @@ button {
   }
 }
 
-.bl_positionSorted__ratio:checked + .bl_positionSorted__label .bl_positionSorted__button{
+.bl_positionSorted__ratio:checked + .bl_positionSorted__label .bl_positionSorted__button {
   color: $color_pink;
 }
 
-
 .view_columns {
 
-
-
-  &__button{
+  &__button {
     position: relative;
-    &:after{
+    cursor: pointer;
+
+    &:after {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
 
       content: '\f009';
-      font-family:"FontAwesome";
+      font-family: "FontAwesome";
       font-size: 24px;
     }
   }
 
 }
 
-
-.view_list{
-  &__button{
+.view_list {
+  &__button {
     position: relative;
-
-    &:after{
+    cursor: pointer;
+    &:after {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
 
       content: '\f00a';
-      font-family:"FontAwesome";
+      font-family: "FontAwesome";
       font-size: 24px;
     }
   }
@@ -1285,15 +1339,11 @@ button {
 
 .view_columns {
 
-
 }
 
-
-
-.bl_products{
+.bl_products {
   //display: flex;  /////////////
   //justify-content: space-between;
-
 
   margin-top: 34px;
   width: 100%;
@@ -1302,10 +1352,8 @@ button {
   //border: 1px solid red;
 }
 
-.bl_products__item{
+.bl_products__item {
   position: relative;
-
-
 
   height: 394px;
 
@@ -1317,40 +1365,38 @@ button {
 
 }
 
-.bl_products__img{
+.bl_products__img {
   margin: 0 auto;
 }
 
-
-.bl_products__title{
+.bl_products__title {
   height: 44px;
-
 
   text-align: center;
   color: #000;
   font-family: $Tahoma;
   font-size: 13px;
 
-
-  &:hover{
+  &:hover {
     text-decoration: underline;
   }
 
 }
 
-.bl_products__price{
+.bl_products__price {
   margin-top: 10px;
   width: 100%;
   text-align: center;
 }
-.bl_products__price_oldPrice{
+
+.bl_products__price_oldPrice {
   display: inline-block;
 
   font-size: 14px;
   text-decoration: line-through;
 }
 
-.bl_products__price_newPrice{
+.bl_products__price_newPrice {
   display: inline-block;
 
   color: $color_pink;
@@ -1360,7 +1406,7 @@ button {
 
 }
 
-.bl_products__buy{
+.bl_products__buy {
 
   width: 100%;
   height: 28px;
@@ -1369,20 +1415,19 @@ button {
   background-color: $color_pink;
   text-align: center;
 
-  &_text{
+  &_text {
     color: #fefefe;
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
-    &:before{
+    &:before {
       content: '\f290';
-      font-family:"FontAwesome";
+      font-family: "FontAwesome";
       margin-right: 9px;
       font-size: 14px;
     }
   }
 }
-
 
 .bl_products__callBack {
   width: 100%;
@@ -1393,30 +1438,27 @@ button {
   background-color: rgba(238, 64, 55, 0);
   line-height: 24px;
 
-  &__text{
+  &__text {
     color: #000;
     font-size: 14px;
   }
 }
 
-
-.bl_loader{
+.bl_loader {
   position: relative;
   height: 394px;
 
   cursor: pointer;
 }
 
-.bl_loader__img{
+.bl_loader__img {
 
   display: block;
-  margin: 80px auto 0;   /////////////
-
-
+  margin: 80px auto 0; /////////////
 
 }
 
-.bl_loader__text{
+.bl_loader__text {
 
   margin: 50px auto 0;
 
@@ -1428,71 +1470,67 @@ button {
   line-height: 27px;
 }
 
-.bl_pagination{
+.bl_pagination {
   text-align: center;
   margin: 54px auto 0;
   width: 100%;
 }
 
-.bl_pagination__fullItems{
+.bl_pagination__fullItems {
   display: inline-block;
   text-align: center;
 }
 
-.bl_pagination__item{
+.bl_pagination__item {
   display: inline-block;
-
 
 }
 
-.bl_pagination__link{
+.bl_pagination__link {
   display: block;
   width: 100%;
-
 
   color: #000;
   font-family: $Tahoma;
   font-size: 14px;
 
-
-  &:hover{
+  &:hover {
     color: $color_pink;
   }
 
 }
 
-
-.bl_pagination__link_number{
+.bl_pagination__link_number {
 
 }
 
-.bl_pagination__link_number__active{
+.bl_pagination__link_number__active {
   color: $color_pink;
 }
 
-
-
-
-
-
-
-
-
-
-
-.bl_aboutSite{
-  margin-top: 53px;  ///////////////////
+.bl_aboutSite {
+  margin: 53px 10px 34px; ///////////////////
   box-sizing: border-box;
   width: 100%;
   border-top: 1px solid $color_pink;
 }
 
+.bl_aboutSite__title {
+  margin-top: 14px;
+  color: black;
+  font-family: $Tahoma;
+  font-weight: 400;
+  font-size: 24px;
 
+}
 
-
-
-
-
+.bl_aboutSite__paragraph {
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+  font-family: $Tahoma;
+  font-weight: 400;
+}
 
 /*********************************************/
 /*FOOTER*/
