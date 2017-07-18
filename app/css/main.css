@@ -1152,6 +1152,9 @@ button {
           align-items: center;
   padding-left: 18px; }
 
+.leng-item__text {
+  color: #fff; }
+
 .leng-item__ico {
   width: 30px;
   height: 16px;
@@ -1627,8 +1630,8 @@ button {
 
 .brand-baner__wp-img {
   padding-bottom: 40%;
-  width: 60%;
-  position: relative; }
+  position: relative;
+  z-index: 10; }
 
 .brand-baner__pic {
   position: absolute;
@@ -1655,79 +1658,29 @@ button {
   max-height: 120px;
   overflow: hidden; }
 
+.main-banner__slider,
 .brand-baner__slider {
-  padding: 0 20px; }
-
-.main-banner__slider {
   position: relative; }
-  .main-banner__slider .owl-nav {
+  .main-banner__slider .owl-nav,
+  .brand-baner__slider .owl-nav {
     position: absolute;
     width: 100%;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 999; }
-    .main-banner__slider .owl-nav .owl-prev {
+    .main-banner__slider .owl-nav .owl-prev,
+    .brand-baner__slider .owl-nav .owl-prev {
       float: left;
-      width: 20px;
-      height: 40px;
+      width: 30px;
+      height: 50px;
       background-color: #000;
       font-weight: bold;
       line-height: 1;
       font-size: 38px;
       transition: all 0.2s; }
-      .main-banner__slider .owl-nav .owl-prev:before {
-        position: relative;
-        display: block;
-        width: 100%;
-        text-align: center;
-        content: '\f104';
-        font-family: "FontAwesome";
-        color: #fff;
-        margin-top: -2px; }
-      .main-banner__slider .owl-nav .owl-prev:hover {
-        transition: all 0.2s;
-        background-color: #fff; }
-        .main-banner__slider .owl-nav .owl-prev:hover:before {
-          color: #000; }
-    .main-banner__slider .owl-nav .owl-next {
-      float: right;
-      width: 20px;
-      height: 40px;
-      font-weight: bold;
-      line-height: 1;
-      font-size: 38px;
-      background-color: #000; }
-      .main-banner__slider .owl-nav .owl-next:before {
-        position: relative;
-        display: block;
-        width: 100%;
-        text-align: center;
-        content: '\f105';
-        font-family: "FontAwesome";
-        color: #fff;
-        margin-top: -2px; }
-      .main-banner__slider .owl-nav .owl-next:hover {
-        transition: all 0.2s;
-        background-color: #fff; }
-        .main-banner__slider .owl-nav .owl-next:hover:before {
-          color: #000; }
-
-.brand-baner__slider {
-  position: relative; }
-  .brand-baner__slider.owl-carousel .owl-stage-outer {
-    padding: 0 30px; }
-  .brand-baner__slider .owl-nav {
-    position: absolute;
-    width: 100%;
-    top: 10%;
-    z-index: 998; }
-    .brand-baner__slider .owl-nav .owl-prev {
-      float: left;
-      width: 20px;
-      height: 40px;
-      background-color: #000;
-      font-weight: bold;
-      line-height: 1;
-      font-size: 38px; }
+      .main-banner__slider .owl-nav .owl-prev:before,
       .brand-baner__slider .owl-nav .owl-prev:before {
         position: relative;
         display: block;
@@ -1735,38 +1688,42 @@ button {
         text-align: center;
         content: '\f104';
         font-family: "FontAwesome";
-        color: #fff;
-        margin-top: -2px; }
+        color: #fff; }
+      .main-banner__slider .owl-nav .owl-prev:hover,
       .brand-baner__slider .owl-nav .owl-prev:hover {
         transition: all 0.2s;
         background-color: #fff; }
+        .main-banner__slider .owl-nav .owl-prev:hover:before,
         .brand-baner__slider .owl-nav .owl-prev:hover:before {
           color: #000; }
+    .main-banner__slider .owl-nav .owl-next,
     .brand-baner__slider .owl-nav .owl-next {
       float: right;
-      margin-right: 40px;
-      width: 20px;
-      height: 40px;
-      background-color: #000;
+      width: 30px;
+      height: 50px;
       font-weight: bold;
       line-height: 1;
-      font-size: 38px; }
+      font-size: 38px;
+      background-color: #000; }
+      .main-banner__slider .owl-nav .owl-next:before,
       .brand-baner__slider .owl-nav .owl-next:before {
         position: relative;
-        margin-top: -2px;
         display: block;
         width: 100%;
         text-align: center;
         content: '\f105';
         font-family: "FontAwesome";
         color: #fff; }
+      .main-banner__slider .owl-nav .owl-next:hover,
       .brand-baner__slider .owl-nav .owl-next:hover {
         transition: all 0.2s;
         background-color: #fff; }
+        .main-banner__slider .owl-nav .owl-next:hover:before,
         .brand-baner__slider .owl-nav .owl-next:hover:before {
           color: #000; }
-  .brand-baner__slider .brand-baner__slider.owl-carousel .owl-item img {
-    display: inline-block; }
+
+.owl-carousel .owl-item img {
+  width: auto !important; }
 
 .banner-list {
   display: -webkit-flex;

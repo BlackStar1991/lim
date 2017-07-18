@@ -304,10 +304,11 @@ button {
   position: relative;
 }
 
-.brand-baner__wp-img {
+.brand-baner__wp-img {  ///////////////////////////////
   padding-bottom: 40%;
-  width: 60%;
+  //width: 50%;
   position: relative;
+  z-index:10;
 }
 
 .brand-baner__pic {
@@ -339,23 +340,24 @@ button {
   overflow: hidden;
 }
 
-.brand-baner__slider {
-  padding: 0 20px;
-}
 
-.main-banner__slider {
+.main-banner__slider,
+.brand-baner__slider{
+
   position: relative;
   .owl-nav {
     position: absolute;
     width: 100%;
     top: 50%;
+    transform: translateY(-50%);
+
     z-index: 999;
 
     .owl-prev {
       float: left;
 
-      width: 20px;
-      height: 40px;
+      width: 30px;
+      height: 50px;
       background-color: #000;
 
       font-weight: bold;
@@ -371,7 +373,7 @@ button {
         content: '\f104';
         font-family: $FontAwesom;
         color: #fff;
-        margin-top: -2px;
+
       }
 
       &:hover {
@@ -384,17 +386,17 @@ button {
 
     }
 
-    .owl-next {
+    .owl-next{
       float: right;
-
-      width: 20px;
-      height: 40px;
+      width: 30px;
+      height: 50px;
 
       font-weight: bold;
       line-height: 1;
       font-size: 38px;
 
       background-color: #000;
+
 
       &:before {
         position: relative;
@@ -404,9 +406,6 @@ button {
         content: '\f105';
         font-family: $FontAwesom;
         color: #fff;
-
-        margin-top: -2px;
-
       }
 
       &:hover {
@@ -422,97 +421,13 @@ button {
   }
 }
 
-.brand-baner__slider {
+.brand-baner__slider.owl-carousel .owl-stage-outer{
+  //margin: 0 40px;
+}
 
-  position: relative;
 
-  &.owl-carousel .owl-stage-outer {
-    padding: 0 30px;
-  }
-
-  .owl-nav {
-    position: absolute;
-    width: 100%;
-    top: 10%;
-    z-index: 998;
-
-    .owl-prev {
-      float: left;
-
-      width: 20px;
-      height: 40px;
-
-      background-color: #000;
-
-      font-weight: bold;
-      line-height: 1;
-      font-size: 38px;
-
-      &:before {
-        position: relative;
-        display: block;
-        width: 100%;
-        text-align: center;
-        content: '\f104';
-        font-family: $FontAwesom;
-        color: #fff;
-
-        margin-top: -2px;
-
-      }
-
-      &:hover {
-        transition: all 0.2s;
-        background-color: #fff;
-        &:before {
-          color: #000;
-        }
-      }
-    }
-
-    .owl-next {
-      float: right;
-      margin-right: 40px;
-      width: 20px;
-      height: 40px;
-
-      background-color: #000;
-
-      font-weight: bold;
-      line-height: 1;
-      font-size: 38px;
-
-      &:before {
-        position: relative;
-
-        margin-top: -2px;
-
-        display: block;
-        width: 100%;
-        text-align: center;
-        content: '\f105';
-        font-family: $FontAwesom;
-        color: #fff;
-
-      }
-
-      &:hover {
-        transition: all 0.2s;
-        background-color: #fff;
-        &:before {
-          color: #000;
-        }
-      }
-
-    }
-
-  }
-
-  .brand-baner__slider.owl-carousel .owl-item img {
-    display: inline-block;
-    //width: 75%;
-  }
-
+.owl-carousel .owl-item img{
+  width: auto !important;
 }
 
 .banner-list {

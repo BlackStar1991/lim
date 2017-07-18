@@ -21,7 +21,7 @@ $(document).ready(function () {
         nav: true,
         navText: true,
         dots: false,
-        autoplay: true,
+        autoplay: false,
         stopOnHover: true,
         smartSpeed: 1000, //Время движения слайда
         autoplayTimeout: 4000, //Время смены слайда
@@ -42,8 +42,8 @@ $(document).ready(function () {
         loop: true,
         nav: true,
         dots: false,
-        autoplay: true,
-        margin: 5,
+        autoplay: false,
+        // margin: 5,
         navText: true,
         stopOnHover: true,
         smartSpeed: 1000, //Время движения слайда
