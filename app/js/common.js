@@ -153,5 +153,38 @@ $('.footer-page').on('click', '.h3-title', function () {
 
 
 
+//   CALLBACK FORM
+    function showCallbackForm() {
+        var fullBlackBlock = "blackWrapper",
+            main = $(".main"),
+            callBackButtons = $(".open-call__text"),
+
+            callBackForm = $(".bl_callBack"),
+            closeButton = $(".bl_callBack__close"),
+            resetButton = $(".bl_callBack__reset");
+
+
+
+
+
+       function hideShowForm(pushedButton) {
+           pushedButton.on("click", function(){
+
+
+               main.toggleClass(fullBlackBlock);
+               callBackForm.toggleClass("hidden");
+           });
+       }
+
+       hideShowForm(callBackButtons);
+       hideShowForm(closeButton);
+       hideShowForm(resetButton);
+
+
+
+    }showCallbackForm();
+
+
+
 });
 

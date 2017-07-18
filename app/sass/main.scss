@@ -29,7 +29,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -44,7 +44,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
   display: block;
 }
 
@@ -136,6 +136,14 @@ html {
   width: 100%;
   height: 100%;
 }
+
+.blackWrapper{
+  width: 100%;
+  height: 100%;
+  opacity: 0.52;
+  background-color: #333;
+}
+
 
 a {
   text-decoration: none;
@@ -355,10 +363,10 @@ button {
 
     .owl-prev {
       float: left;
-
+      position: relative;
       width: 30px;
       height: 50px;
-      background-color: #000;
+      background-color: #f00;
 
       font-weight: bold;
       line-height: 1;
@@ -366,13 +374,16 @@ button {
       transition: all 0.2s;
 
       &:before {
-        position: relative;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: block;
-        width: 100%;
-        text-align: center;
-        content: '\f104';
-        font-family: $FontAwesom;
-        color: #fff;
+        width: 13px;
+        height: 17px;
+        background: url("../image/arrowForSliderLeft.svg") 50% 50% no-repeat;
+
 
       }
 
@@ -380,7 +391,8 @@ button {
         transition: all 0.2s;
         background-color: #fff;
         &:before {
-          color: #000;
+          fill: #ff0;
+          color: #ff0;
         }
       }
 
@@ -388,31 +400,38 @@ button {
 
     .owl-next{
       float: right;
+      position: relative;
       width: 30px;
       height: 50px;
-
       font-weight: bold;
+
+      .banner-list__item{
       line-height: 1;
       font-size: 38px;
 
-      background-color: #000;
+      background-color: #f00;
 
 
       &:before {
-        position: relative;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: block;
-        width: 100%;
-        text-align: center;
-        content: '\f105';
-        font-family: $FontAwesom;
-        color: #fff;
+        width: 13px;
+        height: 17px;
+        background: url("../image/arrowForSliderRight.svg") 50% 50% no-repeat;
+
+
       }
 
       &:hover {
         transition: all 0.2s;
         background-color: #fff;
         &:before {
-          color: #000;
+          fill: #ff0;
+          color: #ff0;
         }
       }
 
@@ -652,8 +671,8 @@ button {
   font-size: 16rem;
   text-transform: uppercase;
   white-space: nowrap;
-  -webkit-text-stroke: .02em #000;
-  text-stroke: .02em #000;
+  text-stroke: .02em;
+  color: #000;
 }
 
 .category-list__item {
@@ -812,7 +831,7 @@ button {
   color: #fff;
   text-transform: uppercase;
   border: none;
-  transition: background-color .3s,
+  transition: background-color .3s;
 
 }
 
@@ -1320,7 +1339,7 @@ button {
     text-transform: uppercase;
     &:before {
       content: '\f290';
-      font-family: "FontAwesome";
+      font-family: $FontAwesom;
       margin-right: 9px;
       font-size: 14px;
     }
@@ -1408,6 +1427,158 @@ button {
 .bl_pagination__link_number__active {
   color: $color_pink;
 }
+
+
+// CALLBACK FORM
+
+.bl_callBack{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  max-width: 628px; //////////////////
+  height: 396px;
+
+
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+
+  z-index:100;
+}
+
+
+.bl_callBack__close{
+  float: right;
+  margin-top: 9px;
+  margin-right: 11px;
+
+  width: 11px;
+  height: 13px;
+  color: black;
+  font-family: $Tahoma;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+
+  &:hover{
+    color: $color_pink;
+  }
+}
+.bl_callBack__wrapper{
+  padding: 15px 40px 0;
+}
+
+.bl_callBack__img{
+  float: left;
+
+}
+
+.bl_callBack__title{
+  margin-top: 54px; ///////////
+  margin-left: 45px; /////////
+  display: inline-block;
+
+  width: 52%;
+  min-height: 35px;
+  color: #333;
+  font-size: 16px;
+
+
+}
+
+.bl_callBack__text{
+  clear: left;
+  display: block;
+  margin-top: 68px;
+  margin-left: 6px;
+  line-height: 20px;
+  width: 100%;
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+}
+
+.bl_callBack__tel{
+  width: 342px;
+  margin: 15px auto 0;
+  &_wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    //background-color: #f00;
+  }
+}
+
+.bl_callBack__prefix{
+
+  margin-left: 15px;
+  line-height: 60px;
+  color: #333;
+  font-family: $Tahoma;
+  font-size: 24px;
+}
+
+.bl_callBack__placeForTelephone{
+  display: inline-block;
+  margin-left: 13px;
+  width: 212px;
+  height: 31px;
+
+  &::placeholder{
+    width: 167px;
+
+    letter-spacing: 4px;
+
+    text-indent: 21px;
+    color: #c1c1c1;
+    font-family: $Tahoma;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+}
+
+.bl_callBack__submit{
+  float: left;
+  margin-top: 28px;
+  text-align: center;
+  text-transform: uppercase;
+
+  width: 155px;
+  height: 28px;
+  background-color: $color_pink2;
+  border: 1px solid $color_borderBlack;
+  
+  &:hover{
+    color: #fff;
+  }
+  
+
+}
+
+.bl_callBack__reset{
+  margin-top: 28px;
+  float: right;
+  text-align: center;
+  text-transform: uppercase;
+
+  width: 155px;
+  height: 28px;
+  border: 1px solid black;
+
+ 
+
+  background-color: #fff;
+  color: black;
+  font-family: $Tahoma;
+  font-size: 14px;
+  font-weight: 400;
+
+}
+
+
 
 /*********************************************/
 /*FOOTER*/
