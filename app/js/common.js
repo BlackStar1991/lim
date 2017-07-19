@@ -221,11 +221,18 @@ function paginationButtons() {
 
 //   CALLBACK FORM
     function showCallbackForm() {
-        var fullBlackBlock = "blackWrapper",
-            main = $(".main"),
-            callBackButtons = $(".open-call__text, .bl_products__callBack"),
+        var fullBlackBlock = $(".blackWrapper"),
+
+            callBackButtonForUser = $(".open-call__text"),
+            callBackButton = $(".bl_products__callBack"),
+
+            trashClass  =$(".trashClass");
 
             callBackForm = $(".bl_callBack"),
+            callBackFormForUser = $(".bl_callBack__forUser"),
+
+            allCallBackForms = $(".bl_callBack, .bl_callBack__forUser"),
+
             closeButton = $(".bl_callBack__close"),
             resetButton = $(".bl_callBack__reset");
 
@@ -233,21 +240,25 @@ function paginationButtons() {
 
 
 
-       function hideShowForm(pushedButton) {
+       function hideShowForm(pushedButton, whatFormShowhed, closeButton) {
            pushedButton.on("click", function(){
 
 
-               main.toggleClass(fullBlackBlock);
-               // main.wrapAll("<div class='blackWrapper'></div>");
+               fullBlackBlock.toggleClass("hidden");
+               whatFormShowhed.toggleClass("hidden");
 
-
-               callBackForm.toggleClass("hidden");
+               closeButton.addClass("hidden");
            });
        }
 
-       hideShowForm(callBackButtons);
-       hideShowForm(closeButton);
-       hideShowForm(resetButton);
+       hideShowForm(callBackButton, callBackForm, trashClass);    /// Show form
+       hideShowForm(callBackButtonForUser, callBackFormForUser, trashClass); /// Show form
+
+
+        hideShowForm(closeButton, trashClass, allCallBackForms ); /// Hide form
+       hideShowForm(resetButton, trashClass, allCallBackForms);  /// Hide form
+
+
 
 
 

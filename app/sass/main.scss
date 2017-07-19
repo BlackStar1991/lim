@@ -131,12 +131,19 @@ html {
   position: relative;
   width: 100%;
   height: 100%;
+
 }
 
 .blackWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+
   background-color: rgba(51, 51, 51, 0.52);
+
+  z-index:999;
 }
 
 a {
@@ -1539,11 +1546,12 @@ button {
 
 $widthBlock: 342px;
 
-.bl_callBack {
+.bl_callBack,
+.bl_callBack__forUser{
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 101%;
+  width: 100%;
   max-width: 628px; //////////////////
 
   min-height: 396px;
@@ -1551,10 +1559,10 @@ $widthBlock: 342px;
   transform: translate(-50%, -50%);
   background-color: #fff;
 
-  z-index: 100;
+  z-index: 1000;
 }
 
-.bl_callBack.bl_callBack__forUser {
+.bl_callBack__forUser {
   min-height: 270px;
 }
 
