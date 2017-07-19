@@ -858,7 +858,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -872,7 +872,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
   display: block; }
 
 body {
@@ -1682,7 +1682,7 @@ button {
       position: relative;
       width: 30px;
       height: 50px;
-      background-color: #f00;
+      background-color: #202020;
       font-weight: bold;
       line-height: 1;
       font-size: 38px;
@@ -1706,8 +1706,7 @@ button {
         background-color: #fff; }
         .main-banner__slider .owl-nav .owl-prev:hover:before,
         .brand-baner__slider .owl-nav .owl-prev:hover:before {
-          fill: #ff0;
-          color: #ff0; }
+          background: url("../image/arrowForSliderLeftHover.svg") 50% 50% no-repeat; }
     .main-banner__slider .owl-nav .owl-next,
     .brand-baner__slider .owl-nav .owl-next {
       float: right;
@@ -1715,9 +1714,7 @@ button {
       width: 30px;
       height: 50px;
       font-weight: bold;
-      line-height: 1;
-      font-size: 38px;
-      background-color: #f00; }
+      background-color: #202020; }
       .main-banner__slider .owl-nav .owl-next:before,
       .brand-baner__slider .owl-nav .owl-next:before {
         content: "";
@@ -1737,8 +1734,7 @@ button {
         background-color: #fff; }
         .main-banner__slider .owl-nav .owl-next:hover:before,
         .brand-baner__slider .owl-nav .owl-next:hover:before {
-          fill: #ff0;
-          color: #ff0; }
+          background: url("../image/arrowForSliderRightHover.svg") 50% 50% no-repeat; }
 
 .owl-carousel .owl-item img {
   width: auto !important; }
@@ -1967,8 +1963,8 @@ button {
   font-size: 16rem;
   text-transform: uppercase;
   white-space: nowrap;
-  -webkit-text-stroke: .02em #000;
-  text-stroke: .02em #000; }
+  text-stroke: .02em;
+  color: #000; }
 
 .category-list__item {
   margin-bottom: 20px; }
@@ -2114,7 +2110,7 @@ button {
   color: #fff;
   text-transform: uppercase;
   border: none;
-  transition: background-color 0.3s; }
+  transition: background-color .3s; }
 
 .mail-btn:hover {
   background: #ff4e54;
@@ -2463,7 +2459,9 @@ button {
 
 .bl_products__item {
   position: relative;
-  height: 394px;
+  height: 100%;
+  min-height: 380px;
+  margin-top: 14px;
   padding: 2px 4px 2px 4px;
   box-sizing: border-box;
   border: 1px solid green; }
@@ -2479,6 +2477,27 @@ button {
   font-size: 13px; }
   .bl_products__title:hover {
     text-decoration: underline; }
+
+.view_list__STYLE .bl_products__item {
+  min-height: 200px; }
+
+.view_list__STYLE .bl_products__center {
+  min-height: 240px;
+  height: 100%;
+  display: table; }
+  .view_list__STYLE .bl_products__center__wrapper {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle; }
+
+.view_list__STYLE .bl_products__title {
+  font-size: 20px; }
+
+.view_list__STYLE .bl_products__price_oldPrice {
+  font-size: 20px; }
+
+.view_list__STYLE .bl_products__price_newPrice {
+  font-size: 24px; }
 
 .bl_products__price {
   margin-top: 10px;
