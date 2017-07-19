@@ -129,6 +129,14 @@
   .mail-form__input {
     width: 200px;
   }
+
+  .bl_numberOfItemShow{
+    margin-left: 0%;
+  }
+
+
+
+
 }
 
 @media (max-width: 1026px) {
@@ -248,7 +256,34 @@
     background: none;
     border-bottom: 1px solid #202020;
   }
+
+
 }
+
+@media (max-width: 991px){
+
+  .bl_filters{
+    display: none;
+  }
+
+
+  .bl_filters__allFilters{
+    min-height: initial;
+
+    margin-top: 3%;
+    border-top: 1px solid $color_pink;
+  }
+
+  .bl_filters__productsFilters{
+    display: none;
+  }
+
+
+}
+
+
+
+
 
 @media (max-width: 850px) {
   .banner-sect__prev-category {

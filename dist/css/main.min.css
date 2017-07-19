@@ -951,8 +951,7 @@ html {
 .blackWrapper {
   width: 100%;
   height: 100%;
-  opacity: 0.52;
-  background-color: #333; }
+  background-color: rgba(51, 51, 51, 0.52); }
 
 a {
   text-decoration: none;
@@ -2254,12 +2253,39 @@ button {
     font-weight: bold; }
 
 .rubric__title {
-  margin-top: 19px;
+  margin: 19px auto 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer; }
+  .rubric__title:hover .rubric__title_button {
+    color: #ff4e54; }
+  .rubric__title:hover .rubric__title_text {
+    text-decoration: underline; }
+
+.rubric__title_button {
+  display: inline-block;
+  width: 24px;
+  height: 24px; }
+  .rubric__title_button:after {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 24px;
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    background: none;
+    border: 1px solid black; }
+
+.rubric__title_text {
+  display: inline-block;
   text-align: left;
   font-family: "Tahoma", sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 20px; }
+
+.rubric__title_margin {
+  margin-left: 20px; }
 
 .bl_filters {
   position: relative;
@@ -2402,7 +2428,7 @@ button {
   display: inline-block; }
 
 .bl_numberOfItemShow {
-  margin-left: 69px;
+  margin-left: 7%;
   display: inline-block; }
 
 .bl_numberOfItemShow__select {
@@ -2459,10 +2485,11 @@ button {
 
 .bl_products__item {
   position: relative;
-  height: 394px;
+  height: 100%;
+  min-height: 380px;
+  margin-top: 14px;
   padding: 2px 4px 2px 4px;
-  box-sizing: border-box;
-  border: 1px solid green; }
+  box-sizing: border-box; }
 
 .bl_products__img {
   margin: 0 auto; }
@@ -2475,6 +2502,27 @@ button {
   font-size: 13px; }
   .bl_products__title:hover {
     text-decoration: underline; }
+
+.view_list__STYLE .bl_products__item {
+  min-height: 200px; }
+
+.view_list__STYLE .bl_products__center {
+  min-height: 240px;
+  height: 100%;
+  display: table; }
+  .view_list__STYLE .bl_products__center__wrapper {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle; }
+
+.view_list__STYLE .bl_products__title {
+  font-size: 20px; }
+
+.view_list__STYLE .bl_products__price_oldPrice {
+  font-size: 20px; }
+
+.view_list__STYLE .bl_products__price_newPrice {
+  font-size: 24px; }
 
 .bl_products__price {
   margin-top: 10px;
@@ -2574,14 +2622,17 @@ button {
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 100%;
+  width: 101%;
   max-width: 628px;
-  height: 396px;
+  min-height: 396px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 100; }
+
+.bl_callBack.bl_callBack__forUser {
+  min-height: 270px; }
 
 .bl_callBack__close {
   float: right;
@@ -2633,6 +2684,16 @@ button {
     height: 100%;
     background-color: #f4f4f4; }
 
+.bl_callBack__user {
+  width: 342px;
+  margin: 15px auto 0; }
+  .bl_callBack__user_wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4; }
+
 .bl_callBack__prefix {
   margin-left: 15px;
   line-height: 60px;
@@ -2640,12 +2701,23 @@ button {
   font-family: "Tahoma", sans-serif;
   font-size: 24px; }
 
-.bl_callBack__placeForTelephone {
+.bl_callBack__user_name {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 42px;
+  color: #333;
+  font-family: "Tahoma", sans-serif;
+  font-size: 24px; }
+
+.bl_callBack__placeForTelephone,
+.bl_callBack__user_fild {
   display: inline-block;
   margin-left: 13px;
   width: 212px;
   height: 31px; }
-  .bl_callBack__placeForTelephone::-webkit-input-placeholder {
+  .bl_callBack__placeForTelephone::-webkit-input-placeholder,
+  .bl_callBack__user_fild::-webkit-input-placeholder {
     width: 167px;
     letter-spacing: 4px;
     text-indent: 21px;
@@ -2653,7 +2725,8 @@ button {
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
-  .bl_callBack__placeForTelephone::-moz-placeholder {
+  .bl_callBack__placeForTelephone::-moz-placeholder,
+  .bl_callBack__user_fild::-moz-placeholder {
     width: 167px;
     letter-spacing: 4px;
     text-indent: 21px;
@@ -2661,7 +2734,8 @@ button {
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
-  .bl_callBack__placeForTelephone:-ms-input-placeholder {
+  .bl_callBack__placeForTelephone:-ms-input-placeholder,
+  .bl_callBack__user_fild:-ms-input-placeholder {
     width: 167px;
     letter-spacing: 4px;
     text-indent: 21px;
@@ -2669,7 +2743,8 @@ button {
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
-  .bl_callBack__placeForTelephone::placeholder {
+  .bl_callBack__placeForTelephone::placeholder,
+  .bl_callBack__user_fild::placeholder {
     width: 167px;
     letter-spacing: 4px;
     text-indent: 21px;
@@ -2677,6 +2752,10 @@ button {
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
+
+.bl_callBack__user_fild {
+  display: block;
+  margin: 0 auto 10px; }
 
 .bl_callBack__submit {
   float: left;
@@ -2804,7 +2883,9 @@ button {
   .mail-form__btn {
     margin: 0; }
   .mail-form__input {
-    width: 200px; } }
+    width: 200px; }
+  .bl_numberOfItemShow {
+    margin-left: 0%; } }
 
 @media (max-width: 1026px) {
   .top-head-baner {
@@ -2914,6 +2995,16 @@ button {
   .main-nav {
     background: none;
     border-bottom: 1px solid #202020; } }
+
+@media (max-width: 991px) {
+  .bl_filters {
+    display: none; }
+  .bl_filters__allFilters {
+    min-height: initial;
+    margin-top: 3%;
+    border-top: 1px solid #ff4e54; }
+  .bl_filters__productsFilters {
+    display: none; } }
 
 @media (max-width: 850px) {
   .banner-sect__prev-category {
