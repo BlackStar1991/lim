@@ -2254,9 +2254,7 @@ button {
 
 .rubric__title {
   margin: 19px auto 0;
-  width: 100%;
-  text-align: center;
-  cursor: pointer; }
+  width: 100%; }
   .rubric__title:hover .rubric__title_button {
     color: #ff4e54; }
   .rubric__title:hover .rubric__title_text {
@@ -2276,6 +2274,13 @@ button {
     background: none;
     border: 1px solid black; }
 
+.rubric__title_button__filters:after {
+  content: "\f0b0";
+  font-family: "FontAwesome"; }
+
+.rubric__title_button.rubric__title_buttonHidden {
+  display: none; }
+
 .rubric__title_text {
   display: inline-block;
   text-align: left;
@@ -2285,7 +2290,10 @@ button {
   line-height: 20px; }
 
 .rubric__title_margin {
-  margin-left: 20px; }
+  margin-left: -3px; }
+
+.rubric__title_margin__filters {
+  margin-left: 24px; }
 
 .bl_filters {
   position: relative;
@@ -2345,7 +2353,7 @@ button {
 
 .bl_filters__item {
   position: relative;
-  padding-left: 10px;
+  padding-left: 14px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -2364,10 +2372,14 @@ button {
     background-color: #ec5d5d; }
 
 .bl_filters__allFilters {
+  margin-top: 37px;
   min-height: 708px;
   background-color: #f2f2f2; }
   .bl_filters__allFilters_wrapper {
     padding: 20px 14px; }
+
+.bl_filters__subList {
+  margin-top: 2px; }
 
 .bl_filters__caterogyName_subName {
   font-size: 12px;
@@ -2419,6 +2431,15 @@ button {
   .filter_text:hover {
     color: #ff4e54;
     transition: all 0.2s; }
+
+.bl_category__products {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px; }
+
+.bl_category__allCategories,
+.bl_category__filters {
+  cursor: pointer; }
 
 .bl_view {
   margin-top: 16px;
@@ -2598,7 +2619,7 @@ button {
   text-align: center; }
 
 .bl_pagination__item {
-  display: inline-block; }
+  float: left; }
 
 .bl_pagination__link {
   display: block;
@@ -2610,13 +2631,27 @@ button {
   font-size: 16px;
   line-height: 34px; }
   .bl_pagination__link:hover {
-    color: #ff4e54; }
+    color: black; }
 
 .bl_pagination__link_number {
-  width: 34px; }
+  width: 34px;
+  box-sizing: border-box; }
+
+.bl_pagination__arrow {
+  padding: 0 16px; }
+
+.bl_pagination__lastPage {
+  padding-left: 18px; }
+
+.bl_pagination__decorLine {
+  border-right: 1px solid #333; }
 
 .bl_pagination__link_number__active {
-  color: #ff4e54; }
+  color: #fff;
+  background-color: #ff4e54;
+  border: none; }
+  .bl_pagination__link_number__active:focus, .bl_pagination__link_number__active:active {
+    color: #fff; }
 
 .bl_callBack {
   position: fixed;
@@ -2994,17 +3029,25 @@ button {
             flex: 1; }
   .main-nav {
     background: none;
-    border-bottom: 1px solid #202020; } }
+    border-bottom: 1px solid #202020; }
+  .bl_filters,
+  .bl_filters__productsFilters {
+    display: block; } }
 
 @media (max-width: 991px) {
-  .bl_filters {
+  .rubric__title {
+    text-align: center; }
+  .rubric__title_margin {
+    margin-left: 24px; }
+  .bl_filters,
+  .bl_filters__productsFilters {
     display: none; }
+  .rubric__title_button.rubric__title_buttonHidden {
+    display: inline-block; }
   .bl_filters__allFilters {
     min-height: initial;
     margin-top: 3%;
-    border-top: 1px solid #ff4e54; }
-  .bl_filters__productsFilters {
-    display: none; } }
+    border-top: 1px solid #ff4e54; } }
 
 @media (max-width: 850px) {
   .banner-sect__prev-category {

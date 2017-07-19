@@ -257,25 +257,41 @@
     border-bottom: 1px solid #202020;
   }
 
+  .bl_filters,
+  .bl_filters__productsFilters{
+    display: block;
+  }
+
+
 
 }
 
 @media (max-width: 991px){
 
-  .bl_filters{
+  .rubric__title{
+    text-align: center;
+  }
+
+  .rubric__title_margin{
+    margin-left: 24px;
+  }
+
+
+  .bl_filters,
+  .bl_filters__productsFilters{
     display: none;
   }
 
+
+  .rubric__title_button.rubric__title_buttonHidden{
+    display: inline-block;
+  }
 
   .bl_filters__allFilters{
     min-height: initial;
 
     margin-top: 3%;
     border-top: 1px solid $color_pink;
-  }
-
-  .bl_filters__productsFilters{
-    display: none;
   }
 
 

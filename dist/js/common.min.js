@@ -119,9 +119,6 @@ $('.footer-page').on('click', '.h3-title', function () {
 
      sliderName.on("click", function () {
 
-         // sliderName.removeClass("decor_triangle__red");
-         // $(this).addClass("decor_triangle__red");
-
             $(this).next().toggleClass("hidden");
             $(this).toggleClass("decor_triangle decor_triangle__active");
 
@@ -149,6 +146,26 @@ $('.footer-page').on('click', '.h3-title', function () {
 
 
    } activateFilterByName();
+
+
+//   sliderEffect
+
+    function sliderEffectForButtons(button, element, duration) {
+
+        button.click(function() {
+            element.slideToggle(duration);
+        });
+    }
+
+    var buttonCategory = $(".rubric__title_button__categories"),
+        buttonFilters = $(".rubric__title_button__filters");
+
+    var blockWithCategories = $(".bl_filters"),
+        blockWithFilters = $(".bl_filters__productsFilters");
+
+    sliderEffectForButtons(buttonCategory, blockWithCategories, 1000);
+    sliderEffectForButtons(buttonFilters, blockWithFilters, 1000);
+
 
 
 //   Toggle switch between view_columns__STYLE & view_list__STYLE
@@ -185,6 +202,18 @@ $('.footer-page').on('click', '.h3-title', function () {
     }swichColumnAndListStyles();
 
 
+// Pagination activation
+function paginationButtons() {
+    var paginationNumber = $(".bl_pagination__link_number"),
+        paginationNumberActive = "bl_pagination__link_number__active";
+
+    paginationNumber.on("click", function () {
+
+        paginationNumber.removeClass(paginationNumberActive);
+        $(this).addClass(paginationNumberActive);
+    })
+
+}paginationButtons();
 
 
 
