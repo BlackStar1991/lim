@@ -413,6 +413,10 @@
     display: none;
   }
 
+  .social-list__wrapper{
+    display: none;
+  }
+
   .top-panel-footer__soc-list {
     padding: 0;
     margin-bottom: 10px;
@@ -551,9 +555,16 @@
     width: 50px;
     padding: 0 10px;
   }
-  .slick-next, .slick-prev {
-    font-size: .7px;
+
+  .bl_numberOfItemShow{
+    display: block;
+    margin-top: 2%;
   }
+
+  .bl_positionSorted{
+    margin-top: 5%;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -614,6 +625,18 @@
   .banner-bnt-text__title {
     font-size: 18px;
   }
+
+  .rubric__title_margin,
+.rubric__title_margin__filters{
+    margin-left: 3%;
+  }
+
+
+.rubric__title_text{
+  font-size: 20px;
+}
+
+
 }
 
 @media (max-width: 320px) {
