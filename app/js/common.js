@@ -250,6 +250,16 @@ $(document).ready(function () {
 
     showCallbackForm();
 
+// FILTER for telephone number
+
+
+
+
+
+
+
+
+
 
 // RESIZE WINDOW
 
@@ -269,8 +279,6 @@ $(window).resize(function(){
 
 
 });
-
-
 $(window).resize();
 
 

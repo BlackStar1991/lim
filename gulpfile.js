@@ -34,7 +34,7 @@ gulp.task('watch', function () {
     gulp.watch(['./app/**/*.html'], ['html']);          // watching changes in HTML
     gulp.watch(['./app/sass/**/*.scss'], ['sass']);     // watching changes in SASS
     gulp.watch(['./app/js/**/*.js'], ['js']);           // watching changes in JS
-    gulp.watch(['./app/imagea/sprite/*.*'], ['sprite']);   // watching changes in IMAGES
+    gulp.watch(['./app/image/sprite/*.*'], ['sprite']);   // watching changes in IMAGES
 });
 
 /*********************************************/
