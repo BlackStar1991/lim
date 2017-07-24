@@ -2242,7 +2242,7 @@ button {
   margin-right: 8px; }
 
 .bl_breadcrumbs {
-  margin-top: 14px;
+  margin-top: 0px;
   width: 100%; }
   .bl_breadcrumbs__item {
     position: relative;
@@ -2882,7 +2882,7 @@ button {
   border-bottom: 1px dotted #c6c6c6;
   font-family: "Tahoma", sans-serif;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 48px; }
   .blog_list__item:first-child {
     padding-top: 0; }
@@ -3074,6 +3074,7 @@ button {
   display: inline-block;
   padding-right: 2px;
   line-height: 25px;
+  font-size: 14px;
   color: #fff; }
 
 .bl_socbuttons__facebook {
@@ -3108,6 +3109,7 @@ button {
 
 .bl_topic {
   width: 100%;
+  margin-top: 12px;
   background-color: white;
   border: 1px solid #f4f4f4;
   box-shadow: 1px 1.7px 5.8px 0.2px rgba(0, 0, 0, 0.22); }
@@ -3183,7 +3185,8 @@ button {
   color: black;
   font-size: 18px;
   font-weight: 400;
-  line-height: 24px; }
+  line-height: 24px;
+  height: 80px; }
 
 .bl_topic__description_button {
   display: block;
@@ -3304,7 +3307,9 @@ button {
   .mail-form__input {
     width: 200px; }
   .bl_numberOfItemShow {
-    margin-left: 0%; } }
+    margin-left: 0%; }
+  .blog_list__item {
+    font-size: 22px; } }
 
 @media (max-width: 1026px) {
   .top-head-baner {
@@ -3431,7 +3436,9 @@ button {
   .bl_filters__allFilters {
     min-height: initial;
     margin-top: 3%;
-    border-top: 1px solid #ff4e54; } }
+    border-top: 1px solid #ff4e54; }
+  .blog_list__link {
+    text-align: center; } }
 
 @media (max-width: 850px) {
   .banner-sect__prev-category {

@@ -963,7 +963,7 @@ button {
 // CATEGORY
 
 .bl_breadcrumbs {
-  margin-top: 14px;
+  margin-top: 0px;  //////////////////// 14px
   width: 100%;
   &__item {
     position: relative;
@@ -2059,6 +2059,7 @@ $widthBlock: 342px;
 
 .bl_topic{
   width: 100%;
+  margin-top: 12px;
   //max-height: 754px;
   background-color: white;
   border: 1px solid #f4f4f4;
@@ -2154,6 +2155,8 @@ $widthBlock: 342px;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+
+  height: 80px;  //////////
 }
 
 .bl_topic__description_button{

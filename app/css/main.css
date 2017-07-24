@@ -2242,7 +2242,7 @@ button {
   margin-right: 8px; }
 
 .bl_breadcrumbs {
-  margin-top: 14px;
+  margin-top: 0px;
   width: 100%; }
   .bl_breadcrumbs__item {
     position: relative;
@@ -3109,6 +3109,7 @@ button {
 
 .bl_topic {
   width: 100%;
+  margin-top: 12px;
   background-color: white;
   border: 1px solid #f4f4f4;
   box-shadow: 1px 1.7px 5.8px 0.2px rgba(0, 0, 0, 0.22); }
@@ -3184,7 +3185,8 @@ button {
   color: black;
   font-size: 18px;
   font-weight: 400;
-  line-height: 24px; }
+  line-height: 24px;
+  height: 80px; }
 
 .bl_topic__description_button {
   display: block;
@@ -3254,7 +3256,9 @@ button {
     margin-right: -9px;
     margin-left: -9px; }
   .serv-baner-info__item:not(:last-child) {
-    margin-right: 25px; } }
+    margin-right: 25px; }
+  .bl_topic__text {
+    font-size: 12px; } }
 
 @media (max-width: 1100px) {
   html {
@@ -3305,9 +3309,28 @@ button {
   .mail-form__input {
     width: 200px; }
   .bl_numberOfItemShow {
-    margin-left: 0%; }
+    margin-left: 0; }
   .blog_list__item {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .blog_search {
+    margin-left: 0; }
+  .blog_search__field {
+    text-indent: 5px; }
+  .blog_search__button:before {
+    left: 5px; }
+  .blog_search {
+    margin-left: 1%;
+    margin-right: 1%; }
+  .bl_topic__circle_btn {
+    float: left;
+    width: 26px;
+    height: 26px; }
+  .bl_topic__time_btn:after,
+  .bl_topic__user_btn:after {
+    font-size: 12px; }
+  .bl_topic__text {
+    font-size: 9px;
+    margin-left: 3px; } }
 
 @media (max-width: 1026px) {
   .top-head-baner {
@@ -3436,7 +3459,13 @@ button {
     margin-top: 3%;
     border-top: 1px solid #ff4e54; }
   .blog_list__link {
-    text-align: center; } }
+    text-align: center; }
+  .bl_topic__text {
+    padding-bottom: 0;
+    padding-top: 6px; }
+  .bl_topic__text {
+    font-size: 12px;
+    margin-left: 4px; } }
 
 @media (max-width: 850px) {
   .banner-sect__prev-category {
@@ -3643,7 +3672,17 @@ button {
     display: block;
     margin-top: 2%; }
   .bl_positionSorted {
-    margin-top: 5%; } }
+    margin-top: 5%; }
+  .bl_topic__circle_btn {
+    float: left;
+    width: 20px;
+    height: 20px; }
+  .bl_topic__time_btn:after,
+  .bl_topic__user_btn:after {
+    font-size: 10px; }
+  .bl_topic__text {
+    padding-top: 4px;
+    margin-left: 4px; } }
 
 @media (max-width: 500px) {
   .leng-item {
