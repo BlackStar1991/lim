@@ -134,7 +134,9 @@
     margin-left: 0%;
   }
 
-
+  .blog_list__item {
+    font-size: 22px;
+  }
 
 
 }
@@ -294,6 +296,12 @@
     border-top: 1px solid $color_pink;
   }
 
+
+
+
+.blog_list__link{
+  text-align: center;
+}
 
 }
 

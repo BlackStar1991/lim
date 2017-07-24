@@ -1674,6 +1674,7 @@ button {
   .brand-baner__slider .owl-nav {
     position: absolute;
     width: 100%;
+    height: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
@@ -1681,8 +1682,9 @@ button {
     z-index: 999; }
     .main-banner__slider .owl-nav .owl-prev,
     .brand-baner__slider .owl-nav .owl-prev {
-      float: left;
-      position: relative;
+      position: absolute;
+      left: 0;
+      top: -25px;
       width: 30px;
       height: 50px;
       background-color: #202020;
@@ -1712,8 +1714,9 @@ button {
           background: url("../image/arrowForSliderLeftHover.svg") 50% 50% no-repeat; }
     .main-banner__slider .owl-nav .owl-next,
     .brand-baner__slider .owl-nav .owl-next {
-      float: right;
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: -25px;
       width: 30px;
       height: 50px;
       font-weight: bold;
@@ -2879,7 +2882,7 @@ button {
   border-bottom: 1px dotted #c6c6c6;
   font-family: "Tahoma", sans-serif;
   font-size: 30px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 48px; }
   .blog_list__item:first-child {
     padding-top: 0; }
@@ -3071,6 +3074,7 @@ button {
   display: inline-block;
   padding-right: 2px;
   line-height: 25px;
+  font-size: 14px;
   color: #fff; }
 
 .bl_socbuttons__facebook {
@@ -3301,7 +3305,9 @@ button {
   .mail-form__input {
     width: 200px; }
   .bl_numberOfItemShow {
-    margin-left: 0%; } }
+    margin-left: 0%; }
+  .blog_list__item {
+    font-size: 22px; } }
 
 @media (max-width: 1026px) {
   .top-head-baner {
@@ -3428,7 +3434,9 @@ button {
   .bl_filters__allFilters {
     min-height: initial;
     margin-top: 3%;
-    border-top: 1px solid #ff4e54; } }
+    border-top: 1px solid #ff4e54; }
+  .blog_list__link {
+    text-align: center; } }
 
 @media (max-width: 850px) {
   .banner-sect__prev-category {

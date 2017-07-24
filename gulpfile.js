@@ -10,6 +10,7 @@ var gulp = require("gulp"),                             // gulp core
     rename = require('gulp-rename'),                    // rename files
     useref = require('gulp-useref'),                    // parse build blocks in HTML files to replace references
     minifyCss = require('gulp-minify-css'),             // minify the css files
+    cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),        // sets missing browserprefixes
     browserSync = require('browser-sync').create(),     // inject code to all devices
     imagemin = require('gulp-imagemin'),                // minify images
@@ -147,7 +148,8 @@ gulp.task('build', ['clean'], function () {
     return gulp.src('app/*.html')
 
         .pipe(gulpif('*.js', uglify()))                 // uglify js-files
-        .pipe(gulpif('*.css', minifyCss()))             // minify css-files
+        .pipe(gulpif('*.css', cssnano() ))             // minify css-files
+
         .pipe(useref())
         .pipe(gulp.dest('./dist'));                     // where to put the files
 });
