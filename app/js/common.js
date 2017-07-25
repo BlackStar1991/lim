@@ -168,6 +168,8 @@ $(document).ready(function () {
         listButton = $("#view_list");
         blockProducts = $(".bl_products");
 
+        wrapperImg = $(".bl_products");
+
         columnsButton.on("click", function () {
 
             console.log("column");

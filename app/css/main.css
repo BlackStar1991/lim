@@ -2272,18 +2272,26 @@ button {
     text-decoration: underline; }
 
 .rubric__title_button {
+  position: relative;
   display: inline-block;
+  vertical-align: top;
   width: 24px;
-  height: 24px; }
+  height: 24px;
+  padding: 5px;
+  border: 1px solid black; }
   .rubric__title_button:after {
+    position: absolute;
     width: 100%;
     height: 100%;
-    padding: 5px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     font-size: 24px;
     content: "\f0c9";
     font-family: "FontAwesome";
-    background: none;
-    border: 1px solid black; }
+    background: none; }
 
 .rubric__title_button__filters:after {
   content: "\f0b0";
@@ -2804,6 +2812,7 @@ button {
   .bl_callBack__user_fild::-webkit-input-placeholder {
     width: 167px;
     letter-spacing: 4px;
+    text-align: center;
     text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
@@ -2813,6 +2822,7 @@ button {
   .bl_callBack__user_fild::-moz-placeholder {
     width: 167px;
     letter-spacing: 4px;
+    text-align: center;
     text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
@@ -2822,6 +2832,7 @@ button {
   .bl_callBack__user_fild:-ms-input-placeholder {
     width: 167px;
     letter-spacing: 4px;
+    text-align: center;
     text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
@@ -2831,6 +2842,7 @@ button {
   .bl_callBack__user_fild::placeholder {
     width: 167px;
     letter-spacing: 4px;
+    text-align: center;
     text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
@@ -2839,6 +2851,7 @@ button {
 
 .bl_callBack__user_fild {
   display: block;
+  width: 90%;
   margin: 0 auto 10px; }
 
 .bl_callBack__submit {
@@ -3456,7 +3469,7 @@ button {
     display: inline-block; }
   .bl_filters__allFilters {
     min-height: initial;
-    margin-top: 3%;
+    margin-top: 6%;
     border-top: 1px solid #ff4e54; }
   .blog_list__link {
     text-align: center; }
