@@ -400,11 +400,46 @@ var telephonseInput = $("input[type='tel']");
     });
 
 
+    
+    
+
+    // Button what add slide effect for product characteristics
+
+
+    function showButtonIfWeHaveEnoughInformation() { // We show this button only if we have a lot of information about product
+        var    fieldDescription =$(".main-desc__item .active").find(".main-descript-tab"),
+               heightField = fieldDescription.outerHeight(true),
+               maxContent = $(".main-descript-tab__fullTab"),
+               heightContent  = maxContent.outerHeight(true);
+
+
+        console.log("block Height = " + fieldDescription.outerHeight(true));
+        console.log("content Height = " + maxContent.outerHeight(true));
+
+
+    }showButtonIfWeHaveEnoughInformation();
+    
+    
+    
+    function showMoreCharacteristics() {      // Slide effect
+        var buttonMoreInformation = $(".main-desc__showMoreInfo"),
+            fieldDescriptionActive = "main-descript-tab_active",
+            textShowInfo = ".main-desc__showMoreInfo_show",
+            textHideInfo = ".main-desc__showMoreInfo_hide";
+
+
+        buttonMoreInformation.on("click", function(){
+
+               $(this).siblings(".main-descript-tab").toggleClass(fieldDescriptionActive);
+               $(this).children(textHideInfo).toggleClass("hidden");
+               $(this).children(textShowInfo).toggleClass("hidden");
+
+
+            })
 
 
 
-
-
+    }showMoreCharacteristics();
 
 
 
