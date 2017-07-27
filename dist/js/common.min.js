@@ -107,9 +107,21 @@ $(document).ready(function () {
         responsiveClass: true,
         responsive: {
 
-            992: {
-                loop: true
+            0:{
+                items:1
+            },
+            450:{
+                items:2
+            },
+
+            670:{
+                items:3
+            },
+            1200:{
+                items:5
             }
+
+
         }
     });
 
@@ -130,9 +142,18 @@ $(document).ready(function () {
         pagination: false,
         responsiveClass: true,
         responsive: {
+            0:{
+                items:1
+            },
+            450:{
+                items:2
+            },
 
-            992: {
-                loop: true
+            670:{
+                items:3
+            },
+            1200:{
+                items:5
             }
         }
     });
