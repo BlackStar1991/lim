@@ -59,31 +59,21 @@ $(document).ready(function () {
         }
     });
 
+
+
+
+
+
+
+
+
  /// ProductcCart Slider
-
-
-    // $(".slick-slider-3").slick({
-    //     infinite: true,
-    //
-    //     slidesToScroll: 1,
-    //     slidesToShow: 4,
-    //     responsive: [{
-    //         breakpoint: 992,
-    //         settings: {
-    //             slidesToShow: 4,
-    //             slidesToScroll: 1,
-    //             centerMode: false,
-    //             infinite: true
-    //         }
-    //     }]
-    // });
-
-
     $(".owl-carousel-3").owlCarousel({
         items: 4,
         loop: true,
         nav: true,
         dots: false,
+        margin: 10,
         autoplay: false,
         navText: true,
         stopOnHover: true,
@@ -99,9 +89,53 @@ $(document).ready(function () {
         }
     });
 
+// Products_related Slider (Pohogie)
 
 
+    $(".owl-carousel-4").owlCarousel({
+        items: 5,
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: 18,
+        autoplay: false,
+        navText: true,
+        stopOnHover: true,
+        smartSpeed: 1000,
+        autoplayTimeout: 4000,
+        pagination: false,
+        responsiveClass: true,
+        responsive: {
 
+            992: {
+                loop: true
+            }
+        }
+    });
+
+// Products_looked Slider (Prosmatrival)
+
+
+    $(".owl-carousel-5").owlCarousel({
+        items: 5,
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: 18,
+        autoplay: false,
+        navText: true,
+        stopOnHover: true,
+        smartSpeed: 1000,
+        autoplayTimeout: 4000,
+        pagination: false,
+        responsiveClass: true,
+        responsive: {
+
+            992: {
+                loop: true
+            }
+        }
+    });
 
 
 // Ancor
