@@ -276,6 +276,14 @@ $(document).ready(function () {
             blockProducts.removeClass("view_list__STYLE");
             blockProducts.addClass("view_columns__STYLE");
 
+            $(".bl_products__item").addClass("col-lg-3 col-md-4 col-sm-6");
+            $(".code_forListStyle_view").removeClass("col-xs-6");
+            $(".code_forListStyle_view2__wrapper").removeClass("bl_products__center__wrapper");
+
+
+            $(".bl_loader").toggleClass("bl_loader__list");
+            $(".bl_loader__img").toggleClass("bl_loader__img_list");
+            $(".bl_loader__text").toggleClass("bl_loader__text_list");
 
         });
 
@@ -285,6 +293,15 @@ $(document).ready(function () {
 
             blockProducts.removeClass("view_columns__STYLE");
             blockProducts.addClass("view_list__STYLE");
+
+            $(".bl_products__item").removeClass("col-lg-3 col-md-4 col-sm-6");
+            $(".code_forListStyle_view").addClass("col-xs-6");
+            $(".code_forListStyle_view2__wrapper").addClass("bl_products__center__wrapper");
+
+
+            $(".bl_loader").toggleClass("bl_loader__list");
+            $(".bl_loader__img").toggleClass("bl_loader__img_list");
+            $(".bl_loader__text").toggleClass("bl_loader__text_list");
 
         });
 
@@ -311,45 +328,45 @@ $(document).ready(function () {
 
 
 //   CALLBACK FORM
-    function showCallbackForm() {
-        var fullBlackBlock = $(".blackWrapper"),
-
-            callBackButtonForUser = $(".open-call__text"),
-            callBackButton = $(".bl_products__callBack"),
-
-            trashClass = $(".trashClass"),
-
-            callBackForm = $(".bl_callBack"),
-            callBackFormForUser = $(".bl_callBack__forUser"),
-
-            allCallBackForms = $(".bl_callBack, .bl_callBack__forUser"),
-
-            closeButton = $(".bl_callBack__close"),
-            resetButton = $(".bl_callBack__reset");
-
-
-        function hideShowForm(pushedButton, whatFormShowhed, closeButton) {
-            pushedButton.on("click", function () {
-
-
-                fullBlackBlock.toggleClass("hidden");
-                whatFormShowhed.toggleClass("hidden");
-
-                closeButton.addClass("hidden");
-            });
-        }
-
-        hideShowForm(callBackButton, callBackForm, trashClass);    /// Show form
-        hideShowForm(callBackButtonForUser, callBackFormForUser, trashClass); /// Show form
-
-
-        hideShowForm(closeButton, trashClass, allCallBackForms); /// Hide form
-        hideShowForm(resetButton, trashClass, allCallBackForms);  /// Hide form
-
-
-    }
-
-    showCallbackForm();
+//     function showCallbackForm() {
+//         var fullBlackBlock = $(".blackWrapper"),
+//
+//             callBackButtonForUser = $(".open-call__text"),
+//             callBackButton = $(".bl_products__callBack"),
+//
+//             trashClass = $(".trashClass"),
+//
+//             callBackForm = $(".bl_callBack"),
+//             callBackFormForUser = $(".bl_callBack__forUser"),
+//
+//             allCallBackForms = $(".bl_callBack, .bl_callBack__forUser"),
+//
+//             closeButton = $(".bl_callBack__close"),
+//             resetButton = $(".bl_callBack__reset");
+//
+//
+//         function hideShowForm(pushedButton, whatFormShowhed, closeButton) {
+//             pushedButton.on("click", function () {
+//
+//
+//                 fullBlackBlock.toggleClass("hidden");
+//                 whatFormShowhed.toggleClass("hidden");
+//
+//                 closeButton.addClass("hidden");
+//             });
+//         }
+//
+//         hideShowForm(callBackButton, callBackForm, trashClass);    /// Show form
+//         hideShowForm(callBackButtonForUser, callBackFormForUser, trashClass); /// Show form
+//
+//
+//         hideShowForm(closeButton, trashClass, allCallBackForms); /// Hide form
+//         hideShowForm(resetButton, trashClass, allCallBackForms);  /// Hide form
+//
+//
+//     }
+//
+//     showCallbackForm();
 
 // FILTER for telephone number
 
@@ -483,6 +500,8 @@ var telephonseInput = $("input[type='tel']");
     var blockWithCategories = $(".bl_filters"),
         blockWithFilters = $(".bl_filters__productsFilters");
 
+
+
 $(window).resize(function(){
    if( body.width() >= 992 ){
 
@@ -492,6 +511,14 @@ $(window).resize(function(){
        blockWithCategories.css("display", "none"); // allways show blocks with categories and filters if window.width > 992px
        blockWithFilters.css("display", "none");
    }
+
+
+    if( body.width() >= 700 ){
+
+        $(".view_list__STYLE .code_forListStyle_view").addClass("col-xs-6")
+    }else {
+        $(".view_list__STYLE .code_forListStyle_view").removeClass("col-xs-6")
+    }
 
 
 });

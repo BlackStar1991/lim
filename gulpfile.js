@@ -148,7 +148,7 @@ gulp.task('build', ['clean'], function () {
     return gulp.src('app/*.html')
 
         .pipe(gulpif('*.js', uglify()))                 // uglify js-files
-        .pipe(gulpif('*.css', cssnano() ))             // minify css-files
+        .pipe(gulpif('*.css', minifyCss() ))             // minify css-files
 
         .pipe(useref())
         .pipe(gulp.dest('./dist'));                     // where to put the files
