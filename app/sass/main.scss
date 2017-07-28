@@ -1537,7 +1537,7 @@ button {
   cursor: pointer;
 }
 
-.bl_loader__list{
+.view_list__STYLE .bl_loader__list{
   height:auto;
   width: 100%;
 }
@@ -1549,7 +1549,7 @@ button {
 
 }
 
-.bl_loader__img_list{
+.view_list__STYLE .bl_loader__img_list{
   display: block;
   margin: 0 auto;
 
@@ -1572,7 +1572,7 @@ button {
 }
 
 
-.bl_loader__text_list{
+.view_list__STYLE .bl_loader__text_list{
   margin: 10px auto 0;
   display: block;
   font-size: 24px;
