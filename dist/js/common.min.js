@@ -481,6 +481,18 @@ var telephonseInput = $("input[type='tel']");
 
 
 
+    //   FORM Review
+
+    var buttonAddComment =   $(".code_addReview"),
+        formReview = $(".code_formRewiew");
+
+    buttonAddComment.on("click", function () {
+
+        $(this).hide();
+        formReview.slideDown(600);
+
+   });
+
 
 
 

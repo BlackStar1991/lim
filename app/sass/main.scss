@@ -345,8 +345,10 @@ button {
   overflow: hidden;
 }
 
-.main-banner__slider,
-.brand-baner__slider {
+//.main-banner__slider,
+//.brand-baner__slider
+
+.owl-carousel{
 
   position: relative;
   .owl-nav {
@@ -431,6 +433,73 @@ button {
     }
   }
 }
+
+.prod-slider.owl-carousel,
+.goods-slid.owl-carousel{
+
+
+  .owl-prev{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: $arrow_background;
+    &:before{
+      content: '\f104';
+      margin-top: -3px;
+      margin-left: -2px;
+      width: 14px;
+      height: 20px;
+      color: $color_pink;
+      font-family: $FontAwesom;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 24px;
+      background: none;
+    }
+    &:hover {
+      transition: all 0.2s;
+      background-color: $color_pink;
+      &:before {
+        background: none;
+        color: #fff;
+      }
+    }
+
+  }
+
+  .owl-next{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    background-color: $arrow_background;
+    &:before{
+      content: '\f105';
+      margin-top: -3px;
+      margin-left: 2px;
+      width: 14px;
+      height: 20px;
+      color: $color_pink;
+      font-family: $FontAwesom;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 24px;
+      background: none;
+    }
+
+    &:hover {
+      transition: all 0.2s;
+      background-color: $color_pink;
+      &:before {
+        background: none;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
 
 
 .owl-carousel .owl-item img {
@@ -2358,7 +2427,6 @@ $widthBlock: 342px;
 
 .h1-page {
   font-size: 26rem;
-  -webkit-text-stroke: .03em;
   letter-spacing: .03em;
   color: #000;
 }
@@ -2403,12 +2471,11 @@ $widthBlock: 342px;
 }
 
 .grba-list__color {
-  height: 25px;
-  width: 25px;
+  height: 23px;
+  width: 23px;
   display: block;
-  border: 1px solid #fff;
-  box-shadow: 0 0 0 1px currentColor;
-  margin: 1px;
+  box-sizing: border-box;
+  border-radius: 50%;
 }
 
 .grba-list__color.black {
@@ -2427,10 +2494,25 @@ $widthBlock: 342px;
 }
 
 .grba-list__item {
+  position: relative;
   cursor: pointer;
+
   &:not(:last-child) {
     margin-right: 6px;
   }
+}
+
+.grba-list__input{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.grba-list__input:checked + .grba-list__color{
+  width: 25px;
+  height: 25px;
+  box-shadow: 0 0 5px 3px rgba(83, 109, 254, 0.5);
+  border: 2px solid #fff;
 }
 
 
@@ -2849,7 +2931,7 @@ $widthBlock: 342px;
   min-height: 228px;
   height: 228px;
 
-  border: 1px solid green;
+  //border: 1px solid green;
 
   overflow: hidden;
 
@@ -2889,17 +2971,17 @@ $widthBlock: 342px;
 
 
 .main-desc__showMoreInfo{
+  display: block;
   position: relative;
   width: 260px;
 
-  margin-top: 5px;
+  margin-top: 6px;
   padding: 10px;
   padding-right: 30px;
   color: #fff;
   background-color: $color_pink2;
-
-
 }
+
 .main-desc__showMoreInfo_show{
 
 
@@ -2931,6 +3013,150 @@ $widthBlock: 342px;
     color: inherit;
   }
 }
+
+
+.bl_review{
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-left: 1px solid $color_pink2;
+}
+
+.bl_review__userName{
+  clear: both;
+  display: block;
+
+  margin-top: 10px;
+  font-family:$Tahoma;
+  font-weight:bold;
+  text-decoration: underline;
+
+  &:before{
+    content: "\f2bc";
+    font-family: $FontAwesom;
+    margin-right: 10px;
+    color: $color_pink2;
+  }
+
+}
+
+.bl_review__text{
+
+  clear: both;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+
+  &:before{
+    content: '-';
+    padding-right: 10px;
+  }
+}
+
+.bl_review__dontHaveReview{
+  font-size: 18px;
+  font-weight:bold;
+  color: $color_pink2;
+}
+
+
+// RAITING
+
+.block_rating {
+
+  width: 100%;
+  margin-top: 33px;
+}
+
+fieldset, label {
+  margin: 0;
+  padding: 0;
+}
+.block_rating__stars {
+  border: none;
+  float: left;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+input[type="checkbox"] + label, input[type="radio"] + label {
+  margin: 0;
+}
+.block_rating__stars > input {
+  display: none;
+}
+.block_rating__stars > label:before {
+  margin: 5px;
+  font-size: 15px;
+  font-family: $FontAwesom;
+  display: inline-block;
+  content: "\f005";
+}
+
+.block_rating__stars > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.block_rating__stars > label {
+  color: #c9c9c9;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.block_rating__stars > input:checked ~ label, /* show gold star when clicked */
+.block_rating__stars:not(:checked) > label:hover, /* hover current star */
+.block_rating__stars:not(:checked) > label:hover ~ label {
+  color: #fccf47;
+}
+/* hover previous stars in list */
+
+.block_rating__stars > input:checked + label:hover, /* hover current star when changing rating */
+.block_rating__stars > input:checked ~ label:hover,
+.block_rating__stars > label:hover ~ input:checked ~ label, /* lighten current selection */
+.block_rating__stars > input:checked ~ label:hover ~ label {
+  color: #FFED85;
+}
+
+.block_rating__avarage {
+  margin-left: 31px;
+  color: $color_pink;
+  font-size: 15px;
+  line-height: 35px;
+}
+
+.block_rating__reviews {
+  margin-left: 6px;
+  color: #656c6f;
+  font-size: 13px;
+}
+
+
+
+
+
+.my_button-review{
+
+  clear: both;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: $color_pink;
+
+
+  &:hover{
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+#form-review{
+  display: none;
+}
+
+/////////////////////
 
 
 .card-main-desc-wrap{
