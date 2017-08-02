@@ -405,6 +405,12 @@
   }
 
 
+
+
+  .bl_article{
+    margin-top: 20px !important;
+  }
+
 }
 
 
@@ -758,12 +764,11 @@
     margin-top: 2%;
   }
 
-
   .bl_topic__circle_btn{
-    float: left;
-    width: 20px;
-    height: 20px;
+    display: none;
   }
+
+
   .bl_topic__time_btn:after,
   .bl_topic__user_btn:after{
     font-size: 10px;
@@ -773,6 +778,8 @@
     padding-top: 4px;
     margin-left: 4px;
   }
+
+
 
 
 }
@@ -860,6 +867,25 @@
 }
 
 
+
+  .bl_article__title{
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+
+.bl_article__breadcrumbs_item{
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+
+
+
+.bl_topic__description_text{
+  font-size: 16px;
+}
 }
 
 @media (max-width: 320px) {

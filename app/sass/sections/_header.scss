@@ -372,11 +372,6 @@
 .open-call__ico {
   display: block;
   margin-right: 8px;
-  //background-image: url('../image/sprite2/main-ico.png');
-  //background-repeat: no-repeat;
-  //width: 16px;
-  //height: 17px;
-  //background-position: -90px -80px;
   @include sprite($call);
 }
 
@@ -442,19 +437,16 @@
 }
 
 .cart-head__ico {
-  //background-image: url('../image/sprite2/main-ico.png');
-  //background-repeat: no-repeat;
-  //display: block;
-  //width: 30px;
-  //height: 31px;
-  //background-position: -20px -20px;
   @include sprite($basket);
   margin-bottom: 10px;
 }
 
 .cart-head__link {
+  text-align: center;
   text-decoration: underline;
   transition: color .3s;
+
+
   &:hover {
     color: $red;
   }

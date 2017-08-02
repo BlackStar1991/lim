@@ -108,6 +108,15 @@ html {
   }
 }
 
+.correct_right {
+  padding-right: 0 !important;
+}
+
+.correct_left {
+  padding-left: 0 !important;
+}
+
+
 .serv-baner-item, .services-baner > .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -728,7 +737,6 @@ button {
   font-size: 16rem;
   text-transform: uppercase;
   white-space: nowrap;
-  text-stroke: .02em;
   color: #000;
 }
 
@@ -1183,7 +1191,7 @@ button {
     left: -15px;
     top: 0;
     content: "\f0da";
-    font-family: "FontAwesome";
+    font-family: $FontAwesom;
     transition: all 0.2s;
   }
 
@@ -1196,7 +1204,7 @@ button {
       left: -15px;
       top: 0;
       content: "\f0da";
-      font-family: "FontAwesome";
+      font-family: $FontAwesom;
       transform: rotate(90deg);
       transition: all 0.2s;
     }
@@ -1402,7 +1410,7 @@ button {
       transform: translate(-50%, -50%);
 
       content: '\f009';
-      font-family: "FontAwesome";
+      font-family: $FontAwesom;
       font-size: 30px;
     }
   }
@@ -1420,7 +1428,7 @@ button {
       transform: translate(-50%, -50%);
 
       content: '\f00b';
-      font-family: "FontAwesome";
+      font-family: $FontAwesom;
       font-size: 30px;
     }
   }
@@ -1946,7 +1954,7 @@ $widthBlock: 342px;
 
 .blog_list__item {
 
-  padding: 10px 0;
+  //padding: 10px 0;
   border-bottom: 1px dotted $color_dotted;
   font-family: $Tahoma;
   font-size: 30px;
@@ -2111,9 +2119,10 @@ $widthBlock: 342px;
 .bl_article__title {
   text-align: left;
   color: black;
-  font-size: 30px;
+  font-size: 31px;
   line-height: 36px;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .bl_article__breadcrumbs {
@@ -2315,13 +2324,12 @@ $widthBlock: 342px;
   //width: 100%;
 }
 
+
 .bl_topic__description_text{
   color: black;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
-
-  height: 80px;  //////////
 }
 
 .bl_topic__description_button{
@@ -2644,7 +2652,6 @@ $widthBlock: 342px;
   font-family: $Tahoma;
   text-align: left;
   white-space: nowrap;
-  font-size: 30rem;
   color: $red;
   font-size: 26rem;
   transform: scaleY(1.25) scaleX(1);
@@ -2936,8 +2943,6 @@ $widthBlock: 342px;
   min-height: 228px;
   height: 228px;
 
-  //border: 1px solid green;
-
   overflow: hidden;
 
   &_active{
@@ -3137,26 +3142,7 @@ $widthBlock: 342px;
 }
 
 
-
-
-
-
-//.block_rating__avarage {
-//  margin-left: 31px;
-//  color: $color_pink;
-//  font-size: 15px;
-//  line-height: 35px;
-//}
-//
-//.block_rating__reviews {
-//  margin-left: 6px;
-//  color: #656c6f;
-//  font-size: 13px;
-//}
-
-
-
-.button_kormat {
+.button_lim {
   display: block;
   margin: 8px auto 0;  ////26px
   text-align: center;
@@ -3177,10 +3163,10 @@ $widthBlock: 342px;
 
 }
 
-.button_kormat__text {
+.button_lim__text {
 
   color: inherit;
-  font-family: TahomaBold;
+  font-family: TahomaBold, sans-serif;
   font-size: 16px;
 
   //line-height: 50px;
