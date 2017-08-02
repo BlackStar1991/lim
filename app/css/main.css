@@ -3334,6 +3334,9 @@ button {
 .prod-slider__wp-img:hover {
   border-color: #000; }
 
+.product-galery {
+  margin-top: 15px; }
+
 .product-galery__main-img,
 .prod-slider__wp-img {
   padding-bottom: 100%;
@@ -3874,92 +3877,106 @@ button {
   margin-left: 10px;
   border-left: 1px solid #ec5d5d; }
 
-.bl_review__userName {
-  clear: both;
-  display: block;
+.review_item {
   margin-top: 10px;
-  font-family: "Tahoma", sans-serif;
-  font-weight: bold;
-  text-decoration: underline; }
-  .bl_review__userName:before {
-    content: "\f2bc";
-    font-family: "FontAwesome";
-    margin-right: 10px;
-    color: #ec5d5d; }
-
-.bl_review__text {
-  clear: both;
-  display: block;
   width: 100%;
-  margin-top: 10px; }
-  .bl_review__text:before {
-    content: '-';
-    padding-right: 10px; }
+  padding: 10px;
+  box-sizing: border-box;
+  border-left: 1px solid #ff4e54; }
 
-.bl_review__dontHaveReview {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ec5d5d; }
-
-.block_rating {
-  width: 100%;
-  margin-top: 33px; }
-
-fieldset, label {
-  margin: 0;
-  padding: 0; }
-
-.block_rating__stars {
-  border: none;
-  float: left;
-  width: auto;
-  margin: 0;
-  padding: 0; }
-
-input[type="checkbox"] + label, input[type="radio"] + label {
-  margin: 0; }
-
-.block_rating__stars > input {
-  display: none; }
-
-.block_rating__stars > label:before {
-  margin: 5px;
-  font-size: 15px;
-  font-family: "FontAwesome";
+.review_item__userName {
   display: inline-block;
-  content: "\f005"; }
+  padding-bottom: 4px;
+  border-bottom: 2px solid #ff4e54;
+  font-family: TahomaBold, sans-serif;
+  color: #333;
+  font-size: 18px; }
 
-.block_rating__stars > .half:before {
-  content: "\f089";
-  position: absolute; }
+.review_item__time {
+  float: right;
+  display: inline-block; }
 
-.block_rating__stars > label {
-  color: #c9c9c9;
+.review_item__raiting {
+  margin-top: 10px;
+  text-decoration: underline; }
+
+.personal-form-review {
+  clear: both;
+  margin-top: 15px; }
+
+.review_item__fullReview {
+  margin-top: 10px; }
+
+.review_product {
+  width: 100%;
+  margin: 24px auto;
+  text-align: center; }
+
+.review_product__title {
+  display: inline;
+  font-family: "Tahoma", sans-serif;
+  font-size: 24px; }
+
+.review_product__title__bold {
+  font-family: TahomaBold, sans-serif; }
+
+.bl_raiting__chackbox {
+  position: absolute;
+  visibility: hidden; }
+
+.bl_raiting__label {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+  margin-left: 3px;
+  cursor: pointer; }
+  .bl_raiting__label:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 22px;
+    height: 21px;
+    background: url("../image/star_empty.svg") 50% 50% no-repeat;
+    z-index: 2; }
+  .bl_raiting__label:first-child {
+    margin-left: 13px; }
+
+.bl_review__raitingFull {
+  display: inline-block; }
+
+.bl_review__raitingFull label {
   float: right; }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
-.block_rating__stars > input:checked ~ label,
-.block_rating__stars:not(:checked) > label:hover,
-.block_rating__stars:not(:checked) > label:hover ~ label {
-  color: #fccf47; }
+.bl_review__raitingFull input:checked ~ label:before {
+  background: url("../image/star_full.svg") 50% 50% no-repeat; }
 
-/* hover previous stars in list */
-.block_rating__stars > input:checked + label:hover,
-.block_rating__stars > input:checked ~ label:hover,
-.block_rating__stars > label:hover ~ input:checked ~ label,
-.block_rating__stars > input:checked ~ label:hover ~ label {
-  color: #FFED85; }
+.bl_review__raitingFull label:hover:before,
+.bl_review__raitingFull label:hover ~ label:before {
+  background: url("../image/star_full.svg") 50% 50% no-repeat; }
 
-.block_rating__avarage {
-  margin-left: 31px;
-  color: #ff4e54;
-  font-size: 15px;
-  line-height: 35px; }
+.button_kormat {
+  display: block;
+  margin: 8px auto 0;
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  box-sizing: border-box;
+  color: white;
+  transition: all 0.2s;
+  background-color: #ff4e54;
+  border: 1px solid #ff4e54;
+  border-radius: 24px; }
+  .button_kormat:hover {
+    transition: all 0.2s;
+    background-color: #fff;
+    color: #ec5d5d; }
 
-.block_rating__reviews {
-  margin-left: 6px;
-  color: #656c6f;
-  font-size: 13px; }
+.button_kormat__text {
+  color: inherit;
+  font-family: TahomaBold;
+  font-size: 16px; }
 
 .my_button-review {
   clear: both;

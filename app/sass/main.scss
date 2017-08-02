@@ -2382,6 +2382,11 @@ $widthBlock: 342px;
   border-color: #000;
 }
 
+.product-galery{
+  margin-top: 15px;
+}
+
+
 .product-galery__main-img,
 .prod-slider__wp-img {
   padding-bottom: 100%;
@@ -3022,116 +3027,164 @@ $widthBlock: 342px;
   border-left: 1px solid $color_pink2;
 }
 
-.bl_review__userName{
-  clear: both;
-  display: block;
 
+
+.review_item{
   margin-top: 10px;
-  font-family:$Tahoma;
-  font-weight:bold;
-  text-decoration: underline;
+  width: 100%;
+  padding:10px;
+  box-sizing: border-box;
+  border-left: 1px solid $color_pink;
+}
 
-  &:before{
-    content: "\f2bc";
-    font-family: $FontAwesom;
-    margin-right: 10px;
+.review_item__userName{
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 2px solid $color_pink;
+  font-family: TahomaBold, sans-serif;
+  color: $color_grey2;
+  font-size: 18px;
+}
+
+.review_item__time{
+  float: right;
+  display: inline-block;
+}
+
+.review_item__raiting{
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+
+
+.personal-form-review{
+  clear: both;
+  margin-top: 15px;
+}
+
+.review_item__fullReview{
+  margin-top: 10px;
+}
+
+.review_product{
+  width: 100%;
+  margin: 24px auto;
+  text-align: center;
+}
+
+.review_product__title{
+  display: inline;
+  font-family: $Tahoma;
+  font-size: 24px;
+
+
+}
+
+.review_product__title__bold{
+
+  font-family:TahomaBold, sans-serif;
+
+}
+
+.bl_raiting__chackbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+
+.bl_raiting__label {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 21px;
+  margin-left: 3px;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 22px;
+    height: 21px;
+    background: url("../image/star_empty.svg") 50% 50% no-repeat;
+    z-index: 2;
+  }
+
+  &:first-child {
+    margin-left: 13px;
+  }
+}
+
+
+.bl_review__raitingFull{
+  display: inline-block;
+}
+.bl_review__raitingFull label{
+  float: right;
+}
+
+
+
+.bl_review__raitingFull input:checked ~ label:before {
+  background: url("../image/star_full.svg") 50% 50% no-repeat;
+}
+
+.bl_review__raitingFull label:hover:before,
+.bl_review__raitingFull label:hover ~ label:before {
+  background: url("../image/star_full.svg") 50% 50% no-repeat;
+}
+
+
+
+
+
+
+//.block_rating__avarage {
+//  margin-left: 31px;
+//  color: $color_pink;
+//  font-size: 15px;
+//  line-height: 35px;
+//}
+//
+//.block_rating__reviews {
+//  margin-left: 6px;
+//  color: #656c6f;
+//  font-size: 13px;
+//}
+
+
+
+.button_kormat {
+  display: block;
+  margin: 8px auto 0;  ////26px
+  text-align: center;
+  width: 250px;
+  height: 50px;
+  box-sizing: border-box;
+  color: white;
+  transition: all 0.2s;
+  background-color: $color_pink;
+  border: 1px solid $color_pink;
+  border-radius: 24px;
+
+  &:hover {
+    transition: all 0.2s;
+    background-color: #fff;
     color: $color_pink2;
   }
 
 }
 
-.bl_review__text{
+.button_kormat__text {
 
-  clear: both;
-  display: block;
-  width: 100%;
-  margin-top: 10px;
+  color: inherit;
+  font-family: TahomaBold;
+  font-size: 16px;
 
-  &:before{
-    content: '-';
-    padding-right: 10px;
-  }
+  //line-height: 50px;
 }
-
-.bl_review__dontHaveReview{
-  font-size: 18px;
-  font-weight:bold;
-  color: $color_pink2;
-}
-
-
-// RAITING
-
-.block_rating {
-
-  width: 100%;
-  margin-top: 33px;
-}
-
-fieldset, label {
-  margin: 0;
-  padding: 0;
-}
-.block_rating__stars {
-  border: none;
-  float: left;
-  width: auto;
-  margin: 0;
-  padding: 0;
-}
-input[type="checkbox"] + label, input[type="radio"] + label {
-  margin: 0;
-}
-.block_rating__stars > input {
-  display: none;
-}
-.block_rating__stars > label:before {
-  margin: 5px;
-  font-size: 15px;
-  font-family: $FontAwesom;
-  display: inline-block;
-  content: "\f005";
-}
-
-.block_rating__stars > .half:before {
-  content: "\f089";
-  position: absolute;
-}
-
-.block_rating__stars > label {
-  color: #c9c9c9;
-  float: right;
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.block_rating__stars > input:checked ~ label, /* show gold star when clicked */
-.block_rating__stars:not(:checked) > label:hover, /* hover current star */
-.block_rating__stars:not(:checked) > label:hover ~ label {
-  color: #fccf47;
-}
-/* hover previous stars in list */
-
-.block_rating__stars > input:checked + label:hover, /* hover current star when changing rating */
-.block_rating__stars > input:checked ~ label:hover,
-.block_rating__stars > label:hover ~ input:checked ~ label, /* lighten current selection */
-.block_rating__stars > input:checked ~ label:hover ~ label {
-  color: #FFED85;
-}
-
-.block_rating__avarage {
-  margin-left: 31px;
-  color: $color_pink;
-  font-size: 15px;
-  line-height: 35px;
-}
-
-.block_rating__reviews {
-  margin-left: 6px;
-  color: #656c6f;
-  font-size: 13px;
-}
-
 
 
 

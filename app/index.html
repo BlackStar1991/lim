@@ -30,7 +30,7 @@
     <!-- build:css css/main.min.css -->
 
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="css/production_styles.css">
 
     <!-- endbuild -->
 
@@ -750,132 +750,115 @@
                         </div>
                     </div>
 
-                    <div class="main-desc__item  tab-desc active">
-                        <div class="wrapperBlock">
+                    <div class="main-desc__item  tab-desc active" id="tab-review">
 
-
-                            <div class="main-descript-tab">
-
-                                <div id="review"><p class="bl_review__dontHaveReview">Для этого товара нет отзывов. Будь первым, оцени товар! </p></div>     <!-- Это срабатывает если отзывов нету -->
-
-                                <ul  class="main-descript-tab__fullTab">
-                                    <li class="bl_review">
-
-
-                                        <span class="bl_review__userName">Кожаный властелин</span>
-
-                                        <span class="bl_review__text">Очень хороший товар, ноский, кожа мягкая и приятная на ощупь. Ещё теплая</span>
-
-
-                                    </li>
-                                    <li class="bl_review">
-
-
-                                            <span class="bl_review__userName">Crocodile</span>
-
-                                                <span class="bl_review__text">Очень понравилась данная сумка в бежевом оттенке. Взял себе и подруге на вырост. Ну очень доволен покупкой, и подруга в полном экстазе. Таких хороших коженых изделий она ещё не испытывала </span>
-
-                              
-                                    </li>
-                                </ul>
-
-
-
-
-                                
-
-
-
+                        <div class="review_allReview">
+                            <div id="review"><p>У данного товара пока нету отзывов, будь первым</p></div>
+                            <div class="review_item">
+                                <p class="review_item__userName">User Name</p>
+                                <time class="review_item__time">01.08.2017</time>
+                                <p class="review_item__raiting"><span>Рейтинг пользователя</span>
+                                    <span>4</span><span>/5</span></p>
+                                <p class="review_item__fullReview">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur eos laborum magni quam quod ratione repudiandae suscipit tempora veniam! Aspernatur, atque corporis dignissimos minima nam officia provident quasi quia!</span>
+                                    <span>Alias, amet autem cum cumque delectus, deleniti dignissimos doloribus dolorum facilis illum incidunt iure iusto, laboriosam laborum maxime minus natus necessitatibus perspiciatis quaerat quis repellendus saepe sed similique suscipit unde!</span>
+                                    <span>Assumenda at consectetur cumque cupiditate, dicta obcaecati quas qui ut. Ad consequuntur culpa cumque deleniti, dolores dolorum, harum id inventore nihil porro praesentium quae sunt vel! Atque fugiat possimus similique.</span>
+                                    <span>Accusamus dolorem earum eos error exercitationem, fugiat, id incidunt laudantium nobis obcaecati provident quae quasi quo similique veniam? Aliquam aliquid animi autem dolore dolorem, eos error facere minima odio sit!</span>
+                                    <span>At atque cum facilis optio quia quibusdam quis recusandae! Adipisci architecto consequatur debitis dicta dolore, enim esse est eum, iure labore laborum necessitatibus obcaecati quibusdam quos repudiandae saepe sit unde.</span>
+                                    <span>Ab, aperiam autem dolor dolorem hic iure iusto nobis nulla voluptas? Eligendi esse, eum ipsa laudantium maxime modi non nulla perspiciatis quae, quibusdam temporibus velit veritatis voluptatem! Asperiores, repellat, tempore!</span>
+                                    <span>Aliquam animi aut blanditiis culpa delectus ea esse facilis hic iste laboriosam maiores minus molestiae neque nihil odit quasi quia, quis quisquam ratione repudiandae sapiente sed sunt suscipit veniam veritatis.</span>
+                                </p>
                             </div>
-                                <button class="main-desc__showMoreInfo">
-                                    <span class="main-desc__showMoreInfo_show">Показать больше информации</span>
-                                    <span class="main-desc__showMoreInfo_hide hidden">Скрыть информацию</span>
-                                </button>
 
+                            <div class="review_item">
+                                <p class="review_item__userName">User Name</p>
+                                <time class="review_item__time">01.08.2017</time>
+                                <p class="review_item__raiting"><span>Рейтинг пользователя</span>
+                                    <span>1</span><span>/5</span></p>
+                                <p class="review_item__fullReview">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur eos laborum magni quam quod ratione repudiandae suscipit tempora veniam! Aspernatur, atque corporis dignissimos minima nam officia provident quasi quia!</span>
+                                    <span>Alias, amet autem cum cumque delectus, deleniti dignissimos doloribus dolorum facilis illum incidunt iure iusto, laboriosam laborum maxime minus natus necessitatibus perspiciatis quaerat quis repellendus saepe sed similique suscipit unde!</span>
+                                    <span>Assumenda at consectetur cumque cupiditate, dicta obcaecati quas qui ut. Ad consequuntur culpa cumque deleniti, dolores dolorum, harum id inventore nihil porro praesentium quae sunt vel! Atque fugiat possimus similique.</span>
+                                    <span>Accusamus dolorem earum eos error exercitationem, fugiat, id incidunt laudantium nobis obcaecati provident quae quasi quo similique veniam? Aliquam aliquid animi autem dolore dolorem, eos error facere minima odio sit!</span>
+                                    <span>At atque cum facilis optio quia quibusdam quis recusandae! Adipisci architecto consequatur debitis dicta dolore, enim esse est eum, iure labore laborum necessitatibus obcaecati quibusdam quos repudiandae saepe sit unde.</span>
+                                    <span>Ab, aperiam autem dolor dolorem hic iure iusto nobis nulla voluptas? Eligendi esse, eum ipsa laudantium maxime modi non nulla perspiciatis quae, quibusdam temporibus velit veritatis voluptatem! Asperiores, repellat, tempore!</span>
+                                    <span>Aliquam animi aut blanditiis culpa delectus ea esse facilis hic iste laboriosam maiores minus molestiae neque nihil odit quasi quia, quis quisquam ratione repudiandae sapiente sed sunt suscipit veniam veritatis.</span>
+                                </p>
+                            </div>
 
-
+                            
                             <button class="my_button-review code_addReview">
                                 <span class="button_review">Оставить отзыв о товаре</span>
                                 <i class="fa fa-bookmark" aria-hidden="true"></i>
                             </button>
 
-                            <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> Спасибо за отзыв. Он будет добавлен после проверки администратором сайта.</div>
-
-                            <!-- FORM Review -->
-                            <form class="form-horizontal code_formRewiew" id="form-review">
-
-                                <div class="form-group required">
-                                    <div class="col-sm-12">
-                                        <label class="control-label" for="input-name">*Ваше имя</label>
-                                        <input type="text" name="name" value="" id="input-name" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="form-group required">
-                                    <div class="col-sm-12">
-                                        <label class="control-label" for="input-review">*Ваш отзыв</label>
-                                        <textarea name="text" rows="5" id="input-review" class="form-control" required></textarea>
-                                        <div class="help-block"><span class="text-danger">Note:</span> HTML вставки не допустимы</div>
-                                    </div>
-                                </div>
-                                <div class="form-group required">
-                                    <div class="col-sm-12">
-                                        <p class="">
-                                            <span>Рейтинг товара</span>
-                                            <span class="block_rating__avarage">4.25</span>
-                                            <span class="block_rating__reviews">(153 reviews)</span>
-                                        </p>
-
-                                        <div class="control-label">
-
-
-
-                                            <fieldset class="block_rating__stars" >
-                                                <input type="radio" id="star5" name="rating" value="5"/><label
-                                                    class="full" for="star5" title="Awesome - 5 stars"></label>
-                                                <input type="radio" id="star4half" name="rating"
-                                                       value="4 and a half"/><label class="half" for="star4half"
-                                                                                    title="Pretty good - 4.5 stars"></label>
-                                                <input type="radio" id="star4" name="rating" value="4"/><label
-                                                    class="full" for="star4" title="Good - 4 stars"></label>
-                                                <input type="radio" id="star3half" name="rating"
-                                                       value="3 and a half"/><label class="half" for="star3half"
-                                                                                    title="Above average - 3.5 stars"></label>
-                                                <input type="radio" id="star3" name="rating" value="3"/><label
-                                                    class="full" for="star3" title="Average - 3 stars"></label>
-                                                <input type="radio" id="star2half" name="rating"
-                                                       value="2 and a half"/><label class="half" for="star2half"
-                                                                                    title="Kinda bad - 2.5 stars"></label>
-                                                <input type="radio" id="star2" name="rating" value="2"/><label
-                                                    class="full" for="star2"
-                                                    title="Kinda bad - 2 stars"></label>
-                                                <input type="radio" id="star1half" name="rating"
-                                                       value="1 and a half"/><label class="half" for="star1half"
-                                                                                    title="Meh - 1.5 stars"></label>
-                                                <input type="radio" id="star1" name="rating" value="1"/><label
-                                                    class="full" for="star1"
-                                                    title="Sucks big time - 1 star"></label>
-                                                <input type="radio" id="starhalf" name="rating"
-                                                       value="half"/><label
-                                                    class="half" for="starhalf"
-                                                    title="Sucks big time - 0.5 stars"></label>
-                                            </fieldset>
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="buttons clearfix">
-                                    <div class="pull-left">
-                                        <button type="button" id="button-review" data-loading-text="Loading..." class="btn my_button-review">Оставить отзыв</button>
-                                    </div>
-                                </div>
-                            </form>
-
-
-
 
                         </div>
+
+
+
+
+
+
+
+                        <form class="form-horizontal personal-form-review code_formRewiew" id="form-review">
+
+                            <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> Пожалуйста,
+                                выберите оценку товара!
+                            </div>
+                            <div class="col-xs-12 review_product">
+                                <p class="review_product__title">Написать отзыв о</p>
+                                <h2 class="review_product__title review_product__title__bold">Женская сумка Karfei 1710078-04A черная</h2>
+                            </div>
+
+                            <div class="form-group required review_form clearfix">
+                                <div class="col-sm-6">
+                                    <input class="form-control review_name" type="text" name="name" value=""
+                                           placeholder="Ваше имя:">
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="bl_review__raiting">
+                                        <span class="review_text">Оценить товар</span>
+
+                                        <div class="bl_review__raitingFull">
+                                            <input class="bl_raiting__chackbox" id="review_star5" type="radio"
+                                                   name="raiting" value="5">
+                                            <label class="bl_raiting__label" for="review_star5"></label>
+
+                                            <input class="bl_raiting__chackbox" id="review_star4" type="radio"
+                                                   name="raiting" value="4">
+                                            <label class="bl_raiting__label" for="review_star4"></label>
+
+                                            <input class="bl_raiting__chackbox" id="review_star3" type="radio"
+                                                   name="raiting" value="3">
+                                            <label class="bl_raiting__label" for="review_star3"></label>
+
+                                            <input class="bl_raiting__chackbox" id="review_star2" type="radio"
+                                                   name="raiting" value="2">
+                                            <label class="bl_raiting__label" for="review_star2"></label>
+
+                                            <input class="bl_raiting__chackbox" id="review_star1" type="radio"
+                                                   name="raiting" value="1">
+                                            <label class="bl_raiting__label" for="review_star1"></label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                        <textarea class="form-control review_textarea" name="text" rows="5"
+                                                  id="input-review" placeholder="Текст сообщения"></textarea>
+                                </div>
+                            </div>
+
+                            <button class="button_kormat clearfix" type="button" id="button-review"
+                                    data-loading-text="Загрузка...">
+                                <span class="button_kormat__text">Отправить</span>
+                            </button>
+
+                        </form>
                     </div>
                 </div>
             </div>
