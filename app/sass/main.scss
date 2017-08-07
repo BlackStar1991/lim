@@ -11,7 +11,7 @@
 /*********************************************/
 
 @include font-face("Tahoma", "../fonts/Tahoma/Tahoma", 400, normal, eot ttf woff);
-@include font-face("Tahoma", "../fonts/TahomaBold/Tahoma-Bold", 700, normal, eot ttf woff);
+@include font-face("TahomaBold", "../fonts/TahomaBold/Tahoma-Bold", 700, normal, eot ttf woff);
 @include font-face("FontAwesome", "../fonts/FontAwesome/FontAwesome", 400, normal, eot ttf woff woff2);
 @include font-face("GeorgiaItal", "../fonts/Georgia/GeorgiaItal", 400, italic, eot ttf woff woff2);
 @include font-face("CenturyGothic", "../fonts/CenturyGothic/GOTHIC", 400, normal, eot ttf woff woff2);
@@ -3466,6 +3466,164 @@ $widthBlock: 342px;
 }
 
 
+
+
+// PRODUCT CARD
+
+
+.text_title{
+  margin-bottom: 11px;
+
+  text-align: center;
+  color: black;
+  font-family: $TahomaBold;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.text_title__margin{
+  margin-top: 14px;
+}
+
+
+.bl_receiver,
+.bl_deliveryMethod{
+  margin-top: 32px;
+    padding: 10px 65px;
+
+  min-height: 310px;
+
+  background-color: #f2f2f2;
+}
+
+.form-group{
+  margin: 0;
+
+  input, textarea, select{
+    outline: none;
+    border:none;
+    &:focus{
+      box-shadow: 0 0 6px $color_pink2;
+    }
+  }
+
+}
+
+.form-control{
+  height: 30px;
+}
+
+
+.form-lineStyle{
+  width: 100%;
+}
+.form-group__left{
+  float: left;
+  input{
+    width: 95%;
+  }
+}
+
+.form-group__right{
+  float: right;
+  label{
+    margin-left: 5%;
+  }
+
+  input{
+    margin-left: 5%;
+    width: 95%;
+  }
+}
+
+.form_telephone{
+  clear: both;
+}
+
+.text_paragraph{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: $Tahoma;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.text_decor__importantField{
+  &:before{
+    position: absolute;
+    top: 0;
+    left: -10px;
+    content: "*";
+    color: #ff4e54;
+    font-family: $Tahoma;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+
+
+.shoppingBasket_label{
+  position: relative;
+  width: 100%;
+}
+
+.shoppingBasket_input{
+  position: absolute;
+  visibility: hidden;
+}
+
+.shoppingBasket_text{
+  position: relative;
+  width: 100%;
+
+  margin-top: 5px;
+  color: black;
+  font-size: 16px;
+  line-height: 18px;
+
+  &:before{
+    position: absolute;
+    top: 2px;
+    left: -18px;
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid $color_dotted;
+    z-index: 2;
+  }
+}
+
+
+.shoppingBasket_label input:checked + .shoppingBasket_text{
+
+  &:before{
+    border-color: $color_pink2;
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color:$color_pink2;
+
+
+    z-index:3;
+  }
+}
+
+
+.group_selects{
+  margin-top: 6px;
+  width: 100%;
+}
 
 
 
