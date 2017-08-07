@@ -158,6 +158,11 @@ $(document).ready(function () {
         }
     });
 
+// Tooltip
+
+    $('.bl_products__callBack').tooltip({ placement: "bottom"});
+
+
 
 // Ancor
     jQuery(".link-top").click(function () {
