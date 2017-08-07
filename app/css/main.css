@@ -963,6 +963,26 @@ html {
   background-color: rgba(51, 51, 51, 0.52);
   z-index: 999; }
 
+.row-flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+.row-flex-wrap {
+  width: 100%;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0; }
+
 a {
   text-decoration: none;
   color: #000; }
@@ -4221,8 +4241,10 @@ button {
 .bl_deliveryMethod {
   margin-top: 32px;
   padding: 10px 65px;
+  height: 100%;
   min-height: 310px;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  background-color: #f00; }
 
 .form-group {
   margin: 0; }
@@ -4383,7 +4405,16 @@ button {
     width: 100%;
     height: 40px; }
   .card-product-info__btn-group {
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+  .form-group__left input,
+  .form-group__right input {
+    width: 100%;
+    margin-left: 0; }
+  .form-group__right,
+  .form-group__left {
+    float: none; }
+  .form-group__right label {
+    margin-left: 0; } }
 
 @media (max-width: 1100px) {
   .main-desc-title__item {
@@ -4617,7 +4648,12 @@ button {
     font-size: 12px;
     margin-left: 4px; }
   .bl_article {
-    margin-top: 20px !important; } }
+    margin-top: 20px !important; }
+  .row-flex {
+    display: block;
+    -webkit-flex: none;
+        -ms-flex: none;
+            flex: none; } }
 
 @media (max-width: 850px) {
   .card-product-info__min-list .min-info-list {

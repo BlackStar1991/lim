@@ -300,137 +300,113 @@
         </ul>
 
 
-        .wrapper
-        <div class="col-md-5 col-md-offset-1">
-            <div class="bl_receiver">
-                <h2 class="text_title text_title__margin">Получатель</h2>
-                <form class="bl_receiver__form" role="form" action="">
-                    <div class="form-group form-group__left">
-                        <label for="user_lastname" class="text_paragraph">Фамилия:</label>
-                        <input class="form-control form-lineStyle" id="user_lastname" type="text">
-                    </div>
-                    <div class="form-group form-group__right ">
-                        <label for="user_name" class="text_paragraph">Имя:</label>
-                        <input class="form-control form-lineStyle" id="user_name" type="text">
-                    </div>
-                    <div class="form-group form_telephone">
-                        <label for="user_tel" class="text_paragraph text_decor__importantField">Телефон:</label>
-                        <input class="form-control" id="user_tel" type="tel" required>
-                    </div>
-                   <div class="form-group">
-                       <label for="user_email" class="text_paragraph">E-mail:</label>
-                       <input class=" form-control" id="user_email" type="email">
-                   </div>
-                   <div class="form-group">
-                       <label for="user_refinement" class="text_paragraph">Пожелания и уточнения:</label>
-                       <textarea class=" form-control" name="" id="user_refinement" cols="30" rows="5"></textarea>
-                   </div>
-                </form>
-            </div>
-
-        </div>
-        <div class="col-md-5 ">
-            <div class="bl_deliveryMethod">
-                <h2 class="text_title text_title__margin">Способ доставки</h2>
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="deliveryMethod_radio" checked>
-                    <p class="shoppingBasket_text">Отправить Новой Почтой</p>
-                </label>
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="deliveryMethod_radio">
-                    <p class="shoppingBasket_text">Доставить курьером по Киеву</p>
-                </label>
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="deliveryMethod_radio">
-                    <p class="shoppingBasket_text">Самовывоз из магазина</p>
-                </label>
-
-                <div class="form-group group_selects">
-                    <select name="zone_id" id="input-payment-zone" class="form-control">
-                        <option value=""> Выберете область</option>
-                        <option value="">Киевская</option>
-                        <option value="">Волынская</option>
-                        <option value="">Одесская</option>
-                    </select>
+        <div class="row row-flex row-flex-wrapss">
+            <div class="col-xs-12 col-md-5 col-md-offset-1 ">
+                <div class="bl_receiver">
+                    <h2 class="text_title text_title__margin">Получатель</h2>
+                    <form class="bl_receiver__form" role="form" action="">
+                        <div class="form-group form-group__left">
+                            <label for="user_lastname" class="text_paragraph">Фамилия:</label>
+                            <input class="form-control form-lineStyle" id="user_lastname" type="text">
+                        </div>
+                        <div class="form-group form-group__right ">
+                            <label for="user_name" class="text_paragraph">Имя:</label>
+                            <input class="form-control form-lineStyle" id="user_name" type="text">
+                        </div>
+                        <div class="form-group form_telephone">
+                            <label for="user_tel" class="text_paragraph text_decor__importantField">Телефон:</label>
+                            <input class="form-control" id="user_tel" type="tel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email" class="text_paragraph">E-mail:</label>
+                            <input class=" form-control" id="user_email" type="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_refinement" class="text_paragraph">Пожелания и уточнения:</label>
+                            <textarea class=" form-control" name="" id="user_refinement" cols="30" rows="5"></textarea>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group group_selects">
-                    <select name="city" id="input-payment-city" class="form-control">
-                        <option value=""> Выберите город</option>
-                        <option value="">Киев</option>
-                        <option value="">Луцк</option>
-                        <option value="">Одесса</option>
-                    </select>
-                </div>
-                <div class="form-group group_selects">
-                    <select name="department" id="input-payment-department" class="form-control">
-                        <option value=""> Выберите отделение</option>
-                        <option value="">№15</option>
-                        <option value="">№3</option>
-                        <option value="">№11</option>
-                    </select>
-                </div>
-
-
-                <h2 class="text_title text_title__margin">Способ оплаты</h2>
-
-
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio" checked>
-                    <p class="shoppingBasket_text">Оплата наличными</p>
-                </label>
-
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio">
-                    <p class="shoppingBasket_text">Оплата через сайт</p>
-                </label>
-
-
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio">
-                    <p class="shoppingBasket_text">Оплата на карту</p>
-                </label>
-
-                <label class="shoppingBasket_label">
-                    <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio" >
-                    <p class="shoppingBasket_text">Самовывоз из магазина</p>
-                </label>
 
             </div>
+            <div class="col-xs-12 col-md-5 ">
+                <div class="bl_deliveryMethod">
+                    <h2 class="text_title text_title__margin">Способ доставки</h2>
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="deliveryMethod_radio" checked>
+                        <p class="shoppingBasket_text">Отправить Новой Почтой</p>
+                    </label>
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="deliveryMethod_radio">
+                        <p class="shoppingBasket_text">Доставить курьером по Киеву</p>
+                    </label>
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="deliveryMethod_radio">
+                        <p class="shoppingBasket_text">Самовывоз из магазина</p>
+                    </label>
+
+                    <div class="form-group group_selects">
+                        <select name="zone_id" id="input-payment-zone" class="form-control">
+                            <option value=""> Выберете область</option>
+                            <option value="">Киевская</option>
+                            <option value="">Волынская</option>
+                            <option value="">Одесская</option>
+                        </select>
+                    </div>
+                    <div class="form-group group_selects">
+                        <select name="city" id="input-payment-city" class="form-control">
+                            <option value=""> Выберите город</option>
+                            <option value="">Киев</option>
+                            <option value="">Луцк</option>
+                            <option value="">Одесса</option>
+                        </select>
+                    </div>
+                    <div class="form-group group_selects">
+                        <select name="department" id="input-payment-department" class="form-control">
+                            <option value=""> Выберите отделение</option>
+                            <option value="">№15</option>
+                            <option value="">№3</option>
+                            <option value="">№11</option>
+                        </select>
+                    </div>
 
 
+                    <h2 class="text_title text_title__margin">Способ оплаты</h2>
+
+
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio" checked>
+                        <p class="shoppingBasket_text">Оплата наличными</p>
+                    </label>
+
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio">
+                        <p class="shoppingBasket_text">Оплата через сайт</p>
+                    </label>
+
+
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio">
+                        <p class="shoppingBasket_text">Оплата на карту</p>
+                    </label>
+
+                    <label class="shoppingBasket_label">
+                        <input class="shoppingBasket_input" type="radio" name="bl_paymentMethod_radio">
+                        <p class="shoppingBasket_text">Самовывоз из магазина</p>
+                    </label>
+
+                </div>
+
+
+            </div>
         </div>
+
+        
 
 
     </div>
     </div>
 </main>
-
-<!-- CALLBACK FORM   FOR PRODUCT -->
-
-<form class="bl_callBack hidden" action="">
-    <div class="wrapperBlock">
-
-        <button class="bl_callBack__close">X</button>
-        <div class="bl_callBack__wrapper">
-            <img class="bl_callBack__img" src="image/Products/min/item-1_min.png" alt="">
-            <h2 class="bl_callBack__title">Мужская сумка со съемным плечевым ремешком Piquadro Pulse</h2>
-            <p class="bl_callBack__text">
-                Оставьте свой номер телефона и наш менеджер оперативно свяжется с Вами, для уточнения всех деталей
-            </p>
-            <div class="bl_callBack__tel">
-                <div class="bl_callBack__tel_wrapper">
-                    <span class="bl_callBack__prefix"> + 380 </span>
-                    <input class="bl_callBack__placeForTelephone" type="tel" placeholder="XX-XXX-XX-XX"
-                           autocomplete="on">
-                </div>
-
-                <input class="bl_callBack__submit" type="submit" value="Отправить">
-                <input class="bl_callBack__reset" type="reset" value="Отменить">
-            </div>
-        </div>
-    </div>
-</form>
-
 
 <!--============================================= FOOTER ==============================================-->
 <footer class="footer-page">
