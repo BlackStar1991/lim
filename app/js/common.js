@@ -403,28 +403,28 @@ var telephonseInput = $("input[type='tel']");
 
 
     //counter card
-    var counterCard = 1;
-    $('.counter__item--plus').click(function() {
-        counterCard = counterCard + 1;
-        $('.counter__item-text').val(counterCard);
-    });
-
-    $('.counter__item--minus').click(function() {
-        counterCard =   $('.counter__item-text').val();
-        counterCard = counterCard - 1;
-        $('.counter__item-text').val(counterCard);
-
-        if( counterCard < 1 ){
-            counterCard = 0;
-            $('.counter__item-text').val(counterCard);
-        }
-    });
-
-    $('body').on('change', '.counter__item-text', function(){
-        counterCard =  + $('.counter__item-text').val();
-
-
-    });
+    // var counterCard = 1;
+    // $('.counter__item--plus').click(function() {
+    //     counterCard = counterCard + 1;
+    //     $('.counter__item-text').val(counterCard);
+    // });
+    //
+    // $('.counter__item--minus').click(function() {
+    //     counterCard =   $('.counter__item-text').val();
+    //     counterCard = counterCard - 1;
+    //     $('.counter__item-text').val(counterCard);
+    //
+    //     if( counterCard < 1 ){
+    //         counterCard = 0;
+    //         $('.counter__item-text').val(counterCard);
+    //     }
+    // });
+    //
+    // $('body').on('change', '.counter__item-text', function(){
+    //     counterCard =  + $('.counter__item-text').val();
+    //
+    //
+    // });
 
 
     //TAB

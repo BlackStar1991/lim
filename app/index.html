@@ -300,7 +300,7 @@
         </ul>
 
 
-        <div class="row row-flex row-flex-wrapss">
+        <div class="row row-flex row-flex-wrapss clearfix">
             <div class="col-xs-12 col-md-5 col-md-offset-1 ">
                 <div class="bl_receiver">
                     <h2 class="text_title text_title__margin">Получатель</h2>
@@ -401,11 +401,211 @@
             </div>
         </div>
 
-        
+
+        <div class="shoppingBasket_product">
+            <div class="row">
+
+                <div class="shoppingBasket_product__title clearfix">
+
+                    <div class="visible-xs visible-sm col-xs-12">
+                        <p class="table_title">Товары к покупке</p>
+                    </div>
 
 
+                    <div class="hidden-xs hidden-sm col-xs-12 col-md-5">
+                        <p class="table_title table_title__left">Товар</p>
+                    </div>
+                    <div class="hidden-xs hidden-sm col-xs-6 col-md-2">
+                        <p class="table_title ">Код товара</p>
+                    </div>
+                    <div class="hidden-xs hidden-sm col-xs-6 col-md-2">
+                        <p class="table_title">Количество</p>
+                    </div>
+
+                    <div class="hidden-xs hidden-sm col-xs-6 col-md-1">
+                        <p class="table_title">Цена</p>
+                    </div>
+                    <div class="hidden-xs hidden-sm col-xs-6 col-md-2">
+                        <p class="table_title">Итого</p>
+                    </div>
+                </div>
+
+
+                <!--  GOODS -->
+
+                <!-- product 1-->
+
+                <div class="shoppingBasket_product__good clearfix">
+                    <div class="col-xs-12 col-md-5">
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+
+                            <div class="shoppingBasket_product__wrapper">
+                                <button class="delite_product">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                                <img class="shoppingBasket_product__img" src="image/Products/item-1.png" alt="">
+
+                                <div class="shoppingBasket_product__description">
+                                    <h2 class="shoppingBasket_product__name">Мужская сумка со съемным плечевым ремешком
+                                        Piquadro
+                                        Pulse</h2>
+                                    <p class="shoppingBasket_product__value"><span>Цвет:</span> <span>черный</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-6 col-md-2">
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <p class="shoppingBasket_product__mark">FR-528M</p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <div class="counter">
+                                <div class="counter__item  counter__item--minus"></div>
+                                <input class="counter__item-text" type="number" value="1">
+                                <div class="counter__item  counter__item--plus"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-1">
+
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <!--<span class="good-price__normal good-price__minSize">2 990 грн</span>-->
+                            <!-- Если есть акция то выподить эти цены -->
+                            <span class="good-price__old good-price__minSize">5000 грн</span>
+                            <span class="good-price__new good-price__minSize">2 990 грн</span>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <span class="good-price__normal good-price__minSize">9150 грн</span>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <!-- product 2-->
+
+                <div class="shoppingBasket_product__good clearfix">
+                    <div class="col-xs-12 col-md-5">
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+
+                            <div class="shoppingBasket_product__wrapper">
+                                <button class="delite_product">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </button>
+                                <img class="shoppingBasket_product__img" src="image/Products/item-1.png" alt="">
+
+                                <div class="shoppingBasket_product__description">
+                                    <h2 class="shoppingBasket_product__name">Мужская сумка со съемным плечевым ремешком
+                                        Piquadro
+                                        Pulse</h2>
+                                    <p class="shoppingBasket_product__value"><span>Цвет:</span> <span>черный</span></p>
+                                    <p class="shoppingBasket_product__value"><span>Цвет:</span> <span>черный</span></p>
+                                    <p class="shoppingBasket_product__value"><span>Размер:</span> <span>XXL</span></p>
+                                    <p class="shoppingBasket_product__value"><span>Материал:</span>
+                                        <span>Драконья кожа</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xs-6 col-md-2">
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <p class="shoppingBasket_product__mark">FR-528M</p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <div class="counter">
+                                <div class="counter__item  counter__item--minus"></div>
+                                <input class="counter__item-text" type="number" value="1">
+                                <div class="counter__item  counter__item--plus"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-1">
+
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <span class="good-price__normal good-price__minSize">2 990 грн</span>
+                            <!-- Если есть акция то выподить эти цены -->
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-xs-6 col-md-2">
+
+
+                        <div class="shoppingBasket_product__item" data-product="1">
+                            <span class="good-price__normal good-price__minSize">99999999 грн</span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+
+        <div class="col-xs-12 col-md-2 col-md-offset-10">
+            <div class="shoppingBasket_product__fullPrise">
+                <p>
+                    <span class="table_title">всего:</span>
+                    <span class="good-price__normal good-price__minSize shoppingBasket_product__fullPrise_text">99999999 грн</span>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-md-2 col-md-offset-8">
+            <button class="button_continueBuying">
+                <a class="button_continueBuying__link" href="#">Продолжить покупки</a>
+            </button>
+        </div>
+
+        <div class="col-xs-12 col-md-2">
+            <button class="button_buyProduct">
+                <span class="button_buyProduct__text">Оформить заказ</span>
+            </button>
+        </div>
+
+
+        <div class="col-xs-12">
+            <div class="decor_line"></div>
+        </div>
     </div>
-    </div>
+
+
 </main>
 
 <!--============================================= FOOTER ==============================================-->
