@@ -375,9 +375,7 @@ $(document).ready(function () {
 
 // FILTER for telephone number
 
-var telephonseInput = $("input[type='tel']");
-
-    telephonseInput.on("change keyup input click", function() {
+    $("input[type='tel']").on("change keyup input click", function() {
         if (this.value.match(/[^0-9]/g)) {
             this.value = this.value.replace(/[^0-9]/g, '');
         }
