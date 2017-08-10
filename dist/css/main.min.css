@@ -2877,7 +2877,8 @@ button {
     color: #000 !important; }
 
 .bl_callBack,
-.bl_callBack__forUser {
+.bl_callBack__forUser,
+.popup_likeShopbag {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -2893,7 +2894,8 @@ button {
 .bl_callBack__forUser {
   min-height: 270px; }
 
-.bl_callBack__close {
+.bl_callBack__close,
+.popup_likeShopbag__close {
   float: right;
   margin-top: 9px;
   margin-right: 11px;
@@ -2904,7 +2906,8 @@ button {
   font-size: 18px;
   font-weight: 400;
   cursor: pointer; }
-  .bl_callBack__close:hover {
+  .bl_callBack__close:hover,
+  .popup_likeShopbag__close:hover {
     color: #ff4e54; }
 
 .bl_callBack__wrapper {
@@ -4429,6 +4432,18 @@ button {
   max-width: 120px;
   margin-right: 2%; }
 
+.shoppingBasket_product__description {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 120px;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .shoppingBasket_product__name {
   text-align: left;
   margin: 0;
@@ -4514,6 +4529,57 @@ button {
 
 .error_text {
   color: red; }
+
+.TEST_BUTTON {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  background-color: #f00;
+  cursor: pointer; }
+
+.popup_likeShopbag {
+  border: 2px solid #11da82;
+  padding: 0 20px 20px;
+  min-height: initial; }
+
+.popup_likeShopbag__text_main {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 3% auto 10px;
+  font-size: 24px; }
+
+.popup_likeShopbag__text {
+  margin: 5px; }
+
+.popup_likeShopbag__buttons {
+  width: 100%;
+  vertical-align: top;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+.popup_likeShopbag__continueBuying,
+.popup_likeShopbag__goToShopbag {
+  width: 45%; }
+
+.popup_likeShopbag__buttons_text {
+  padding: 0 5px; }
+
+.popup_likeShopbag__goToShopbag_text {
+  padding: 0 5px;
+  color: #fff;
+  transition: 0.2s all; }
+  .popup_likeShopbag__goToShopbag_text:hover {
+    color: #000; }
 
 /*********************************************/
 /*FOOTER*/

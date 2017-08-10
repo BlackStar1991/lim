@@ -373,6 +373,44 @@ $(document).ready(function () {
 //
 //     showCallbackForm();
 
+
+//    POPUP BUY PRODUCT
+
+    function popupBuyProduct() {
+
+        $(".TEST_BUTTON").on("click", function () {
+            $(".blackWrapper").removeClass("hidden");
+            $(".popup_likeShopbag").removeClass("hidden");
+
+        });
+
+        var hiddenButtons = $(".popup_likeShopbag__close, .popup_likeShopbag__continueBuying");
+
+        hiddenButtons.on("click", function () {
+            $(".blackWrapper").addClass("hidden");
+            $(".popup_likeShopbag").addClass("hidden");
+        });
+
+
+        $(".popup_likeShopbag__goToShopbag").on("click", function () {  /// Я не знаю будет ли вообще срабатывать эта функция если там ссылка. Есди нет, но убери
+            $(".blackWrapper").addClass("hidden");
+            $(".popup_likeShopbag").addClass("hidden");
+        })
+
+
+
+    }popupBuyProduct();
+
+
+
+
+
+
+
+
+
+
+
 // FILTER for telephone number
 
     $("input[type='tel']").on("change keyup input click", function() {

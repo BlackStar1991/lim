@@ -1841,7 +1841,8 @@ button {
 $widthBlock: 342px;
 
 .bl_callBack,
-.bl_callBack__forUser {
+.bl_callBack__forUser,
+.popup_likeShopbag{
   position: fixed;
   left: 50%;
   top: 50%;
@@ -1860,7 +1861,8 @@ $widthBlock: 342px;
   min-height: 270px;
 }
 
-.bl_callBack__close {
+.bl_callBack__close,
+.popup_likeShopbag__close{
   float: right;
   margin-top: 9px;
   margin-right: 11px;
@@ -3764,7 +3766,12 @@ $widthBlock: 342px;
 }
 
 .shoppingBasket_product__description{
-  //margin-left: 4%;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 120px; // зависит от размеров фотки
+  justify-content: center;
+
 }
 
 .shoppingBasket_product__name{
@@ -3885,6 +3892,77 @@ $widthBlock: 342px;
 
 .error_text{
   color: red;
+}
+
+
+
+
+
+// popup_likeShopbag
+
+.TEST_BUTTON{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  background-color: #f00;
+  cursor: pointer;
+}
+
+
+.popup_likeShopbag{
+ border: 2px solid #11da82;
+ padding: 0 20px 20px;
+ min-height: initial;
+}
+
+.popup_likeShopbag__text_main{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin: 3% auto 10px;
+  font-size: 24px;
+}
+
+.popup_likeShopbag__text{
+
+  margin: 5px;
+}
+
+.popup_likeShopbag__product{
+
+}
+
+.popup_likeShopbag__buttons{
+  width: 100%;
+  vertical-align: top;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+.popup_likeShopbag__continueBuying,
+.popup_likeShopbag__goToShopbag{
+  width: 45%;
+}
+
+.popup_likeShopbag__product_img{
+
+}
+
+.popup_likeShopbag__buttons_text{
+  padding: 0 5px;
+}
+.popup_likeShopbag__goToShopbag_text{
+  padding: 0 5px;
+  color: #fff;
+  transition: 0.2s all;
+  &:hover{
+    color: #000;
+  }
 }
 
 /*********************************************/

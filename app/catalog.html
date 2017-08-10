@@ -18,8 +18,21 @@
     <link rel="apple-touch-icon" sizes="72x72" href="image/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="image/favicon/apple-touch-icon-114x114.png">
 
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <!-- build:css css/libs.min.css -->
+    <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="bower/owl.carousel/dist/assets/owl.carousel.min.css">
+
+    <!-- endbuild -->
+    <!-- build:css css/main.min.css -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!-- endbuild -->
 
 </head>
 
@@ -295,7 +308,7 @@
 
             <div class="bl_filters">
 
-                <h3 class="bl_filters__caterogyName decor_triangle code_mensClutch code_sliderName">Мужские клатчи</h3>
+                <h3 class="bl_filters__caterogyName decor_triangle  code_sliderName">Мужские клатчи</h3>
                 <ul class="bl_filters__mensClutch bl_filters__subList code_sliderList hidden">
                     <!-- списки с классами code_sliderList должны иметь классы hidden -->
                     <li class="bl_filters__item"><h4 class="bl_filters__caterogyName bl_filters__caterogyName_subName">
@@ -1218,8 +1231,15 @@
 <div class="blackWrapper hidden"></div>
 <script src="libs/jquery.min.js"></script>
 
-<script src="js/libs.min.js"></script>
-<script src="js/common.min.js"></script>
+<!-- build:js js/libs.min.js -->
+
+<script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower/owl.carousel/dist/owl.carousel.min.js"></script>
+
+<!-- endbuild -->
+<!-- build:js js/common.min.js -->
+<script src="js/common.js"></script>
+<!-- endbuild -->
 
 </body>
 </html>
