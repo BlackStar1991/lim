@@ -332,46 +332,46 @@ $(document).ready(function () {
     paginationButtons();
 
 
-//   CALLBACK FORM
-//     function showCallbackForm() {
-//         var fullBlackBlock = $(".blackWrapper"),
-//
-//             callBackButtonForUser = $(".open-call__text"),
-//             callBackButton = $(".bl_products__callBack"),
-//
-//             trashClass = $(".trashClass"),
-//
-//             callBackForm = $(".bl_callBack"),
-//             callBackFormForUser = $(".bl_callBack__forUser"),
-//
-//             allCallBackForms = $(".bl_callBack, .bl_callBack__forUser"),
-//
-//             closeButton = $(".bl_callBack__close"),
-//             resetButton = $(".bl_callBack__reset");
-//
-//
-//         function hideShowForm(pushedButton, whatFormShowhed, closeButton) {
-//             pushedButton.on("click", function () {
-//
-//
-//                 fullBlackBlock.toggleClass("hidden");
-//                 whatFormShowhed.toggleClass("hidden");
-//
-//                 closeButton.addClass("hidden");
-//             });
-//         }
-//
-//         hideShowForm(callBackButton, callBackForm, trashClass);    /// Show form
-//         hideShowForm(callBackButtonForUser, callBackFormForUser, trashClass); /// Show form
-//
-//
-//         hideShowForm(closeButton, trashClass, allCallBackForms); /// Hide form
-//         hideShowForm(resetButton, trashClass, allCallBackForms);  /// Hide form
-//
-//
-//     }
-//
-//     showCallbackForm();
+  // CALLBACK FORM
+    function showCallbackForm() {
+        var fullBlackBlock = $(".blackWrapper"),
+
+            callBackButtonForUser = $(".open-call__text"),
+            callBackButton = $(".bl_products__callBack"),
+
+            trashClass = $(".trashClass"),
+
+            callBackForm = $(".bl_callBack"),
+            callBackFormForUser = $(".bl_callBack__forUser"),
+
+            allCallBackForms = $(".bl_callBack, .bl_callBack__forUser"),
+
+            closeButton = $(".bl_callBack__close"),
+            resetButton = $(".bl_callBack__reset");
+
+
+        function hideShowForm(pushedButton, whatFormShowhed, closeButton) {
+            pushedButton.on("click", function () {
+
+
+                fullBlackBlock.toggleClass("hidden");
+                whatFormShowhed.toggleClass("hidden");
+
+                closeButton.addClass("hidden");
+            });
+        }
+
+        hideShowForm(callBackButton, callBackForm, trashClass);    /// Show form
+        hideShowForm(callBackButtonForUser, callBackFormForUser, trashClass); /// Show form
+
+
+        hideShowForm(closeButton, trashClass, allCallBackForms); /// Hide form
+        hideShowForm(resetButton, trashClass, allCallBackForms);  /// Hide form
+
+
+    }
+
+    showCallbackForm();
 
 
 //    POPUP BUY PRODUCT

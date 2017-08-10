@@ -2093,9 +2093,7 @@ button {
   display: block;
   width: 30px;
   height: 30px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../image/sprite2/soc.png");
+  background: url("../image/sprite2/soc.png") 50% 50% no-repeat;
   position: relative; }
   .social-btn:before {
     content: '';
@@ -2197,14 +2195,18 @@ button {
   background: #ff4e54;
   text-decoration: underline; }
 
-.mail-btn__ico {
-  margin-right: 16px;
-  display: block;
-  background-repeat: no-repeat;
-  background-image: url("../image/sprite2/main-ico.png");
+.mail-btn__text {
+  position: relative;
+  margin: 0 auto; }
+
+.mail-btn__ico:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
   width: 23px;
   height: 15px;
-  background-position: -150px -20px; }
+  background: url("../image/sprite2/main-ico.png") no-repeat -150px -20px; }
 
 .mail-form__btn {
   margin-right: 15px; }
@@ -2313,7 +2315,7 @@ button {
   margin-right: 8px; }
 
 .bl_breadcrumbs {
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%; }
   .bl_breadcrumbs__item {
     position: relative;
@@ -2884,34 +2886,33 @@ button {
   top: 50%;
   width: 100%;
   max-width: 628px;
-  min-height: 396px;
+  min-height: 250px;
+  padding: 10px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 1080; }
 
-.bl_callBack__forUser {
-  min-height: 270px; }
-
 .bl_callBack__close,
 .popup_likeShopbag__close {
-  float: right;
-  margin-top: 9px;
-  margin-right: 11px;
-  width: 11px;
-  height: 13px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
   color: black;
   font-family: "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 4; }
   .bl_callBack__close:hover,
   .popup_likeShopbag__close:hover {
     color: #ff4e54; }
 
 .bl_callBack__wrapper {
-  padding: 15px 40px 0; }
+  padding: 10px 0; }
 
 .bl_callBack__img {
   float: left; }
@@ -2938,7 +2939,7 @@ button {
 
 .bl_callBack__tel {
   width: 342px;
-  margin: 15px auto 0; }
+  margin: 0 auto; }
   .bl_callBack__tel_wrapper {
     position: relative;
     margin: 0 auto;
@@ -2946,15 +2947,12 @@ button {
     height: 100%;
     background-color: #f4f4f4; }
 
-.bl_callBack__user {
-  width: 342px;
-  margin: 15px auto; }
-  .bl_callBack__user_wrapper {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    background-color: #f4f4f4; }
+.bl_callBack__user_wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4; }
 
 .bl_callBack__prefix {
   margin-left: 15px;
@@ -2964,13 +2962,7 @@ button {
   font-size: 24px; }
 
 .bl_callBack__user_name {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 42px;
-  color: #333;
-  font-family: "Tahoma", sans-serif;
-  font-size: 24px; }
+  text-align: center; }
 
 .bl_callBack__placeForTelephone,
 .bl_callBack__user_fild {
@@ -2980,40 +2972,32 @@ button {
   height: 31px; }
   .bl_callBack__placeForTelephone::-webkit-input-placeholder,
   .bl_callBack__user_fild::-webkit-input-placeholder {
-    width: 167px;
     letter-spacing: 4px;
     text-align: center;
-    text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
   .bl_callBack__placeForTelephone::-moz-placeholder,
   .bl_callBack__user_fild::-moz-placeholder {
-    width: 167px;
     letter-spacing: 4px;
     text-align: center;
-    text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
   .bl_callBack__placeForTelephone:-ms-input-placeholder,
   .bl_callBack__user_fild:-ms-input-placeholder {
-    width: 167px;
     letter-spacing: 4px;
     text-align: center;
-    text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
     font-weight: 400; }
   .bl_callBack__placeForTelephone::placeholder,
   .bl_callBack__user_fild::placeholder {
-    width: 167px;
     letter-spacing: 4px;
     text-align: center;
-    text-indent: 21px;
     color: #c1c1c1;
     font-family: "Tahoma", sans-serif;
     font-size: 20px;
@@ -3021,23 +3005,23 @@ button {
 
 .bl_callBack__user_fild {
   display: block;
-  width: 90%;
-  margin: 0 auto 10px; }
+  margin: 10px auto; }
 
-.bl_callBack__submit {
+.bl_callBack__submit,
+.bl_callBack__submit_product {
   float: left;
-  margin-top: 28px;
   text-align: center;
   text-transform: uppercase;
   width: 155px;
   height: 28px;
   background-color: #ec5d5d;
   border: 1px solid #ee4037; }
-  .bl_callBack__submit:hover {
+  .bl_callBack__submit:hover,
+  .bl_callBack__submit_product:hover {
     color: #fff; }
 
-.bl_callBack__reset {
-  margin-top: 28px;
+.bl_callBack__reset,
+.bl_callBack__reset_product {
   float: right;
   text-align: center;
   text-transform: uppercase;
@@ -3359,7 +3343,7 @@ button {
   text-transform: uppercase;
   padding-top: 10px;
   padding-bottom: 18px;
-  border-bottom: 1px solid  #eceaea; }
+  border-bottom: 1px solid #eceaea; }
 
 .bl_topic__description {
   display: inline-block; }
@@ -3771,12 +3755,11 @@ button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
+  margin: 0 auto 10px;
   background: #eceaea;
   border: 1px dashed #b9b9b9;
   border-radius: 50%;
-  font-size: 30px;
-  margin-bottom: 10px; }
+  font-size: 30px; }
 
 .prior-item__title {
   text-align: center;
@@ -3904,8 +3887,7 @@ button {
     margin-top: 5px;
     font-size: 16px; }
   .main-descript-tab li {
-    padding: 8px 30px;
-    padding-left: 40px;
+    padding: 8px 30px 8px 40px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -4190,7 +4172,6 @@ button {
   border: none; }
 
 .ocfilter-option label a {
-  color: transparent;
   font-family: "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -4215,11 +4196,6 @@ button {
 .option-values label span {
   padding-left: 20px; }
 
-/*.ocfilter-option label input {
-	position: absolute;
-	visibility: hidden;
-}
-*/
 .option-values label > input:checked label a:before {
   position: absolute;
   left: 2px;
@@ -4445,7 +4421,7 @@ button {
           justify-content: center; }
 
 .shoppingBasket_product__name {
-  text-align: left;
+  text-align: center;
   margin: 0;
   font-size: 16px;
   color: #000; }
@@ -4528,7 +4504,11 @@ button {
     background-color: #ff4e54; }
 
 .error_text {
-  color: red; }
+  display: inline-block;
+  color: red;
+  height: 28px;
+  width: 100%;
+  text-align: center; }
 
 .TEST_BUTTON {
   width: 50px;
