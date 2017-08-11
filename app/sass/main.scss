@@ -392,7 +392,11 @@ button {
       transition: all 0.2s;
 
       &:before {
-        content: "";
+        content: "\f053";
+        font-family: $FontAwesom;
+        color: #fff;
+        font-size: 18px;
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -400,15 +404,19 @@ button {
         display: block;
         width: 13px;
         height: 17px;
-        background: url("../image/arrowForSliderLeft.svg") 50% 50% no-repeat;
+
+        //background: url("../image/arrowForSliderLeft.svg") 50% 50% no-repeat;
 
       }
 
       &:hover {
         transition: all 0.2s;
         background-color: #fff;
+
+
         &:before {
-          background: url("../image/arrowForSliderLeftHover.svg") 50% 50% no-repeat;
+          color: #000;
+          //background: url("../image/arrowForSliderLeftHover.svg") 50% 50% no-repeat;
         }
       }
 
@@ -425,7 +433,11 @@ button {
       background-color: #202020;
 
       &:before {
-        content: "";
+        content: "\f054";
+        font-family: $FontAwesom;
+        color: #fff;
+        font-size: 18px;
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -433,7 +445,7 @@ button {
         display: block;
         width: 13px;
         height: 17px;
-        background: url("../image/arrowForSliderRight.svg") 50% 50% no-repeat;
+        //background: url("../image/arrowForSliderRight.svg") 50% 50% no-repeat;
 
       }
 
@@ -441,7 +453,8 @@ button {
         transition: all 0.2s;
         background-color: #fff;
         &:before {
-          background: url("../image/arrowForSliderRightHover.svg") 50% 50% no-repeat;
+          color: #000;
+          //background: url("../image/arrowForSliderRightHover.svg") 50% 50% no-repeat;
         }
       }
 
@@ -946,7 +959,6 @@ button {
   color: #000;
   font-size: 16rem;
   text-transform: uppercase;
-  -webkit-text-stroke: .03em #000;
   text-stroke: .03em #000;
 
 }
@@ -1876,7 +1888,7 @@ $widthBlock: 342px;
 
 .bl_callBack__tel {
   width: $widthBlock;
-  margin: 0 auto;
+  margin: 10px auto 0;
   &_wrapper {
     position: relative;
     margin: 0 auto;
@@ -1907,9 +1919,17 @@ $widthBlock: 342px;
   font-size: 24px;
 }
 
+
+
 .bl_callBack__user_name {
   text-align: center;
 }
+
+
+.bl_callBack__user_wrapper{
+  max-width: 342px;
+}
+
 
 .bl_callBack__placeForTelephone,
 .bl_callBack__user_fild {
@@ -1935,7 +1955,10 @@ $widthBlock: 342px;
 .bl_callBack__user_fild {
 
   display: block;
+  width: 80%;
   margin: 10px auto;
+
+
 }
 
 .bl_callBack__submit,
@@ -2026,23 +2049,22 @@ $widthBlock: 342px;
   width: 100%;
   height: 112px;
   background-color: #f4f4f4;
-
-  //border: 1px solid #000;
 }
+
+
+
 
 .blog_search__wrapper {
 
   padding-top: 17px;
   margin-left: 10px;
   margin-right: 10px;
-  //border: 1px solid #000;
+
 }
 
 .blog_search__field {
   position: relative;
 
-  //margin-right: 20px;
-  //padding-right: 10px;
   width: 100%;
   height: 35px;
   box-sizing: border-box;
@@ -3635,11 +3657,14 @@ $widthBlock: 342px;
 }
 
 .shoppingBasket_product__name {
-  //text-align: left;
-  text-align: center;
+  text-align: left;
   margin: 0;
   font-size: 16px;
   color: #000;
+
+  &.popup_likeShopbag__text{
+    text-align: center;
+  }
 }
 
 .shoppingBasket_product__value {

@@ -1716,7 +1716,10 @@ button {
       font-size: 38px;
       transition: all 0.2s; }
       .owl-carousel .owl-nav .owl-prev:before {
-        content: "";
+        content: "\f053";
+        font-family: "FontAwesome";
+        color: #fff;
+        font-size: 18px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1725,13 +1728,12 @@ button {
                 transform: translate(-50%, -50%);
         display: block;
         width: 13px;
-        height: 17px;
-        background: url("../image/arrowForSliderLeft.svg") 50% 50% no-repeat; }
+        height: 17px; }
       .owl-carousel .owl-nav .owl-prev:hover {
         transition: all 0.2s;
         background-color: #fff; }
         .owl-carousel .owl-nav .owl-prev:hover:before {
-          background: url("../image/arrowForSliderLeftHover.svg") 50% 50% no-repeat; }
+          color: #000; }
     .owl-carousel .owl-nav .owl-next {
       position: absolute;
       right: 0;
@@ -1741,7 +1743,10 @@ button {
       font-weight: bold;
       background-color: #202020; }
       .owl-carousel .owl-nav .owl-next:before {
-        content: "";
+        content: "\f054";
+        font-family: "FontAwesome";
+        color: #fff;
+        font-size: 18px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1750,13 +1755,12 @@ button {
                 transform: translate(-50%, -50%);
         display: block;
         width: 13px;
-        height: 17px;
-        background: url("../image/arrowForSliderRight.svg") 50% 50% no-repeat; }
+        height: 17px; }
       .owl-carousel .owl-nav .owl-next:hover {
         transition: all 0.2s;
         background-color: #fff; }
         .owl-carousel .owl-nav .owl-next:hover:before {
-          background: url("../image/arrowForSliderRightHover.svg") 50% 50% no-repeat; }
+          color: #000; }
 
 .prod-slider.owl-carousel .owl-prev,
 .goods-slid.owl-carousel .owl-prev {
@@ -2225,7 +2229,6 @@ button {
   color: #000;
   font-size: 16rem;
   text-transform: uppercase;
-  -webkit-text-stroke: .03em #000;
   text-stroke: .03em #000; }
 
 .foot-info-list__title {
@@ -2939,7 +2942,7 @@ button {
 
 .bl_callBack__tel {
   width: 342px;
-  margin: 0 auto; }
+  margin: 10px auto 0; }
   .bl_callBack__tel_wrapper {
     position: relative;
     margin: 0 auto;
@@ -2963,6 +2966,9 @@ button {
 
 .bl_callBack__user_name {
   text-align: center; }
+
+.bl_callBack__user_wrapper {
+  max-width: 342px; }
 
 .bl_callBack__placeForTelephone,
 .bl_callBack__user_fild {
@@ -3005,6 +3011,7 @@ button {
 
 .bl_callBack__user_fild {
   display: block;
+  width: 80%;
   margin: 10px auto; }
 
 .bl_callBack__submit,
@@ -4421,10 +4428,12 @@ button {
           justify-content: center; }
 
 .shoppingBasket_product__name {
-  text-align: center;
+  text-align: left;
   margin: 0;
   font-size: 16px;
   color: #000; }
+  .shoppingBasket_product__name.popup_likeShopbag__text {
+    text-align: center; }
 
 .shoppingBasket_product__value {
   text-align: left;
