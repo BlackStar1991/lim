@@ -3160,6 +3160,12 @@ $widthBlock: 342px;
   background: url("../image/star_full.svg") 50% 50% no-repeat;
 }
 
+
+.review_textarea{
+  margin-top: 10px;
+}
+
+
 .button_lim {
   display: block;
   margin: 8px auto 0; ////26px
@@ -3842,6 +3848,48 @@ $widthBlock: 342px;
     color: #000;
   }
 }
+
+
+.close {
+  margin-top: -4px;
+  margin-right: -6px;
+}
+
+//// Errors
+
+
+.checkout-cart #content{
+  min-height: 200px;
+}
+
+.bl_error__button{
+  max-width: 250px;
+  text-transform: uppercase;
+
+  &:hover{
+    background-color: #ee4037;
+  }
+
+}
+
+.bl_error__button a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  line-height: 3;
+}
+
+
+.bl_error__text{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight:bold;
+}
+
+
+
+
 
 /*********************************************/
 /*FOOTER*/

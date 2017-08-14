@@ -569,9 +569,6 @@
   .top-panel-footer__soc-list {
 
     display: none;
-
-    //padding: 0;
-    //margin-bottom: 10px;
   }
 
   .top-panel-footer {
@@ -582,6 +579,16 @@
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .bl_review__raiting {
+    margin-top: 10px;
+  }
+
+  .review_textarea{
+    margin-top: 25px;
+  }
+}
+
 
 @media (max-width: 700px) {
 
