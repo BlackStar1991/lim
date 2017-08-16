@@ -3365,6 +3365,10 @@ $widthBlock: 342px;
   color: #333;
 }
 
+#ocfilter-mobile .navbar-default{
+  display:none;
+}
+
 .option-values label {
   position: relative;
   padding-left: 20px;
@@ -3436,6 +3440,9 @@ $widthBlock: 342px;
 .popover-content .btn-primary:hover {
   background-color: #ff4e54;
 }
+
+
+
 
 // PRODUCT CARD
 
