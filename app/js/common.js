@@ -454,7 +454,6 @@ $(document).ready(function () {
 
 
 
-
     //counter card
     var counterCard = 1;
     $('.counter__item--plus').click(function() {

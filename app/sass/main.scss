@@ -177,6 +177,15 @@ a {
   }
 }
 
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+}
+
+
+
 p {
   margin: 0;
   padding: 0;
@@ -2455,6 +2464,7 @@ $widthBlock: 342px;
 }
 
 .product-galery__main-img {
+
   margin-bottom: 10px;
 }
 
@@ -2468,7 +2478,7 @@ $widthBlock: 342px;
   transition: all 150ms linear;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .zoo-item .zoo-img {
@@ -2480,7 +2490,7 @@ $widthBlock: 342px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: transform 0.5s ease-out
+  transition: transform 0.5s ease-out;
 }
 
 /////////

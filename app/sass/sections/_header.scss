@@ -287,63 +287,10 @@
   margin-bottom: 16px;
 }
 
-.head-search {
+.header-desc__search{
   position: relative;
 
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 15px;
-    margin: auto;
-    cursor: pointer;
-    @include sprite($search);
-    z-index: 4;
-
-  }
-
-}
-
-::-webkit-input-placeholder {
-  color: $black;
-  opacity: 1;
-  transition: opacity .3s
-}
-
-::-moz-placeholder {
-  color: $black;
-  opacity: 1;
-  transition: opacity .3s
-}
-
-:-moz-placeholder {
-  color: $black;
-  opacity: 1;
-  transition: opacity .3s
-}
-
-:-ms-input-placeholder {
-  color: $black;
-  opacity: 1;
-  transition: opacity .3s
-}
-
-:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-:focus::-moz-placeholder {
-  opacity: 0;
-}
-
-:focus:-moz-placeholder {
-  opacity: 0;
-}
-
-:focus:-ms-input-placeholder {
-  opacity: 0;
+  //overflow: hidden;
 }
 
 .head-search__input {
@@ -360,18 +307,27 @@
 }
 
 .head-search__ico {
+
   display: block;
   position: absolute;
-  //height: 100%;
-  width: 46px;
-  z-index: 15;
   top: 0;
   left: 0;
-  cursor: pointer;
   background: none;
   border: none;
+  width: 40px;
+  height: 40px;
   box-sizing: border-box;
+  z-index: 15;
 
+
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    @include sprite($search);
+  }
 }
 
 .header-desc__search-menu {
