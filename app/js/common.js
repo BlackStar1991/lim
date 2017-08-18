@@ -403,21 +403,12 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-
-
 // FILTER for telephone number
 
-    $("input[type='tel']").on("change keyup input click", function() {
-        if (this.value.match(/[^0-9]/g)) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        }
-    });
+    var telephonseInput = $("input[type='tel']");
+    telephonseInput.mask( "+38 (0" + "99) 999-99-99", {placeholder: "+38 (0__) ___+__+__"});
+
+
 
 
 
@@ -428,39 +419,67 @@ $(document).ready(function () {
 
 
     //img
-    $('.product-galery__pic').attr('src', $('.prod-slider__item:first-child  img').attr('src'));
 
-    $('body').on('click', '.prod-slider__wp-img', function() {
-        var src = $(this).find('img').attr('src');
+    function mainPictureForProduct() {
 
-        $('.product-galery__pic').attr('src', src);
+        $('.product-galery__pic').attr('src', $('.prod-slider__item:first-child  img').attr('src'));
+
+        $('.prod-slider__item').on('click', '.prod-slider__pic', function() {
+
+            var currentSrc = $(this).attr('src');
+            var currentSrcBig = currentSrc.split(".").join("-big.");
+
+            console.log("currentSrc =" + currentSrc);
+            console.log("currentSrcBig =" + currentSrcBig);
+
+            $('.product-galery__mainImage').attr('src', currentSrc);
+            $(".zoo-item").attr("data-zoo-image", currentSrcBig);
+
+            zoomPictute();
+
+        });
+
+        zoomPictute();
+    }
+    mainPictureForProduct();
+
+
+    ////////////////// ZOOM PICTURE
+
+    function zoomPictute() {
+        $('.zoo-item').ZooMove();
+    }
+
+
+
+
+
+
+    //counter card
+    var counterCard = 1;
+    $('.counter__item--plus').click(function() {
+        counterCard = counterCard + 1;
+        $('.counter__item-text').val(counterCard);
+    });
+
+    $('.counter__item--minus').click(function() {
+        counterCard =   $('.counter__item-text').val();
+        counterCard = counterCard - 1;
+        $('.counter__item-text').val(counterCard);
+
+        if( counterCard < 1 ){
+            counterCard = 0;
+            $('.counter__item-text').val(counterCard);
+        }
+    });
+
+    $('body').on('change', '.counter__item-text', function(){
+        counterCard =  + $('.counter__item-text').val();
+
 
     });
 
 
-    //counter card
-    // var counterCard = 1;
-    // $('.counter__item--plus').click(function() {
-    //     counterCard = counterCard + 1;
-    //     $('.counter__item-text').val(counterCard);
-    // });
-    //
-    // $('.counter__item--minus').click(function() {
-    //     counterCard =   $('.counter__item-text').val();
-    //     counterCard = counterCard - 1;
-    //     $('.counter__item-text').val(counterCard);
-    //
-    //     if( counterCard < 1 ){
-    //         counterCard = 0;
-    //         $('.counter__item-text').val(counterCard);
-    //     }
-    // });
-    //
-    // $('body').on('change', '.counter__item-text', function(){
-    //     counterCard =  + $('.counter__item-text').val();
-    //
-    //
-    // });
 
 
     //TAB
