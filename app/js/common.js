@@ -165,16 +165,15 @@ $(document).ready(function () {
 
 
 // Ancor
-    jQuery(".link-top").click(function () {
-        var elementClick = jQuery(this).attr("href");
-        var destination = jQuery(elementClick).offset().top;
-        jQuery("html, body").animate({
-            scrollTop: destination
-        }, 300);
-
-
-        return false;
+    $(".bl_ancor").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 500);
     });
+
+
+
 
 //MENU
     var headerPage = $('.header-page');
@@ -596,5 +595,42 @@ $(window).resize(function(){
 $(window).resize();
 
 
+
+
+// Showed ancor only when scrolling > scrineSize
+// Fixed mainMenu
+
+    var mainNavigation = $(".main-nav"),
+        topNavigation = mainNavigation.offset().top,
+        mainNavigationFixed = "main-nav__fixed";
+
+    $(window).scroll(function () {
+
+        var ancor = $(".bl_ancor"),
+            windowHeight = $(window).height() / 2;
+
+        var screenWidth = screen.width;
+
+        if ($(this).scrollTop() > windowHeight) {
+            ancor.removeClass("hidden");
+
+        } else {
+            ancor.addClass("hidden");
+        }
+
+        if (($(this).scrollTop() >= topNavigation) && (screenWidth >= 1027)) {
+            mainNavigation.addClass(mainNavigationFixed);
+        } else {
+            mainNavigation.removeClass(mainNavigationFixed);
+        }
+
+    });
+
+
+
+
+
 });
+
+
 

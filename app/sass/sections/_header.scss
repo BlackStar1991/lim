@@ -69,6 +69,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:after {
+      display: none;
+    }
   }
 }
 
@@ -287,7 +291,7 @@
   margin-bottom: 16px;
 }
 
-.header-desc__search{
+.header-desc__search {
   position: relative;
 
   //overflow: hidden;
@@ -319,9 +323,7 @@
   box-sizing: border-box;
   z-index: 15;
 
-
-
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     top: 12px;
@@ -378,7 +380,7 @@
 
 .header-desc__phones {
   max-width: 360px;
-  padding-right: 10px;
+  //padding-right: 10px;
 }
 
 .phones-list__link {
@@ -427,6 +429,42 @@
   white-space: nowrap;
 }
 
+.header-desc__productCompare {
+  max-width: 46px;
+}
+
+.header-desc__productCompare_button {
+  position: relative;
+  margin: 4px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+
+  &:hover {
+
+    border-color: $color_pink2;
+
+    .header-desc__productCompare_link {
+      color: $color_pink2;
+    }
+  }
+}
+
+.header-desc__productCompare_link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 2;
+  font-size: 20px;
+  color: #000;
+}
+
 .header-desc__cart-head {
   max-width: 150px;
 }
@@ -434,6 +472,12 @@
 .main-nav {
   background-color: #f2f2f2;
   border-bottom: 1px solid #dfdfdf;
+}
+
+.main-nav__fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .main-menu {

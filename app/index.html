@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild -->
-    
+
 </head>
 
 <body class="body">
@@ -180,7 +180,6 @@
 
                     <div class="open-call__text">Заказать обратный звонок</div>
                 </div>
-
                 <ul class="phones-list  header-desc__phones-list">
                     <li class="phones-list__item">
                         <a class="phones-list__link" href="tel:+380500000000">+38(050) 000-00-00</a>
@@ -199,6 +198,17 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="header-desc__productCompare">
+                <button class="btn header-desc__productCompare_button" title="Закладки">
+                    <a  href="#" class="header-desc__productCompare_link fa fa-tags" aria-hidden="true"></a>
+                </button>
+
+                <button class="btn header-desc__productCompare_button" title="Сравнение">
+                    <a  href="#" class="header-desc__productCompare_link fa fa-balance-scale" aria-hidden="true"></a>
+                </button>
+            </div>
+
 
             <div class="header-desc__cart-head">
                 <div class="cart-head">
@@ -228,7 +238,7 @@
         </div>
     </div>
 
-    <nav class="main-nav  header-page__nav">
+    <nav class="main-nav header-page__nav">
         <div class="container">
             <ul class="main-menu">
                 <li class="main-menu__item">
@@ -302,10 +312,11 @@
             </div>
 
             <div class="card-product__galery">
-                <div class="product-galery" >
+                <div class="product-galery">
                     <div class="product-galery__main-img">
-                        <figure class="zoo-item" data-zoo-image="image/category/1_category-big.jpg" data-zoo-cursor="true" data-zoo-move="url('../image/search.svg')" data-zoo-scale="2">
-                            <img class="product-galery__mainImage"  src="image/category/1_category.jpg"  alt="Сумка">
+                        <figure class="zoo-item" data-zoo-image="image/category/1_category-big.jpg"
+                                data-zoo-cursor="true" data-zoo-move="url('../image/search.svg')" data-zoo-scale="2">
+                            <img class="product-galery__mainImage" src="image/category/1_category.jpg" alt="Сумка">
                         </figure>
                     </div>
 
@@ -364,7 +375,6 @@
                             </li>
 
                             <li class="min-info-list__item min-info-list__item--mark   active">
-                                <!--						class	no-active-->
                                 Наличие:
                                 <span class="min-info-list__mark"></span>
                                 Есть в наличии
@@ -382,22 +392,20 @@
                                 <div class="grba-list">
 
 
-
                                     <label class="grba-list__item">
-                                        <input class="grba-list__input"  name="product_color" type="radio" checked>
+                                        <input class="grba-list__input" name="product_color" type="radio" checked>
                                         <span class="grba-list__color black"></span>
                                     </label>
 
 
-
                                     <label class="grba-list__item">
-                                        <input class="grba-list__input"  name="product_color" type="radio">
+                                        <input class="grba-list__input" name="product_color" type="radio">
                                         <span class="grba-list__color grou"></span>
                                     </label>
 
 
                                     <label class="grba-list__item">
-                                        <input class="grba-list__input"  name="product_color" type="radio">
+                                        <input class="grba-list__input" name="product_color" type="radio">
                                         <span class="grba-list__color green"></span>
                                     </label>
 
@@ -405,8 +413,6 @@
 
 
                             </div>
-
-
 
 
                             <div class="grba-sect__m">
@@ -422,6 +428,7 @@
                             </div>
                         </div>
                     </div>
+
 
                     <div class="card-product-info__price">
                         <div class="good-price">
@@ -439,13 +446,48 @@
                         </div>
                     </div>
 
+                    <div class="bl_minRaiting">
+
+                        <div class="bl_fullStars clearfix">
+                            <input class="bl_raiting__chackbox" id="raiting_star5" type="radio"
+                                   name="raiting" value="5">
+                            <label class="bl_raiting__label" for="raiting_star5"></label>
+
+                            <input class="bl_raiting__chackbox" id="raiting_star4" type="radio"
+                                   name="raiting" value="4">
+                            <label class="bl_raiting__label" for="raiting_star4"></label>
+
+                            <input class="bl_raiting__chackbox" id="raiting_star3" type="radio"
+                                   name="raiting" value="3">
+                            <label class="bl_raiting__label" for="raiting_star3"></label>
+
+                            <input class="bl_raiting__chackbox" id="raiting_star2" type="radio"
+                                   name="raiting" value="2">
+                            <label class="bl_raiting__label" for="raiting_star2"></label>
+
+                            <input class="bl_raiting__chackbox" id="raiting_star1" type="radio"
+                                   name="raiting" value="1">
+                            <label class="bl_raiting__label" for="raiting_star1"></label>
+                        </div>
+
+
+                        <div class="bl_minRaiting__averageValue">
+                            <span class="bl_minRaiting__text">Голосов :</span>
+                            <span class="bl_minRaiting__text">1</span>
+                            <span class="bl_minRaiting__text">Средний балл :</span>
+                            <span class="bl_minRaiting__text">3</span>
+                        </div>
+
+                    </div>
+
+
                     <div class="card-product-info__btn-group">
                         <div class="btn-group">
                             <div class="btn-group__it">
 
-                                    <button class="bl_products__buy btn-buy">
-                                        <span class="bl_products__buy_text">КУПИТЬ</span>
-                                    </button>
+                                <button class="bl_products__buy btn-buy">
+                                    <span class="bl_products__buy_text">КУПИТЬ</span>
+                                </button>
 
                                 <button class="bl_products__callBack btn-call">
                                     <span class="bl_products__callBack_text">Перезвоните мне</span>
@@ -640,14 +682,15 @@
                                 <div class="main-descript-tab__fullTab">
 
 
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia?</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
-                                    ipsum dolor sit amet.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
-                                    ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus illo impedit
-                                    modi molestias, recusandae.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
-                                    ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, nulla?</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia?</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
+                                        ipsum dolor sit amet.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Cumque doloribus illo
+                                        impedit
+                                        modi molestias, recusandae.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, nulla?</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
                                         ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, nulla?</p>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, quia? Lorem
@@ -784,7 +827,7 @@
                                 </p>
                             </div>
 
-                            
+
                             <button class="my_button-review code_addReview">
                                 <span class="button_review">Оставить отзыв о товаре</span>
                                 <i class="fa fa-bookmark" aria-hidden="true"></i>
@@ -794,11 +837,6 @@
                         </div>
 
 
-
-
-
-
-
                         <form class="form-horizontal personal-form-review code_formRewiew" id="form-review">
 
                             <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> Пожалуйста,
@@ -806,7 +844,8 @@
                             </div>
                             <div class="col-xs-12 review_product">
                                 <p class="review_product__title">Написать отзыв о</p>
-                                <h2 class="review_product__title review_product__title__bold">Женская сумка Karfei 1710078-04A черная</h2>
+                                <h2 class="review_product__title review_product__title__bold">Женская сумка Karfei
+                                    1710078-04A черная</h2>
                             </div>
 
                             <div class="form-group required review_form clearfix">
@@ -1015,8 +1054,6 @@
                     </div>
 
 
-
-
                     <div class="product-line__desc products_looked">
                         <ul class="goods-slid products_looked__slider owl-carousel-5 owl-carousel">
 
@@ -1147,7 +1184,6 @@
                                     </div>
                                 </div>
                             </li>
-
 
 
                         </ul>
@@ -1476,10 +1512,24 @@
 
     <div class="line-anchor">
         <div class="container">
-            <a class="link-top" href="#anchor-top"><span class="link-top__text">Вверх</span></a>
+
         </div>
     </div>
 </footer>
+
+
+<!-- ANCOR -->
+
+
+<div class="bl_ancor hidden-xs hidden">
+    <a class="bl_ancor__link" href="#anchor-top">
+        <div class="wrappenBlock">
+            <span class="bl_ancor__text icon-arrow__up">Вверх</span>
+        </div>
+    </a>
+</div>
+
+<!--<a class="link-top" href="#anchor-top"><span class="link-top__text">Вверх</span></a>-->
 
 
 <!-- CALLBACK FORM -->

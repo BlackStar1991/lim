@@ -1030,27 +1030,81 @@ button {
   }
 }
 
-.link-top {
-  display: inline-flex;
-  align-items: center;
-  font-size: 1px;
-  &:after {
-    content: "";
-    border: 6em solid #000;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 8em;
-    height: 8em;
-    border-right: none;
-    border-bottom: none;
-    margin-top: 7px;
+//.link-top {
+//   display: inline-flex;
+//   align-items: center;
+//   font-size: 1px;
+//   &:after {
+//     content: "";
+//     border: 6em solid #000;
+//     transform: rotate(45deg);
+//     width: 8em;
+//     height: 8em;
+//     border-right: none;
+//     border-bottom: none;
+//     margin-top: 7px;
+//   }
+// }
+//
+//.link-top__text {
+//  font-size: 14px;
+//  margin-right: 8px;
+//}
+
+
+.bl_ancor{
+
+  position: fixed;
+
+  bottom: 60px;
+  right: 2%;
+
+  width: 70px;
+  height: 32px;
+  border: 1px solid $color_pink;
+  z-index: 999;
+}
+
+.bl_ancor__link{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  &:hover .bl_ancor__text,
+  &:focus .bl_ancor__text,
+  &:active .bl_ancor__text{
+    color: $color_pink2;
+    text-decoration: underline;
   }
 }
 
-.link-top__text {
+.bl_ancor__text{
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  width: 38px;
+  height: 10px;
+  color: black;
   font-size: 14px;
-  margin-right: 8px;
+  line-height: 30px;
+  text-decoration: none;
 }
+.icon-arrow__up{
+  &:before{
+    position: absolute;
+    content: "\f139";
+    font-family: $FontAwesom;
+    bottom: -20px;
+    left: -52%;
+    font-size: 20px;
+    color: inherit;
+
+  }
+}
+
+
+
+
 
 // CATEGORY
 
@@ -2514,6 +2568,7 @@ $widthBlock: 342px;
 
 .card-product-info__min-list {
   display: flex;
+  margin-bottom: 24px;
   justify-content: space-between;
   font-size: 16px;
   max-width: 460px;
@@ -2586,9 +2641,24 @@ $widthBlock: 342px;
   margin-bottom: 14px;
 }
 
-.card-product-info__min-list {
-  margin-bottom: 23px;
+
+.bl_minRaiting{
+  height: 40px;
+
 }
+
+
+.bl_minRaiting__averageValue{
+  clear: left;
+  display: block;
+  transform: translateY(50%);
+}
+
+.bl_minRaiting__text{
+  font-size: 12px;
+  color: #333;
+}
+
 
 .min-info-list__item {
   &.active {
@@ -2862,6 +2932,7 @@ $widthBlock: 342px;
 }
 
 .card-product-info__btn-group {
+  margin-top: 4px;
   margin-bottom: 38px;
 }
 
@@ -3159,16 +3230,26 @@ $widthBlock: 342px;
   display: inline-block;
 }
 
-.bl_review__raitingFull label {
+.bl_fullStars{
+  float: left;
+  display: block;
+}
+
+
+.bl_review__raitingFull label,
+.bl_fullStars label {
   float: right;
 }
 
-.bl_review__raitingFull input:checked ~ label:before {
+.bl_review__raitingFull input:checked ~ label:before,
+.bl_fullStars input:checked ~ label:before {
   background: url("../image/star_full.svg") 50% 50% no-repeat;
 }
 
 .bl_review__raitingFull label:hover:before,
-.bl_review__raitingFull label:hover ~ label:before {
+.bl_review__raitingFull label:hover ~ label:before,
+.bl_fullStars label:hover:before,
+.bl_fullStars label:hover ~ label:before {
   background: url("../image/star_full.svg") 50% 50% no-repeat;
 }
 
@@ -4080,7 +4161,7 @@ $widthBlock: 342px;
   max-width: 250px;
   text-transform: uppercase;
   background-color: #fff;
-  color: $color_pink;
+  color: $color_pink2;
   
   transition: all .3s;
 
@@ -4088,6 +4169,91 @@ $widthBlock: 342px;
     color: #fff;
     background-color: $color_pink;
   }
+}
+
+
+/* Product-Compare Сравнение продуктов */
+
+
+.bl_compare,
+.bl_wishlist{
+  margin-top: 30px;
+  width: 100%;
+}
+
+.bl_compare.table,
+.bl_wishlist.table{
+  vertical-align: middle;
+}
+
+.bl_compare.table tr td,
+.bl_wishlist.table tr td{
+  vertical-align: middle;
+  text-align: center;
+}
+
+.bl_compare.table tr td:first-child{
+
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.bl_compare__title,
+.bl_wishlist__title{
+  margin-top: 10px;
+}
+
+.bl_compare__button{
+  display: block;
+  font-size: 18px;
+  max-width: 150px;
+  margin:10px auto;
+  box-sizing: border-box;
+}
+
+.bl_compare__button_buy:hover{
+  border: 1px solid #000;
+  color: #000;
+  background-color: transparent;
+}
+
+.bl_compare__button_delite{
+  color: #000;
+  border: 1px solid #000;
+}
+
+.bl_compare__button_delite:hover{
+  text-decoration: underline;
+}
+
+
+/* wishlist  / ЗАКЛАДКИ */
+
+
+.bl_wishlist img{
+  min-width: 100px;
+}
+
+.bl_wishlist thead td{
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.bl_wishlist__button_buy{
+  background-color: #EC5D5D;
+  color: #fff;
+}
+.bl_wishlist__button_buy:hover{
+  background-color: #FF4E54;
+}
+
+
+.bl_wishlist__button_delite{
+  background-color: #000;
+  color: #fff;
+}
+.bl_wishlist__button_delite:hover{
+  color: #fff;
 }
 
 
