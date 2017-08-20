@@ -2309,6 +2309,7 @@ $widthBlock: 342px;
 }
 
 .bl_socbuttons__google {
+  vertical-align: top;
   min-width: 77px;
 }
 
@@ -3569,11 +3570,12 @@ $widthBlock: 342px;
 
 }
 
-.form-control,
-.bl_review__raiting{
+.personal-form-review .form-control,
+.personal-form-review .bl_review__raiting{
   margin-top: 16px;
   height: 30px;
 }
+
 
 .form-lineStyle {
   width: 100%;
@@ -3722,21 +3724,40 @@ $widthBlock: 342px;
   height: 100%;
 }
 
-.delite_product {
+.wrapperButton{
   float: left;
-  margin-left: 2%;
-  width: 17px;
-  height: 17px;
-  color: #969696;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  min-height:120px;
+}
+
+.delite_product {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  color: $color_grey2;
   font-size: 24px;
+
+  &:before{
+
+    content: "\f00d";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+
+
+    font-family:$FontAwesom;
+
+    font-size: 24px;
+    z-index: 2;
+  }
+
 
   &:hover {
     color: $color_pink2;
-  }
-
-  .fa {
-    font-size: 24px;
-    line-height: 5;
   }
 
 }
@@ -4091,7 +4112,7 @@ $widthBlock: 342px;
 }
 
 .bl_number404__tag {
-  position: absolute;
+  position: relative;
   width: 20px;
   height: 32px;
   border: 2px solid #f2f2f2;
@@ -4099,7 +4120,7 @@ $widthBlock: 342px;
   top: 8px;
   left: 38px;
   border-radius: 5px;
-  position: relative;
+
   transform-origin: top;
   animation: rotatingTag 3s linear infinite;
 }

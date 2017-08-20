@@ -190,6 +190,11 @@
     margin-left: 0;
   }
 
+  .header-desc__search{
+    transform: translateY(50%);
+  }
+
+
   .bl_fullStars{
     padding-left: 20px;
   }
@@ -345,9 +350,6 @@
     flex: 1;
   }
 
-  .header-desc__search{
-    top: 30%;
-  }
 
 
   .header-desc__cart-head {
@@ -454,6 +456,7 @@
 
   .header-desc__productCompare{
     position: absolute;
+    top: 0;
     right: 108px;
   }
 
@@ -666,11 +669,7 @@
   .h3-title:before {
     top: -8px;
   }
-  .line-anchor {
-    height: 50px;
-    background-size: auto 100%;
-    padding-right: 10px;
-  }
+
   .h3-title {
     position: relative;
     font-size: 18rem;

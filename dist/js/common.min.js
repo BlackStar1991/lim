@@ -428,9 +428,6 @@ $(document).ready(function () {
             var currentSrc = $(this).attr('src');
             var currentSrcBig = currentSrc.split(".").join("-big.");
 
-            console.log("currentSrc =" + currentSrc);
-            console.log("currentSrcBig =" + currentSrcBig);
-
             $('.product-galery__mainImage').attr('src', currentSrc);
             $(".zoo-item").attr("data-zoo-image", currentSrcBig);
 
