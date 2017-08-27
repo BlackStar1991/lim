@@ -49,13 +49,11 @@
 }
 
 .open-btn__ico {
-  background-image: url('../image/sprite2/main-ico.png');
-  background-repeat: no-repeat;
   display: block;
   width: 17px;
   height: 10px;
   margin-right: 24px;
-  background-position: -89px -137px;
+  background: url('../image/sprite2/main-ico.png') no-repeat -89px -137px;
 }
 
 .services-baner {
@@ -82,8 +80,7 @@
 }
 
 .serv-baner-item__ico {
-  background-image: url('../image/sprite2/main-ico.png');
-  background-repeat: no-repeat;
+  background: url('../image/sprite2/main-ico.png') no-repeat;
   display: block;
   margin-right: 10px;
 }
@@ -177,6 +174,10 @@
   width: 100%;
   height: 36px;
   padding-left: 18px;
+
+  &:hover{
+    background-color: #333;
+  }
 }
 
 .leng-item__text {
@@ -513,6 +514,7 @@
     text-decoration: underline;
   }
 }
+
 
 .open-menu-min {
   min-width: 30px;
