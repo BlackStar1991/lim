@@ -221,7 +221,7 @@
 }
 
 .header-desc {
-  padding: 20px 0;
+  padding: 10px 0;
 
   & > .container {
     display: flex;
@@ -231,8 +231,8 @@
 
 .header-desc__logo {
   padding-right: 10px;
-  margin-top: -10px;
-  margin-left: -4px;
+  //margin-top: -10px;
+  //margin-left: -4px;
 }
 
 .logo {
@@ -242,18 +242,18 @@
 .logo__name {
   display: block;
   color: #000;
-  font-size: 72px;
+  font-size: 82px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.logo__sub {
-  display: block;
-  font-size: 12px;
-  font-weight: 700;
-  color: $black;
-  padding-left: 5px;
-}
+//.logo__sub {
+//  display: block;
+//  font-size: 12px;
+//  font-weight: 700;
+//  color: $black;
+//  padding-left: 5px;
+//}
 
 .services-menu {
   display: flex;
