@@ -2790,10 +2790,15 @@ body[class^="news"] .bl_breadcrumbs {
 
 .view_list__STYLE .bl_products__center__wrapper {
   height: 100%;
+  max-height: 430px;
   vertical-align: middle;
   display: block !important; }
 
 .view_list__STYLE .bl_products__title {
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  line-height: 1;
   font-size: 20px; }
 
 .view_list__STYLE .bl_products__price_oldPrice {
@@ -5687,9 +5692,15 @@ body[class^="news"] .bl_breadcrumbs {
 
 @media (max-width: 991px) {
   .rubric__title {
+    width: 100%;
     text-align: center; }
   .rubric__title_margin {
     margin-left: 24px; }
+  .bl_filters__allFilters {
+    padding: 0; }
+  .rubric__title_text {
+    text-align: center;
+    width: auto; }
   .bl_filters,
   .bl_filters__productsFilters {
     display: none; }
@@ -5874,6 +5885,9 @@ body[class^="news"] .bl_breadcrumbs {
     border-bottom: 1px solid red;
     width: 100%;
     max-width: 100%; }
+  .view_list__STYLE .bl_products__wrapperOne {
+    width: 100%;
+    margin: 0 auto; }
   .card-product__mob-title {
     padding-bottom: 30px;
     display: block; }

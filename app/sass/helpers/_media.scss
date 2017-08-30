@@ -190,6 +190,10 @@
     margin-left: 0;
   }
 
+
+
+
+
   .header-desc__search{
     transform: translateY(50%);
   }
@@ -373,11 +377,21 @@
 @media (max-width: 991px) {
 
   .rubric__title {
+    width: 100%;
     text-align: center;
   }
 
   .rubric__title_margin {
     margin-left: 24px;
+  }
+
+  .bl_filters__allFilters{
+    padding: 0;
+  }
+
+  .rubric__title_text {
+    text-align: center;
+    width: auto;
   }
 
   .bl_filters,
@@ -387,6 +401,10 @@
 
   .rubric__title_button.rubric__title_buttonHidden {
     display: inline-block;
+  }
+
+  .view_list__STYLE .bl_products__title{
+
   }
 
   .bl_filters__allFilters {
@@ -641,6 +659,11 @@
     border-bottom: 1px solid red;
     width: 100%;
     max-width: 100%;
+  }
+
+  .view_list__STYLE .bl_products__wrapperOne{
+    width: 100%;
+    margin: 0 auto;
   }
 
   .card-product__mob-title {
