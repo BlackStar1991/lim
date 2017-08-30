@@ -235,6 +235,10 @@
   //margin-left: -4px;
 }
 
+.header-desc__search .bl_autocompleteSearch {
+  left: auto;
+}
+
 .logo {
   display: block;
 }
@@ -515,6 +519,10 @@
   }
 }
 
+.middle_menu_right > li > a:hover {
+  text-decoration: none !important;
+  color: #ff4e54;
+}
 
 .open-menu-min {
   min-width: 30px;

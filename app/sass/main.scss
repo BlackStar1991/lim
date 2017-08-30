@@ -48,6 +48,10 @@ footer, header, menu, nav, section {
   display: block;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+}
+
 body {
   font-size: 15px;
   color: #000;
@@ -1081,6 +1085,13 @@ button {
 /// Input
 
 input {
+
+  &:focus{
+    &::placeholder{
+      opacity:0;
+    }
+  }
+
   &::placeholder {
     color: #202020;
     opacity: 1;
@@ -1271,21 +1282,21 @@ body[class^="news"] .bl_breadcrumbs {
     font-family: $FontAwesom;
     transition: all 0.2s;
   }
+}
 
-  &__active {
+.decor_triangle__active {
     position: relative;
     &:before {
       font-size: 16px;
       color: inherit;
       position: absolute;
-      left: -15px;
+      left: 10px;
       top: 0;
       content: "\f0da";
       font-family: $FontAwesom;
       transform: rotate(90deg);
       transition: all 0.2s;
     }
-  }
 }
 
 .ocfilter-option .decor_triangle{
@@ -1947,6 +1958,12 @@ $widthBlock: 342px;
   background-color: #fff;
 
   z-index: 1080;
+
+
+  .bl_callBack__title{
+    margin-left: 10px;
+  }
+
 }
 
 .bl_callBack {
@@ -2768,6 +2785,7 @@ $widthBlock: 342px;
 }
 
 .bl_minRaiting {
+  display: inline-block;
   height: 40px;
 
 }
@@ -2981,7 +2999,7 @@ $widthBlock: 342px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 27px;
+  margin-bottom: 14px;
 }
 
 .btn-buy {
@@ -3067,11 +3085,11 @@ $widthBlock: 342px;
 }
 
 .card-product-info__btn-group {
-  margin-top: 4px;
-  margin-bottom: 38px;
+
 }
 
 .card-product-info__prior-list {
+  margin-top: 18px;
   margin-bottom: 25px;
   width: 100%;
 }
@@ -3085,7 +3103,16 @@ $widthBlock: 342px;
   width: 100%;
 }
 
+.card-product-info__tab{
+  margin-top: 20px;
+}
+
+.bl_raitingAndSoc{
+  width: 100%;
+}
+
 .link-social {
+
   display: flex;
   align-items: center;
 }
@@ -3095,11 +3122,16 @@ $widthBlock: 342px;
   margin-right: 10px;
 }
 
-.card-product-info__link-social {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 25px;
+.link-social__wp{
+  display: inline-block;
+}
 
+
+.card-product-info__link-social {
+  display: inline-block;
+  float: right;
+  //display: flex;
+  //justify-content: flex-end;
 }
 
 .info-desc-title__item {
@@ -4150,6 +4182,11 @@ $widthBlock: 342px;
   color: #000;
   text-transform: uppercase;
 }
+/*если нет категорий*/
+.bl_category__text-empty {
+  margin-top: 24px;
+  color: #ff4e54;
+}
 
 .bl_error__text .sub-header {
   font-size: 16px;
@@ -4193,7 +4230,7 @@ $widthBlock: 342px;
 
 .bl_number404__container_bag {
   position: relative;
-  margin: 135px auto 37px;
+  margin: 67px auto 18px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -4661,6 +4698,13 @@ $widthBlock: 342px;
 
 /* Brands  БРЕНДЫ  */
 
+.main-brand .bl_filters {
+  padding-left: 10px;
+}
+.main-brand .bl_category__products {
+  text-align: center;
+}
+
 .bl_brands {
   margin-bottom: 30px;
 }
@@ -4686,7 +4730,74 @@ $widthBlock: 342px;
   font-size: 16px;
 }
 
-//////
+//////* Контакты */
+
+.col-base-list {
+  margin-top: 0;
+}
+.base-list {
+  width: 100%;
+  display: table;
+  margin-bottom: 0;
+}
+.base-list .alltime p,
+.base-list .alltime .text-lim {
+  display: inline-block;
+}
+.base-list ul {
+  display: table-row;
+  list-style: none;
+  padding: 0;
+}
+
+.base-list li {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-left: 3.3em;
+  padding-right: 3em;
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: normal;
+}
+.base-list li:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  width: 1.3em;
+  position: absolute;
+  left: 2px;
+  top: 0;
+  color: #ff4e54;
+  text-align: center;
+  line-height: normal;
+  font-size: 22px;
+  line-height: normal;
+}
+.base-list li.address:before {
+  content: "\f041";
+}
+.base-list li.worktime:before {
+  content: "\f073";
+}
+.base-list li.email:before {
+  content: "\f003";
+}
+.base-list li.telephones:before {
+  content: "\f095";
+}
+.base-list li.alltime:before {
+  content: "\f017";
+}
+.base-list h4 {
+  margin-top: 0;
+}
+.base-list .text-lim {
+  color: #ff4e54;
+  border-bottom: 1px dotted;
+}
+
+
+
 
 /*********************************************/
 /*FOOTER*/
