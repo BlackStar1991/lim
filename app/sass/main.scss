@@ -1086,9 +1086,9 @@ button {
 
 input {
 
-  &:focus{
-    &::placeholder{
-      opacity:0;
+  &:focus {
+    &::placeholder {
+      opacity: 0;
     }
   }
 
@@ -1213,7 +1213,11 @@ body[class^="news"] .bl_breadcrumbs {
   border-bottom: 1px solid $color_grey3;
 }
 
-.rubric__title__filterPrice{
+.main-brand .rubric__title_text {
+  text-align: center;
+}
+
+.rubric__title__filterPrice {
   border: none !important;
 }
 
@@ -1223,7 +1227,7 @@ body[class^="news"] .bl_breadcrumbs {
 }
 
 .rubric__title_margin {
-  margin-left: -18px;  /// -3px
+  margin-left: -18px; /// -3px
 
 }
 
@@ -1266,9 +1270,6 @@ body[class^="news"] .bl_breadcrumbs {
   cursor: pointer;
 }
 
-
-
-
 .decor_triangle {
   position: relative;
 
@@ -1285,27 +1286,25 @@ body[class^="news"] .bl_breadcrumbs {
 }
 
 .decor_triangle__active {
-    position: relative;
-    &:before {
-      font-size: 16px;
-      color: inherit;
-      position: absolute;
-      left: 10px;
-      top: 0;
-      content: "\f0da";
-      font-family: $FontAwesom;
-      transform: rotate(90deg);
-      transition: all 0.2s;
-    }
-}
-
-.ocfilter-option .decor_triangle{
-  &:before{
-    left: 12px;
+  position: relative;
+  &:before {
+    font-size: 16px;
+    color: inherit;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    content: "\f0da";
+    font-family: $FontAwesom;
+    transform: rotate(90deg);
+    transition: all 0.2s;
   }
 }
 
-
+.ocfilter-option .decor_triangle {
+  &:before {
+    left: 12px;
+  }
+}
 
 .decor_triangle__socButton {
   position: relative;
@@ -1354,7 +1353,6 @@ body[class^="news"] .bl_breadcrumbs {
   margin-top: 37px;
   //min-height: 708px;
   min-height: initial;
-
 
   //margin-left: -30px; ///////////////////////
 
@@ -1851,9 +1849,6 @@ body[class^="news"] .bl_breadcrumbs {
   width: 100%;
 }
 
-
-
-
 .pagination {
 
   &.bl_pagination__fullItems {
@@ -1962,8 +1957,7 @@ $widthBlock: 342px;
 
   z-index: 1080;
 
-
-  .bl_callBack__title{
+  .bl_callBack__title {
     margin-left: 10px;
   }
 
@@ -3106,11 +3100,11 @@ $widthBlock: 342px;
   width: 100%;
 }
 
-.card-product-info__tab{
+.card-product-info__tab {
   margin-top: 20px;
 }
 
-.bl_raitingAndSoc{
+.bl_raitingAndSoc {
   width: 100%;
 }
 
@@ -3125,10 +3119,9 @@ $widthBlock: 342px;
   margin-right: 10px;
 }
 
-.link-social__wp{
+.link-social__wp {
   display: inline-block;
 }
-
 
 .card-product-info__link-social {
   display: inline-block;
@@ -3714,6 +3707,10 @@ $widthBlock: 342px;
   margin-top: 14px;
 }
 
+.text_center {
+  text-align: center;
+}
+
 .bl_receiver,
 .bl_deliveryMethod {
   margin-top: 32px;
@@ -4185,6 +4182,7 @@ $widthBlock: 342px;
   color: #000;
   text-transform: uppercase;
 }
+
 /*если нет категорий*/
 .bl_category__text-empty {
   margin-top: 24px;
@@ -4704,6 +4702,7 @@ $widthBlock: 342px;
 .main-brand .bl_filters {
   padding-left: 10px;
 }
+
 .main-brand .bl_category__products {
   text-align: center;
 }
@@ -4738,15 +4737,18 @@ $widthBlock: 342px;
 .col-base-list {
   margin-top: 0;
 }
+
 .base-list {
   width: 100%;
   display: table;
   margin-bottom: 0;
 }
+
 .base-list .alltime p,
 .base-list .alltime .text-lim {
   display: inline-block;
 }
+
 .base-list ul {
   display: table-row;
   list-style: none;
@@ -4763,6 +4765,7 @@ $widthBlock: 342px;
   font-size: 16px;
   line-height: normal;
 }
+
 .base-list li:before {
   content: "\f00c";
   font-family: FontAwesome;
@@ -4776,31 +4779,121 @@ $widthBlock: 342px;
   font-size: 22px;
   line-height: normal;
 }
+
 .base-list li.address:before {
   content: "\f041";
 }
+
 .base-list li.worktime:before {
   content: "\f073";
 }
+
 .base-list li.email:before {
   content: "\f003";
 }
+
 .base-list li.telephones:before {
   content: "\f095";
 }
+
 .base-list li.alltime:before {
   content: "\f017";
 }
+
 .base-list h4 {
   margin-top: 0;
 }
+
 .base-list .text-lim {
   color: #ff4e54;
   border-bottom: 1px dotted;
 }
 
+//* Страница контактов CONTACT FORM */
 
+.information-contact {
 
+  .error_text {
+    clear: both;
+    padding-left: 15px;
+    height: auto;
+    width: auto;
+  }
+
+  .contacts-geo-map {
+    margin-bottom: 20px;
+  }
+  .contacts-form form {
+    background: #eee;
+    padding: 26px;
+    margin-bottom: 40px;
+  }
+
+  .contacts-form form .form-group {
+    margin-bottom: 8px;
+  }
+
+  .contacts-form form .control-label {
+    padding-top: 7px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .contacts-form form .white-btn {
+    margin-right: 15px;
+    margin-top: 10px;
+  }
+
+  .contact-content .h1-page {
+    margin-bottom: 22px;
+    margin-top: 16px;
+  }
+  .b-contact-info {
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .b-contact-info__table {
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 1.45;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .b-contact-info__cell_width_200 {
+    width: 200px;
+  }
+
+  .b-contact-info__cell {
+    padding: 10px;
+    border: 1px solid #c2c2c2;
+    background: #fff;
+  }
+  .b-contact-info__phone:not(:last-child) {
+    padding-bottom: 8px;
+  }
+  .bl_contact__list {
+    padding: 0 45px;
+    list-style: disc outside;
+    display: inline-block;
+    margin: 0px auto 20px;
+    text-align: left;
+  }
+
+  .bl_contact__list li {
+    margin: 0;
+    padding: 0 0 12px 15px;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .bl_contact__list li > ul {
+    margin-top: 10px;
+  }
+
+}
 
 /*********************************************/
 /*FOOTER*/

@@ -2460,6 +2460,9 @@ body[class^="news"] .bl_breadcrumbs {
   padding-bottom: 10px;
   border-bottom: 1px solid #d9d9d9; }
 
+.main-brand .rubric__title_text {
+  text-align: center; }
+
 .rubric__title__filterPrice {
   border: none !important; }
 
@@ -4506,6 +4509,9 @@ body[class^="news"] .bl_breadcrumbs {
 .text_title__margin {
   margin-top: 14px; }
 
+.text_center {
+  text-align: center; }
+
 .bl_receiver,
 .bl_deliveryMethod {
   margin-top: 32px;
@@ -5404,6 +5410,77 @@ body[class^="news"] .bl_breadcrumbs {
 .base-list .text-lim {
   color: #ff4e54;
   border-bottom: 1px dotted; }
+
+.information-contact .error_text {
+  clear: both;
+  padding-left: 15px;
+  height: auto;
+  width: auto; }
+
+.information-contact .contacts-geo-map {
+  margin-bottom: 20px; }
+
+.information-contact .contacts-form form {
+  background: #eee;
+  padding: 26px;
+  margin-bottom: 40px; }
+
+.information-contact .contacts-form form .form-group {
+  margin-bottom: 8px; }
+
+.information-contact .contacts-form form .control-label {
+  padding-top: 7px;
+  margin-bottom: 10px;
+  text-align: left; }
+
+.information-contact .contacts-form form .white-btn {
+  margin-right: 15px;
+  margin-top: 10px; }
+
+.information-contact .contact-content .h1-page {
+  margin-bottom: 22px;
+  margin-top: 16px; }
+
+.information-contact .b-contact-info {
+  line-height: 20px;
+  margin-bottom: 20px; }
+
+.information-contact .b-contact-info__table {
+  margin-bottom: 20px;
+  width: 100%;
+  line-height: 1.45; }
+
+.information-contact table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.information-contact .b-contact-info__cell_width_200 {
+  width: 200px; }
+
+.information-contact .b-contact-info__cell {
+  padding: 10px;
+  border: 1px solid #c2c2c2;
+  background: #fff; }
+
+.information-contact .b-contact-info__phone:not(:last-child) {
+  padding-bottom: 8px; }
+
+.information-contact .bl_contact__list {
+  padding: 0 45px;
+  list-style: disc outside;
+  display: inline-block;
+  margin: 0px auto 20px;
+  text-align: left; }
+
+.information-contact .bl_contact__list li {
+  margin: 0;
+  padding: 0 0 12px 15px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.2; }
+
+.information-contact .bl_contact__list li > ul {
+  margin-top: 10px; }
 
 /*********************************************/
 /*FOOTER*/
