@@ -703,6 +703,10 @@
     display: none;
   }
 
+  .zoo-item .zoo-img{
+    background-size: contain;
+  }
+
   .h3-title:before {
     top: -8px;
   }
