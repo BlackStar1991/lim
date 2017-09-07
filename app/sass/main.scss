@@ -1138,7 +1138,7 @@ input {
     }
   }
   &__active {
-    font-weight: bold;
+    //font-weight: bold;
   }
 
 }
@@ -1247,7 +1247,8 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_filters__caterogyName,
 .bl_filters__caterogyName_active {
   position: relative;
-  font-size: 14px;
+  font-family: $Tahoma;
+  font-size: 16px;
   color: #000;
   line-height: 24px;
   cursor: pointer;
@@ -1278,7 +1279,7 @@ body[class^="news"] .bl_breadcrumbs {
     font-size: 16px;
     color: inherit;
     position: absolute;
-    left: -15px;
+    left: -16px;
     top: 0;
     content: "\f0da";
     font-family: $FontAwesom;
@@ -1286,13 +1287,14 @@ body[class^="news"] .bl_breadcrumbs {
   }
 }
 
+
 .decor_triangle__active {
   position: relative;
   &:before {
     font-size: 16px;
     color: inherit;
     position: absolute;
-    left: 10px;
+    left: -16px;
     top: 0;
     content: "\f0da";
     font-family: $FontAwesom;
@@ -1303,9 +1305,17 @@ body[class^="news"] .bl_breadcrumbs {
 
 .ocfilter-option .decor_triangle {
   &:before {
-    left: 12px;
+    left: 0;
   }
 }
+
+.ocfilter-option .decor_triangle__active {
+  &:before {
+    left: 0;
+  }
+}
+
+
 
 .decor_triangle__socButton {
   position: relative;
@@ -1320,6 +1330,9 @@ body[class^="news"] .bl_breadcrumbs {
   }
 
 }
+
+
+
 
 .decor_circle {
   position: relative;
@@ -1350,7 +1363,7 @@ body[class^="news"] .bl_breadcrumbs {
 }
 
 .bl_filters__allFilters {
-  //margin-left: -30px;////////////////////
+  margin-left: -15px;
   margin-top: 37px;
   //min-height: 708px;
   min-height: initial;
@@ -1368,7 +1381,7 @@ body[class^="news"] .bl_breadcrumbs {
 }
 
 .bl_filters__caterogyName_subName {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -1434,7 +1447,7 @@ body[class^="news"] .bl_breadcrumbs {
 
 .ocfilter-option .option-name {
   margin-bottom: 0;
-  padding-left: 28px;
+  padding-left: 16px;
 }
 
 .bl_filters__allFilters {
