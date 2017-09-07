@@ -217,7 +217,7 @@ button {
 /*********************************************/
 
 .main {
-  padding-top: 18px;
+  padding-top: 8px;
 }
 
 .banner-sect {
@@ -1116,13 +1116,14 @@ input {
     position: relative;
     display: inline-block;
     padding-right: 20px;
-    color: $color_grey;
+    color: #000;
     font-family: $Tahoma;
     font-size: 12px;
 
     &:not(:nth-of-type(1)):before {
       content: "»";
       position: absolute;
+      font-weight:normal;
       left: -15px;
 
     }
@@ -1445,15 +1446,15 @@ body[class^="news"] .bl_breadcrumbs {
 }
 
 .bl_filter__label .badge {
-  background-color: #ff4e54;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   vertical-align: top;
   transform: translateY(50%);
 }
 
 .bl_filter__label input:checked ~ .filter_text:after {
   position: absolute;
-  left: -32px;
+  left: -24px;
   content: "\f00c";
   width: 100%;
   height: 100%;
@@ -2771,8 +2772,8 @@ $widthBlock: 342px;
 }
 
 .grba-list__input:checked + .grba-list__color {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   //box-shadow: 0 0 5px 3px rgba(83, 109, 254, 0.5);
   border: 2px solid #fff;
 }
@@ -2790,7 +2791,7 @@ $widthBlock: 342px;
 .bl_minRaiting__averageValue {
   clear: left;
   display: block;
-  transform: translateY(50%);
+  //transform: translateY(50%);
 }
 
 .bl_minRaiting__text {
