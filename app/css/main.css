@@ -1222,6 +1222,18 @@ button {
     background: url("../image/leng/ru.png") 50% 50% no-repeat;
     z-index: 12; }
 
+.leng-item__ico--eng {
+  position: relative; }
+  .leng-item__ico--eng:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 30px;
+    height: 16px;
+    background: url("../image/leng/eng.png") 50% 50% no-repeat;
+    z-index: 12; }
+
 .header-desc {
   padding: 10px 0; }
   .header-desc > .container {
@@ -1265,9 +1277,9 @@ button {
   .services-menu__link:after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 0;
-    height: 100%;
+    height: 56%;
     width: 100%;
     border-right: 1px solid black; }
 
@@ -4168,14 +4180,16 @@ body[class^="news"] .bl_breadcrumbs {
   color: #fff;
   background-color: #ff4e54; }
 
-.main-desc__showMoreInfo_show:after {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  content: "\f103";
-  font-family: "FontAwesome";
-  font-size: 15px;
-  color: inherit; }
+.main-desc__showMoreInfo_show {
+  margin-left: -18px; }
+  .main-desc__showMoreInfo_show:after {
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    content: "\f103";
+    font-family: "FontAwesome";
+    font-size: 15px;
+    color: inherit; }
 
 .main-desc__showMoreInfo_hide:after {
   position: absolute;
@@ -4873,6 +4887,9 @@ body[class^="news"] .bl_breadcrumbs {
   .bl_error__button:hover {
     background-color: #ff4e54; }
 
+.bl_number404__button a.bl_error__button {
+  line-height: 44px; }
+
 .bl_error__button a {
   display: block;
   width: 100%;
@@ -5136,13 +5153,16 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_wishlist__button_delite:hover {
   color: #fff; }
 
-/* Autocomplete Search  Поиск через Json*/
+/* Autocomplete Search  Поиск через AJAX */
 .bl_autocompleteSearch {
   position: absolute;
   color: #000;
   left: 0;
   width: 100%;
   z-index: 20; }
+
+.bl_autocompleteSearch__full {
+  width: 100%; }
 
 .bl_autocompleteSearch__item {
   position: relative;
@@ -5848,6 +5868,9 @@ body[class^="news"] .bl_breadcrumbs {
     bottom: auto;
     left: 30px;
     -webkit-filter: grayscale(100%); }
+  .result_autocomplete.bl_autocompleteSearch {
+    width: 80%;
+    top: 10px; }
   .head-search__ico {
     top: 20px;
     left: 20px;

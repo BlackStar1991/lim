@@ -3290,12 +3290,13 @@ $widthBlock: 342px;
 }
 
 .main-desc__showMoreInfo_show {
-
+  margin-left: -18px;
   &:after {
     position: absolute;
 
+
     top: 10px;
-    right: 10px;
+    right: 6px;
 
     content: "\f103";
     font-family: $FontAwesom;
@@ -3504,6 +3505,10 @@ $widthBlock: 342px;
 .products_related, .products_looked {
   width: 100%;
   margin: 0 16px;
+}
+
+.products_related__link{
+
 }
 
 .goods-item-slid {
@@ -4182,6 +4187,12 @@ $widthBlock: 342px;
 
 }
 
+.bl_number404__button a.bl_error__button{
+
+  line-height: 44px;
+}
+
+
 .bl_error__button a {
   display: block;
   width: 100%;
@@ -4497,7 +4508,7 @@ $widthBlock: 342px;
   color: #fff;
 }
 
-/* Autocomplete Search  Поиск через Json*/
+/* Autocomplete Search  Поиск через AJAX */
 
 .bl_autocompleteSearch {
   position: absolute;
@@ -4505,6 +4516,10 @@ $widthBlock: 342px;
   left: 0;
   width: 100%;
   z-index: 20;
+}
+
+.bl_autocompleteSearch__full{
+  width: 100%;
 }
 
 .bl_autocompleteSearch__item {
