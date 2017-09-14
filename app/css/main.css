@@ -5548,7 +5548,7 @@ body[class^="news"] .bl_breadcrumbs {
   html {
     font-size: .9px; }
   .logo__name {
-    font-size: 55px; }
+    font-size: 70px; }
   .phones-list__link {
     letter-spacing: 0; }
   .header-desc__phones {
@@ -5598,7 +5598,7 @@ body[class^="news"] .bl_breadcrumbs {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .logo__name {
-    font-size: 40px; }
+    font-size: 60px; }
   .header-desc__logo {
     margin-top: -6px; }
   .phones-list {
@@ -5840,7 +5840,8 @@ body[class^="news"] .bl_breadcrumbs {
   .main-banner__img {
     padding-bottom: 60%; }
   .header-desc {
-    position: relative; }
+    position: relative;
+    padding: 20px 0; }
   .header-desc__productCompare {
     position: absolute;
     top: 0;
@@ -6125,7 +6126,7 @@ body[class^="news"] .bl_breadcrumbs {
   .header-desc__services-menu, .main-menu, .header-desc__search {
     width: 100%; }
   .logo__name {
-    font-size: 30px; }
+    font-size: 40px; }
   .link-btn-categ.main-banner__btn {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
