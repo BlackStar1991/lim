@@ -498,7 +498,7 @@ $(document).ready(function () {
 
     // Button what add slide effect for product characteristics
 
-
+/*
     function showButtonIfWeHaveEnoughInformation() { // We show this button only if we have a lot of information about product
         var    fieldDescription =$(".main-desc__item .active").find(".main-descript-tab"),
                heightField = fieldDescription.outerHeight(true),
@@ -512,7 +512,7 @@ $(document).ready(function () {
 
     }showButtonIfWeHaveEnoughInformation();
     
-    
+ */
     
     function showMoreCharacteristics() {      // Slide effect
         var buttonMoreInformation = $(".main-desc__showMoreInfo"),
