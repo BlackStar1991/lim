@@ -35,8 +35,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   outline: none;
   box-sizing: border-box;
@@ -111,6 +109,10 @@ html {
   &:before {
     content: none;
   }
+
+  #content{
+    min-height: initial;
+  }
 }
 
 .correct_right {
@@ -120,6 +122,11 @@ html {
 .correct_left {
   padding-left: 0 !important;
 }
+
+.correct_paddingLeft{
+  padding-left: 30px;
+}
+
 
 .serv-baner-item, .services-baner > .container {
   display: -webkit-box;
@@ -196,6 +203,15 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.news_list__fullContent{
+  ul{
+    list-style-type:disc;
+  }
+  a{
+    color: inherit;
+  }
 }
 
 button {
@@ -1070,9 +1086,11 @@ button {
 //}
 
 .icon-arrow__up {
+
   &:before {
     position: absolute;
     content: "\f139";
+    font-style: normal;
     font-family: $FontAwesom;
     bottom: 0;
     left: 0;
@@ -2358,6 +2376,34 @@ $widthBlock: 342px;
   }
 }
 
+// News LIST
+
+.news_list{
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.news_list__item{
+  font-family: "Tahoma", sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 24px;
+}
+
+.news_list__link{
+
+}
+
+.activator .news_list__link{
+  color: $color_pink;
+}
+
+.news_list__fullContent{
+  padding-right: 4%;
+}
+
+
 // ARTICLES BLOG
 
 .bl_article {
@@ -2915,20 +2961,18 @@ $widthBlock: 342px;
   float: left;
   text-align: left;
   white-space: nowrap;
-  font-size: 22rem;
-  margin-left: 10px;
+  font-size: 19rem;
+  margin-left: 25px;
   line-height: 10px;
   text-decoration: line-through;
 }
 
 .good-price__new {
-  margin-left: 10px;
   float: right;
   text-align: right;
   white-space: nowrap;
-  font-size: 30rem;
-  color: $red;
-
+  font-size: 25rem;
+  color: $color_pink;
   display: inline-block;
 }
 

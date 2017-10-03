@@ -515,17 +515,12 @@ $(document).ready(function () {
 
     function hideButtonsMoreCharacteristicsIfWeHaveBitChatacteristics() {
 
-
-
-
         $(".main-descript-tab__fullTab").each(function(index, el ) {
-            // var heightField =;
+
             var innerHeight = el.scrollHeight;
-            console.log($(".main-descript-tab").height() + " = heightField");
 
-            if((( el.scrollHeight <  $(".main-descript-tab").height()) && ( el.scrollHeight !== 0))){
+            if ( ((innerHeight < $(this).parent().height() ) && (innerHeight !== 0))  ) {
 
-                // console.log(innerHeight + " = innerHeight");
                  $(this).parent(".main-descript-tab").siblings(".main-desc__showMoreInfo").addClass("hidden");
                  $(this).parent(".main-descript-tab").css("height", "auto");
             }

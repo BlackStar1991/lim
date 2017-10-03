@@ -864,8 +864,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   outline: none;
   box-sizing: border-box; }
@@ -929,12 +927,17 @@ html {
   padding-left: 10px !important; }
   .container:before {
     content: none; }
+  .container #content {
+    min-height: initial; }
 
 .correct_right {
   padding-right: 0 !important; }
 
 .correct_left {
   padding-left: 0 !important; }
+
+.correct_paddingLeft {
+  padding-left: 30px; }
 
 .serv-baner-item, .services-baner > .container {
   display: -ms-flexbox;
@@ -1006,6 +1009,12 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none; }
+
+.news_list__fullContent ul {
+  list-style-type: disc; }
+
+.news_list__fullContent a {
+  color: inherit; }
 
 button {
   background: none;
@@ -1491,8 +1500,6 @@ button {
   font-size: 18rem;
   text-transform: uppercase;
   letter-spacing: .1em; }
-  .main-menu__link:hover {
-    text-decoration: underline; }
 
 .middle_menu_right > li > a:hover {
   text-decoration: none !important;
@@ -2354,6 +2361,7 @@ button {
 .icon-arrow__up:before {
   position: absolute;
   content: "\f139";
+  font-style: normal;
   font-family: "FontAwesome";
   bottom: 0;
   left: 0;
@@ -3377,6 +3385,23 @@ body[class^="news"] .bl_breadcrumbs {
     border-radius: 50%;
     background-color: #ff4e54; }
 
+.news_list {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 10px; }
+
+.news_list__item {
+  font-family: "Tahoma", sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 24px; }
+
+.activator .news_list__link {
+  color: #ff4e54; }
+
+.news_list__fullContent {
+  padding-right: 4%; }
+
 .bl_article {
   display: block;
   margin-top: 74px;
@@ -3849,17 +3874,16 @@ body[class^="news"] .bl_breadcrumbs {
   float: left;
   text-align: left;
   white-space: nowrap;
-  font-size: 22rem;
-  margin-left: 10px;
+  font-size: 19rem;
+  margin-left: 25px;
   line-height: 10px;
   text-decoration: line-through; }
 
 .good-price__new {
-  margin-left: 10px;
   float: right;
   text-align: right;
   white-space: nowrap;
-  font-size: 30rem;
+  font-size: 25rem;
   color: #ff4e54;
   display: inline-block; }
 
