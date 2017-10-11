@@ -3184,6 +3184,9 @@ $widthBlock: 342px;
   width: 100%;
 }
 
+
+
+
 .link-social {
 
   display: flex;
@@ -3391,6 +3394,7 @@ $widthBlock: 342px;
 }
 
 .review_item__userName {
+  float: left;
   display: inline-block;
   padding-bottom: 4px;
   border-bottom: 2px solid $color_pink;
@@ -3405,9 +3409,14 @@ $widthBlock: 342px;
 }
 
 .review_item__raiting {
+  display: block;
+  clear: both;
   margin-top: 10px;
   text-decoration: underline;
 }
+
+
+
 
 .personal-form-review {
   clear: both;
@@ -3415,6 +3424,8 @@ $widthBlock: 342px;
 }
 
 .review_item__fullReview {
+  clear: both;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -3515,6 +3526,11 @@ $widthBlock: 342px;
   }
 
 }
+
+.onlyRobots{// видно только для роботов
+  display: none;
+}
+
 
 .button_lim__text {
 

@@ -4236,6 +4236,7 @@ body[class^="news"] .bl_breadcrumbs {
   border-left: 1px solid #ff4e54; }
 
 .review_item__userName {
+  float: left;
   display: inline-block;
   padding-bottom: 4px;
   border-bottom: 2px solid #ff4e54;
@@ -4248,6 +4249,8 @@ body[class^="news"] .bl_breadcrumbs {
   display: inline-block; }
 
 .review_item__raiting {
+  display: block;
+  clear: both;
   margin-top: 10px;
   text-decoration: underline; }
 
@@ -4256,6 +4259,8 @@ body[class^="news"] .bl_breadcrumbs {
   margin-top: 15px; }
 
 .review_item__fullReview {
+  clear: both;
+  width: 100%;
   margin-top: 10px; }
 
 .review_product {
@@ -4333,6 +4338,9 @@ body[class^="news"] .bl_breadcrumbs {
     transition: all 0.2s;
     background-color: #fff;
     color: #ff4e54; }
+
+.onlyRobots {
+  display: none; }
 
 .button_lim__text {
   color: inherit;
@@ -6185,7 +6193,10 @@ body[class^="news"] .bl_breadcrumbs {
     width: 100%; }
   table {
     overflow-x: auto;
-    display: block; } }
+    display: block; }
+  .review_item .bl_fullStars {
+    margin-top: 10px;
+    clear: both; } }
 
 @media (max-width: 320px) {
   .link-btn-categ.main-banner__btn {
