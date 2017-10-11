@@ -3078,7 +3078,7 @@ $widthBlock: 342px;
 .btn-buy {
   max-width: 286px;
   width: 100%;
-  height: 50px;
+  height: 35px;
   font-size: 22px;
 }
 
@@ -4027,13 +4027,14 @@ $widthBlock: 342px;
 }
 
 .shoppingBasket_product__name {
-  text-align: left;
+  text-align: center;
   margin: 0;
   font-size: 16px;
   color: #000;
 
-  &.popup_likeShopbag__text {
+  th, td{
     text-align: center;
+    vertical-align: middle!important;
   }
 }
 
@@ -4090,7 +4091,7 @@ $widthBlock: 342px;
 .button_continueBuying {
   margin-top: 18px;
   width: 100%;
-  height: 35px;
+  min-height: 35px;
   border: 1px solid black;
   box-sizing: border-box;
 
@@ -4129,6 +4130,9 @@ $widthBlock: 342px;
     transition: all .3s;
   }
 }
+
+.button_continueBuying{}
+
 
 .decor_line {
   position: relative;
@@ -4186,9 +4190,6 @@ $widthBlock: 342px;
   margin: 5px;
 }
 
-.popup_likeShopbag__product {
-
-}
 
 .popup_likeShopbag__buttons {
   width: 100%;
@@ -4201,10 +4202,6 @@ $widthBlock: 342px;
 .popup_likeShopbag__continueBuying,
 .popup_likeShopbag__goToShopbag {
   width: 45%;
-}
-
-.popup_likeShopbag__product_img {
-
 }
 
 .popup_likeShopbag__buttons_text {
