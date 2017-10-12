@@ -2552,6 +2552,18 @@ body[class^="news"] .bl_breadcrumbs {
             transform: rotate(90deg);
     transition: all 0.2s; }
 
+.decor_point {
+  position: relative; }
+  .decor_point:before {
+    font-size: 8px;
+    color: inherit;
+    position: absolute;
+    left: -16px;
+    top: 0;
+    content: "\f111";
+    font-family: "FontAwesome";
+    transition: all 0.2s; }
+
 .ocfilter-option .decor_triangle:before {
   left: 5px; }
 
@@ -4853,7 +4865,7 @@ body[class^="news"] .bl_breadcrumbs {
 
 .popup_likeShopbag {
   border: 2px solid #fff;
-  padding: 0 20px 20px;
+  padding: 0 0 20px;
   min-height: initial; }
 
 .popup_likeShopbag__text_main {

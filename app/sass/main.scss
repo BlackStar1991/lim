@@ -1322,6 +1322,22 @@ body[class^="news"] .bl_breadcrumbs {
   }
 }
 
+.decor_point{
+  position: relative;
+
+  &:before {
+    font-size: 8px;
+    color: inherit;
+    position: absolute;
+    left: -16px;
+    top: 0;
+    content: "\f111";
+    font-family: $FontAwesom;
+    transition: all 0.2s;
+  }
+}
+
+
 .ocfilter-option .decor_triangle {
   &:before {
     left: 5px;
@@ -4189,7 +4205,7 @@ $widthBlock: 342px;
 
 .popup_likeShopbag {
   border: 2px solid #fff;
-  padding: 0 20px 20px;
+  padding: 0 0 20px;
   min-height: initial;
 }
 
@@ -5003,6 +5019,15 @@ $widthBlock: 342px;
   }
 
 }
+
+///// CEO 
+
+.bl_ceo{
+  position: relative;
+  width: 100%;
+}
+
+
 
 /*********************************************/
 /*FOOTER*/
