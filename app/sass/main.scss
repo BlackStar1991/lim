@@ -1326,7 +1326,7 @@ body[class^="news"] .bl_breadcrumbs {
   position: relative;
 
   &:before {
-    font-size: 8px;
+    font-size: 6px;
     color: inherit;
     position: absolute;
     left: -16px;
@@ -1336,6 +1336,22 @@ body[class^="news"] .bl_breadcrumbs {
     transition: all 0.2s;
   }
 }
+.decor_lineGorizontal{
+  position: relative;
+
+  &:before {
+    font-size: 8px;
+    color: inherit;
+    position: absolute;
+    left: -16px;
+    top: 0;
+    content: "\f068";
+    font-family: $FontAwesom;
+    transition: all 0.2s;
+  }
+}
+
+
 
 
 .ocfilter-option .decor_triangle {
@@ -1396,6 +1412,12 @@ body[class^="news"] .bl_breadcrumbs {
     transition: all 0.2s;
   }
 }
+
+.bl_filters__lastChild a{
+  font-size: 16px;
+  line-height: 24px;
+}
+
 
 .bl_filters__allFilters {
   margin-left: -15px;

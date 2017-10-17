@@ -2555,12 +2555,24 @@ body[class^="news"] .bl_breadcrumbs {
 .decor_point {
   position: relative; }
   .decor_point:before {
-    font-size: 8px;
+    font-size: 6px;
     color: inherit;
     position: absolute;
     left: -16px;
     top: 0;
     content: "\f111";
+    font-family: "FontAwesome";
+    transition: all 0.2s; }
+
+.decor_lineGorizontal {
+  position: relative; }
+  .decor_lineGorizontal:before {
+    font-size: 8px;
+    color: inherit;
+    position: absolute;
+    left: -16px;
+    top: 0;
+    content: "\f068";
     font-family: "FontAwesome";
     transition: all 0.2s; }
 
@@ -2609,6 +2621,10 @@ body[class^="news"] .bl_breadcrumbs {
   .bl_filters__item:hover {
     color: #ff4e54;
     transition: all 0.2s; }
+
+.bl_filters__lastChild a {
+  font-size: 16px;
+  line-height: 24px; }
 
 .bl_filters__allFilters {
   margin-left: -15px;
@@ -5540,6 +5556,10 @@ body[class^="news"] .bl_breadcrumbs {
 
 .information-contact .bl_contact__list li > ul {
   margin-top: 10px; }
+
+.bl_ceo {
+  position: relative;
+  width: 100%; }
 
 /*********************************************/
 /*FOOTER*/
