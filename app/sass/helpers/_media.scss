@@ -941,6 +941,18 @@
     width: 100%;
   }
 
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+
+
+
+  .review_item .bl_fullStars{
+    margin-top: 10px;
+    clear: both;
+  }
+
 
 }
 

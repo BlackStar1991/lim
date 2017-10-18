@@ -531,14 +531,11 @@
   font-size: 18rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .middle_menu_right > li > a:hover {
   text-decoration: none !important;
-  color: #ff4e54;
+  color: #ff4e54!important;
 }
 
 .open-menu-min {
