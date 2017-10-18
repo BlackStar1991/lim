@@ -452,7 +452,7 @@
   }
 
   .good-price {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .banner-sect__prev-category {
@@ -934,6 +934,14 @@
   .bl_topic__description_text {
     font-size: 16px;
   }
+
+  .card-product-info__price .counter{
+    float: none;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+
 }
 
 @media (max-width: 320px) {

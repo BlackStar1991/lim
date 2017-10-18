@@ -2729,7 +2729,7 @@ $widthBlock: 342px;
 
 .card-product-info__min-list {
   display: flex;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   justify-content: space-between;
   font-size: 16px;
   max-width: 460px;
@@ -2910,15 +2910,19 @@ $widthBlock: 342px;
 }
 
 .good-price__old {
+  position: relative;
+  bottom:-12px;
   float: left;
   text-align: left;
   white-space: nowrap;
   font-size: 22rem;
-  margin-right: 25px;
+  margin-left: 10px;
+  line-height: 10px;
   text-decoration: line-through;
 }
 
 .good-price__new {
+  margin-left: 10px;
   float: right;
   text-align: right;
   white-space: nowrap;
@@ -2929,6 +2933,8 @@ $widthBlock: 342px;
 }
 
 .good-price__normal {
+  margin-left: 10px;
+
   font-family: $Tahoma;
   text-align: left;
   white-space: nowrap;
@@ -3014,10 +3020,15 @@ $widthBlock: 342px;
 
 .card-product-info__price {
   max-width: 460px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+
+  //display: flex;
+  //align-items: flex-end;
+  //justify-content: space-between;
   margin-bottom: 14px;
+}
+
+.card-product-info__price .counter{
+  float: right;
 }
 
 .btn-buy {
@@ -3242,7 +3253,7 @@ $widthBlock: 342px;
   position: relative;
   display: block;
   width: 100%;
-  min-height: 228px;
+  //min-height: 228px;
   height: 228px;
 
   overflow: hidden;
@@ -3490,7 +3501,7 @@ $widthBlock: 342px;
 /////////////////////
 
 .card-main-desc-wrap {
-  margin-bottom: 35px;
+  margin-bottom: 5px;
 }
 
 .min-title {
@@ -3511,12 +3522,17 @@ $widthBlock: 342px;
 
 }
 
+.good-price {
+  display: inline-block;
+  //line-height: 33px;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+}
+
+
 .goods-item-slid {
-  .good-price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
 
   .good-price__hist {
     font-size: 14px;

@@ -293,7 +293,7 @@ $(document).ready(function () {
 
         listButton.on("click", function () {
 
-            console.log("list");
+
 
             blockProducts.removeClass("view_columns__STYLE");
             blockProducts.addClass("view_list__STYLE");
@@ -478,6 +478,9 @@ $(document).ready(function () {
 
 
     //TAB
+
+
+
     $(this).find('.tab-title').each(function(i) {
         $(this).click(function() {
             $(this).addClass('active').siblings().removeClass('active')
@@ -485,41 +488,62 @@ $(document).ready(function () {
         });
     });
 
-    $(this).find('.main-desc-title__item').each(function(i) {
-        $(this).click(function() {
-            $(this).addClass('active').siblings().removeClass('active')
-                .closest('.tab-wrap').find('.main-desc__item').removeClass('active').eq(i).addClass('active');
+
+    function switchMainDescription() {
+        var mainDescriptionItem = $(".main-desc-title__item"),
+            mainDescriptionContent =  $(".main-desc__item"),
+            active = "active";
+
+        mainDescriptionItem.on("click", function () {
+            mainDescriptionItem.removeClass(active);
+            $(this).addClass("active");
+            var index = $('.main-desc-title__item.active').index();
+
+            mainDescriptionContent.removeClass(active);
+            mainDescriptionContent.eq(index).addClass(active);
+
+            hideButtonsMoreCharacteristicsIfWeHaveBitChatacteristics();
+
         });
-    });
+
+    }switchMainDescription();
 
 
-    
     
 
     // Button what add slide effect for product characteristics
 
-/*
-    function showButtonIfWeHaveEnoughInformation() { // We show this button only if we have a lot of information about product
-        var    fieldDescription =$(".main-desc__item .active").find(".main-descript-tab"),
-               heightField = fieldDescription.outerHeight(true),
-               maxContent = $(".main-descript-tab__fullTab"),
-               heightContent  = maxContent.outerHeight(true);
+    function hideButtonsMoreCharacteristicsIfWeHaveBitChatacteristics() {
 
 
-        console.log("block Height = " + fieldDescription.outerHeight(true));
-        console.log("content Height = " + maxContent.outerHeight(true));
 
 
-    }showButtonIfWeHaveEnoughInformation();
+        $(".main-descript-tab__fullTab").each(function(index, el ) {
+            // var heightField =;
+            var innerHeight = el.scrollHeight;
+            console.log($(".main-descript-tab").height() + " = heightField");
+
+            if((( el.scrollHeight <  $(".main-descript-tab").height()) && ( el.scrollHeight !== 0))){
+
+                // console.log(innerHeight + " = innerHeight");
+                 $(this).parent(".main-descript-tab").siblings(".main-desc__showMoreInfo").addClass("hidden");
+                 $(this).parent(".main-descript-tab").css("height", "auto");
+            }
+
+        });
+
+    }hideButtonsMoreCharacteristicsIfWeHaveBitChatacteristics();
+
     
- */
+    
+     
     
     function showMoreCharacteristics() {      // Slide effect
+
         var buttonMoreInformation = $(".main-desc__showMoreInfo"),
             fieldDescriptionActive = "main-descript-tab_active",
             textShowInfo = ".main-desc__showMoreInfo_show",
             textHideInfo = ".main-desc__showMoreInfo_hide";
-
 
         buttonMoreInformation.on("click", function(){
 
@@ -527,14 +551,12 @@ $(document).ready(function () {
                $(this).children(textHideInfo).toggleClass("hidden");
                $(this).children(textShowInfo).toggleClass("hidden");
 
-
             })
-
-
-
     }showMoreCharacteristics();
 
 
+
+    
 
     //   FORM Review
 
