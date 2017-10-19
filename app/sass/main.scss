@@ -784,12 +784,6 @@ button {
   padding-top: 15rem;
   padding-bottom: 30rem;
   border-top: 1px solid $color_pink;
-  h1, h2, h3, div {
-    font-family: $Tahoma;
-    margin-bottom: 1.3em;
-    font-size: 24rem;
-    line-height: 1.4;
-  }
   p {
     font-family: $Tahoma;
     font-size: 16rem;
@@ -799,6 +793,16 @@ button {
       margin: 0;
     }
   }
+}
+.description-sect__title{
+  font-family: $Tahoma;
+  margin: 10px 0;
+  font-size: 24rem;
+  line-height: 1.4;
+}
+.main-descript-tab__fullTab{
+  margin-top: 10px;
+  border-top: 1px solid #ff4e54;
 }
 
 .top-panel-footer {
@@ -1291,15 +1295,24 @@ body[class^="news"] .bl_breadcrumbs {
   cursor: pointer;
 }
 
-.decor_triangle {
+.bl_filters__button {
   position: relative;
+  float: left;
+  margin-left: -25px;
+  margin-right: 5px;
+  width: 20px;
+  min-height: 24px;
+}
 
+.decor_triangle,
+.decor_triangle__active{
+  position: relative;
   &:before {
     font-size: 16px;
     color: inherit;
     position: absolute;
-    left: -16px;
-    top: 0;
+    left: 6px;
+    top: 4px;
     content: "\f0da";
     font-family: $FontAwesom;
     transition: all 0.2s;
@@ -1308,15 +1321,7 @@ body[class^="news"] .bl_breadcrumbs {
 
 
 .decor_triangle__active {
-  position: relative;
   &:before {
-    font-size: 16px;
-    color: inherit;
-    position: absolute;
-    left: -16px;
-    top: 0;
-    content: "\f0da";
-    font-family: $FontAwesom;
     transform: rotate(90deg);
     transition: all 0.2s;
   }
@@ -4298,10 +4303,7 @@ $widthBlock: 342px;
 
 }
 
-.bl_number404__button a.bl_error__button{
 
-  line-height: 44px;
-}
 
 
 .bl_error__button a {
@@ -4353,152 +4355,6 @@ $widthBlock: 342px;
   position: relative;
   text-transform: uppercase;
   font-size: 14px;
-}
-
-//// PAGE 404 Not Found
-
-.bl_number404__text {
-  transform: rotate(-15deg);
-  position: absolute;
-  top: 53px;
-  left: -34px;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 100%;
-  font-size: 120px;
-  opacity: .7;
-  color: #fff;
-  text-shadow: 0 1px 1px #000;
-}
-
-.bl_number404__container_bag {
-  position: relative;
-  margin: 67px auto 18px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 150px;
-  height: 220px;
-
-  &:before {
-    content: '';
-    height: 2px;
-    position: absolute;
-    bottom: -1px;
-    background: #ccc;
-    width: 100%;
-    display: block;
-    right: 0;
-    left: 0;
-    margin: auto;
-    box-shadow: 0 0 13px 16px rgba(0, 0, 0, 0.2);
-    z-index: -1;
-    border-radius: 100%;
-  }
-}
-
-.bl_number404__handle {
-  position: absolute;
-  width: 61px;
-  height: 11px;
-  background: #000;
-  top: -100px;
-  left: 42px;
-  border-radius: 2px;
-  &:before,
-  &:after {
-    position: absolute;
-    top: 11px;
-    content: '';
-    width: 5px;
-    height: 90px;
-    background: #bbb;
-  }
-  &:after {
-    left: 55px;
-  }
-}
-
-.bl_number404__bag {
-  position: absolute;
-  width: 150px;
-  height: 204px;
-  background: #ff4e54;
-  border-radius: 21px;
-
-  &:before {
-    position: absolute;
-    content: '';
-    width: 8px;
-    height: 169px;
-    background: #FFF;
-    opacity: 0.1;
-    top: 17px;
-    left: 9px;
-    box-shadow: 123px 0 0 rgba(255, 255, 255, 0.9),
-    108px 0 0 rgba(255, 255, 255, 0.9),
-    93px 0 0 rgba(255, 255, 255, 0.9),
-    78px 0 0 rgba(255, 255, 255, 0.9),
-    63px 0 0 rgba(255, 255, 255, 0.9),
-    47px 0 0 rgba(255, 255, 255, 0.9),
-    31px 0 0 rgba(255, 255, 255, 0.9),
-    15px 0 0 rgba(255, 255, 255, 0.9);
-  }
-}
-
-.bl_number404__wheel {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  top: 205px;
-  left: 14px;
-  background: #000;
-  border-radius: 100%;
-  box-shadow: 106px 0 0 #000;
-}
-
-.bl_number404__tag {
-  position: relative;
-  width: 20px;
-  height: 32px;
-  border: 2px solid #f2f2f2;
-  background: #bbb;
-  top: 8px;
-  left: 38px;
-  border-radius: 5px;
-
-  transform-origin: top;
-  animation: rotatingTag 3s linear infinite;
-
-  &:before, &:after {
-    position: absolute;
-    top: -11px;
-    left: 6px;
-    content: '';
-    background: #F3E9D2;
-    width: 1px;
-    height: 11px;
-    border-radius: 50px 50px 0 0;
-  }
-
-  &:after {
-    left: 9px;
-  }
-
-}
-
-@keyframes rotatingTag {
-  0% {
-    transform: rotate(6deg);
-  }
-  50% {
-    transform: rotate(-6deg);
-  }
-  100% {
-    transform: rotate(6deg);
-  }
 }
 
 //// PAGE SEARCH
@@ -4629,10 +4485,6 @@ $widthBlock: 342px;
   z-index: 20;
 }
 
-.bl_autocompleteSearch__full{
-  width: 100%;
-}
-
 .bl_autocompleteSearch__item {
   position: relative;
   clear: both;
@@ -4669,6 +4521,7 @@ $widthBlock: 342px;
   padding: 10px;
   display: block;
   width: 100%;
+  text-align: center;
   color: #fff;
   background-color: black;
   font-size: 18px;
