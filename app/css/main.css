@@ -3089,6 +3089,10 @@ body[class^="news"] .bl_breadcrumbs {
   .popup_likeShopbag .bl_callBack__title {
     margin-left: 10px; }
 
+.popup_likeShopbag {
+  max-width: 740px;
+  top: 260px; }
+
 .bl_callBack {
   padding: 0 1px;
   min-height: 396px; }
@@ -3100,7 +3104,6 @@ body[class^="news"] .bl_breadcrumbs {
   right: 10px;
   width: 12px;
   height: 12px;
-  color: black;
   font-family: "Tahoma", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -3109,6 +3112,10 @@ body[class^="news"] .bl_breadcrumbs {
   .bl_callBack__close:hover,
   .popup_likeShopbag__close:hover {
     color: #ff4e54; }
+
+.popup_likeShopbag__close {
+  top: 5px;
+  color: #ff4e54; }
 
 .bl_callBack__wrapper {
   padding: 0; }
@@ -4777,12 +4784,23 @@ body[class^="news"] .bl_breadcrumbs {
 
 .shoppingBasket_product__name {
   text-align: center;
+  padding-top: 34px;
   margin: 0;
   font-size: 16px;
   color: #000; }
+  .shoppingBasket_product__name table {
+    margin-bottom: 0; }
   .shoppingBasket_product__name th, .shoppingBasket_product__name td {
+    border: 1px solid #000 !important;
     text-align: center;
     vertical-align: middle !important; }
+
+.shoppingBasket_product__name .table > tbody > tr > th {
+  padding: 0; }
+
+.shoppingBasket_product__name table th:last-child,
+.shoppingBasket_product__name table th:nth-last-child(2) {
+  min-width: 65px; }
 
 .shoppingBasket_product__value {
   text-align: left;
@@ -4887,7 +4905,7 @@ body[class^="news"] .bl_breadcrumbs {
 
 .popup_likeShopbag {
   border: 2px solid #fff;
-  padding: 0 0 20px;
+  padding: 0 0 5px;
   min-height: initial; }
 
 .popup_likeShopbag__text_main {
