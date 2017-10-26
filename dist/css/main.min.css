@@ -2119,9 +2119,8 @@ button {
   font-size: 24rem;
   line-height: 1.4; }
 
-.main-descript-tab__fullTab {
-  margin-top: 10px;
-  border-top: 1px solid #ff4e54; }
+.categorieReview .main-descript-tab__fullTab {
+  margin-top: 50px; }
 
 .top-panel-footer {
   position: relative;
@@ -3091,7 +3090,7 @@ body[class^="news"] .bl_breadcrumbs {
 
 .popup_likeShopbag {
   max-width: 740px;
-  top: 260px; }
+  top: 200px; }
 
 .bl_callBack {
   padding: 0 1px;
@@ -4795,12 +4794,14 @@ body[class^="news"] .bl_breadcrumbs {
     text-align: center;
     vertical-align: middle !important; }
 
-.shoppingBasket_product__name .table > tbody > tr > th {
-  padding: 0; }
-
 .shoppingBasket_product__name table th:last-child,
 .shoppingBasket_product__name table th:nth-last-child(2) {
   min-width: 65px; }
+
+.shoppingBasket_product__name .table > tbody > tr > th,
+.shoppingBasket_product__name .table > tbody > tr > td {
+  padding: 0;
+  line-height: 1; }
 
 .shoppingBasket_product__value {
   text-align: left;
@@ -4886,6 +4887,26 @@ body[class^="news"] .bl_breadcrumbs {
     height: 1px;
     width: 100%;
     background-color: #ff4e54; }
+
+.button_remove {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  background: none; }
+
+.decore_close:before {
+  content: '\f00d';
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #ff4e54; }
 
 .error_text {
   display: inline-block;
@@ -5445,7 +5466,9 @@ body[class^="news"] .bl_breadcrumbs {
 
 .bl_ceo {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  margin-top: 15px;
+  border-top: 1px solid #ff4e54; }
 
 /*********************************************/
 /*FOOTER*/

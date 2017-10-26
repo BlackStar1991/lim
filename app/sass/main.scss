@@ -800,9 +800,11 @@ button {
   font-size: 24rem;
   line-height: 1.4;
 }
-.main-descript-tab__fullTab{
-  margin-top: 10px;
-  border-top: 1px solid #ff4e54;
+
+
+.categorieReview .main-descript-tab__fullTab{
+  margin-top: 50px;
+  //border-top: 1px solid #ff4e54;
 }
 
 .top-panel-footer {
@@ -4120,6 +4122,14 @@ $widthBlock: 342px;
   min-width: 65px;
 }
 
+.shoppingBasket_product__name .table>tbody>tr>th,
+.shoppingBasket_product__name .table>tbody>tr>td{
+  padding: 0;
+  line-height: 1;
+}
+
+
+
 
 .shoppingBasket_product__value {
   text-align: left;
@@ -4946,6 +4956,8 @@ $widthBlock: 342px;
 .bl_ceo{
   position: relative;
   width: 100%;
+  margin-top: 15px;
+  border-top: 1px solid $color_pink;
 }
 
 
