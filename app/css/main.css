@@ -2119,6 +2119,9 @@ button {
   font-size: 24rem;
   line-height: 1.4; }
 
+.categorieReview {
+  margin-top: 15px; }
+
 .categorieReview .main-descript-tab__fullTab {
   margin-top: 50px; }
 
@@ -2483,9 +2486,6 @@ body[class^="news"] .bl_breadcrumbs {
   padding-bottom: 10px;
   border-bottom: 1px solid #d9d9d9; }
 
-.main-brand .rubric__title_text {
-  text-align: center; }
-
 .rubric__title__filterPrice {
   border: none !important; }
 
@@ -2502,6 +2502,7 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_filters {
   position: relative;
   margin-top: 20px;
+  margin-bottom: 10px;
   font-family: "Tahoma", sans-serif;
   box-sizing: border-box; }
 
@@ -2542,13 +2543,13 @@ body[class^="news"] .bl_breadcrumbs {
   position: relative; }
   .decor_triangle:before,
   .decor_triangle__active:before {
+    content: "\f0da";
+    font-family: "FontAwesome";
     font-size: 16px;
     color: inherit;
     position: absolute;
     left: 6px;
-    top: 4px;
-    content: "\f0da";
-    font-family: "FontAwesome";
+    top: 0;
     transition: all 0.2s; }
 
 .decor_triangle__active:before {
@@ -2556,6 +2557,9 @@ body[class^="news"] .bl_breadcrumbs {
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   transition: all 0.2s; }
+
+.decor_triangle.decor_triangle__closet:before {
+  left: -19px; }
 
 .decor_point {
   position: relative; }
@@ -2619,7 +2623,7 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_filters__item {
   position: relative;
   padding-left: 14px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   cursor: pointer; }
@@ -2634,6 +2638,7 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_filters__allFilters {
   margin-left: -15px;
   margin-top: 37px;
+  margin-bottom: 15px;
   min-height: initial; }
   .bl_filters__allFilters_wrapper {
     background-color: #f2f2f2;
@@ -2647,7 +2652,7 @@ body[class^="news"] .bl_breadcrumbs {
   margin-top: 2px; }
 
 .bl_filters__caterogyName_subName {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400; }
 
 .bl_filters__caterogyName_subName a:hover {
@@ -3927,6 +3932,11 @@ body[class^="news"] .bl_breadcrumbs {
   color: #ff4e54;
   display: inline-block; }
 
+.goods-item-slid__price .good-price__new {
+  float: none;
+  text-align: center;
+  padding: 0; }
+
 .good-price__normal {
   margin-left: 10px;
   font-family: "Tahoma", sans-serif;
@@ -4439,6 +4449,7 @@ body[class^="news"] .bl_breadcrumbs {
   margin-bottom: 12px; }
 
 .goods-item-slid__price {
+  text-align: center;
   margin-bottom: 12px; }
 
 .name-product {
@@ -4788,9 +4799,10 @@ body[class^="news"] .bl_breadcrumbs {
   font-size: 16px;
   color: #000; }
   .shoppingBasket_product__name table {
+    background-color: #fff;
     margin-bottom: 0; }
   .shoppingBasket_product__name th, .shoppingBasket_product__name td {
-    border: 1px solid #000 !important;
+    border: 1px solid #6f6f6f !important;
     text-align: center;
     vertical-align: middle !important; }
 
@@ -4802,6 +4814,9 @@ body[class^="news"] .bl_breadcrumbs {
 .shoppingBasket_product__name .table > tbody > tr > td {
   padding: 0;
   line-height: 1; }
+
+.shoppingBasket_product__name .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f7f7f7; }
 
 .shoppingBasket_product__value {
   text-align: left;
@@ -4844,6 +4859,7 @@ body[class^="news"] .bl_breadcrumbs {
   min-height: 35px;
   border: 1px solid black;
   box-sizing: border-box;
+  background-color: #fff;
   transition: all .3s; }
   .button_continueBuying:hover {
     text-decoration: underline;
@@ -4861,7 +4877,7 @@ body[class^="news"] .bl_breadcrumbs {
 .button_buyProduct {
   margin-top: 18px;
   width: 100%;
-  height: 35px;
+  min-height: 35px;
   color: #fff;
   text-transform: uppercase;
   background-color: #ff4e54;
@@ -4925,7 +4941,8 @@ body[class^="news"] .bl_breadcrumbs {
   cursor: pointer; }
 
 .popup_likeShopbag {
-  border: 2px solid #fff;
+  border: 2px solid #dfdfdf;
+  background-color: #dfdfdf;
   padding: 0 0 5px;
   min-height: initial; }
 
@@ -5308,7 +5325,8 @@ body[class^="news"] .bl_breadcrumbs {
 .main-brand .bl_filters {
   padding-left: 10px; }
 
-.main-brand .bl_category__products {
+.main-brand .bl_category__products,
+.main-brand h1 {
   text-align: center; }
 
 .bl_brands {
@@ -5330,6 +5348,9 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_brands ul > li > a {
   text-transform: uppercase;
   font-size: 16px; }
+
+.active_brand_category {
+  color: #ff4e54; }
 
 .col-base-list {
   margin-top: 0; }
@@ -5464,11 +5485,18 @@ body[class^="news"] .bl_breadcrumbs {
 .information-contact .bl_contact__list li > ul {
   margin-top: 10px; }
 
+.decor_redLine {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  clear: both;
+  margin-top: 15px;
+  background-color: #ff4e54; }
+
 .bl_ceo {
   position: relative;
   width: 100%;
-  margin-top: 15px;
-  border-top: 1px solid #ff4e54; }
+  margin-top: 5px; }
 
 /*********************************************/
 /*FOOTER*/
