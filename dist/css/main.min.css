@@ -2510,7 +2510,7 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_filters__caterogyName_active {
   position: relative;
   font-family: "Tahoma", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #000;
   line-height: 24px;
   cursor: pointer; }
@@ -2551,6 +2551,9 @@ body[class^="news"] .bl_breadcrumbs {
     left: 6px;
     top: 0;
     transition: all 0.2s; }
+
+.corrected.decor_triangle:before, .corrected.decor_triangle__active:before {
+  top: 4px; }
 
 .decor_triangle__active:before {
   -webkit-transform: rotate(90deg);
@@ -4030,6 +4033,9 @@ body[class^="news"] .bl_breadcrumbs {
   border: 1px solid;
   font-size: 14px; }
 
+.btn-group, .btn-group-vertical {
+  width: 100%; }
+
 .btn-group__add {
   margin-top: 15px;
   display: -webkit-flex;
@@ -4344,7 +4350,7 @@ body[class^="news"] .bl_breadcrumbs {
     content: "";
     width: 22px;
     height: 21px;
-    background: url("../image/star_empty.svg") 50% 50% no-repeat;
+    background: url("../image/star_empty1.svg") 50% 50% no-repeat;
     z-index: 2; }
   .bl_raiting__label:first-child {
     margin-left: 13px; }
@@ -4802,7 +4808,6 @@ body[class^="news"] .bl_breadcrumbs {
     background-color: #fff;
     margin-bottom: 0; }
   .shoppingBasket_product__name th, .shoppingBasket_product__name td {
-    border: 1px solid #6f6f6f !important;
     text-align: center;
     vertical-align: middle !important; }
 
@@ -4813,10 +4818,23 @@ body[class^="news"] .bl_breadcrumbs {
 .shoppingBasket_product__name .table > tbody > tr > th,
 .shoppingBasket_product__name .table > tbody > tr > td {
   padding: 0;
-  line-height: 1; }
+  line-height: 1;
+  border-color: transparent; }
+
+.shoppingBasket_product__name .table > tbody > tr > th {
+  line-height: 2;
+  height: 25px;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #DDD; }
+
+.table-striped .counter__item--minus {
+  margin-right: 0; }
+
+.table-striped .counter__item--plus {
+  margin-left: 0; }
 
 .shoppingBasket_product__name .table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f7f7f7; }
+  background-color: #fff; }
 
 .shoppingBasket_product__value {
   text-align: left;
@@ -4942,7 +4960,6 @@ body[class^="news"] .bl_breadcrumbs {
 
 .popup_likeShopbag {
   border: 2px solid #dfdfdf;
-  background-color: #dfdfdf;
   padding: 0 0 5px;
   min-height: initial; }
 

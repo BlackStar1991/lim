@@ -1272,7 +1272,7 @@ body[class^="news"] .bl_breadcrumbs {
 .bl_filters__caterogyName_active {
   position: relative;
   font-family: $Tahoma;
-  font-size: 16px;
+  font-size: 15px;
   color: #000;
   line-height: 24px;
   cursor: pointer;
@@ -1318,6 +1318,11 @@ body[class^="news"] .bl_breadcrumbs {
     transition: all 0.2s;
   }
 }
+.corrected.decor_triangle:before, .corrected.decor_triangle__active:before{
+  top: 4px;
+}
+
+
 
 .decor_triangle__active {
   &:before {
@@ -3137,6 +3142,11 @@ $widthBlock: 342px;
   font-size: 14px;
 }
 
+.btn-group, .btn-group-vertical{
+  width: 100%;
+}
+
+
 .btn-group__add {
   margin-top: 15px;
   display: flex;
@@ -3506,7 +3516,7 @@ $widthBlock: 342px;
     content: "";
     width: 22px;
     height: 21px;
-    background: url("../image/star_empty.svg") 50% 50% no-repeat;
+    background: url("../image/star_empty1.svg") 50% 50% no-repeat;
     z-index: 2;
   }
 
@@ -4088,7 +4098,6 @@ $widthBlock: 342px;
   }
 
   th, td {
-    border: 1px solid $color_grey !important;
     text-align: center;
     vertical-align: middle !important;
   }
@@ -4104,10 +4113,26 @@ $widthBlock: 342px;
 .shoppingBasket_product__name .table > tbody > tr > td {
   padding: 0;
   line-height: 1;
+  border-color: transparent;
 }
 
+.shoppingBasket_product__name .table > tbody > tr > th{
+  line-height: 2;
+  height: 25px;
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #DDD;
+}
+
+.table-striped .counter__item--minus{
+  margin-right: 0;
+}
+.table-striped .counter__item--plus{
+  margin-left: 0;
+}
+
+
 .shoppingBasket_product__name .table-striped>tbody>tr:nth-of-type(odd){
-  background-color: #f7f7f7;
+  background-color: #fff;
 }
 
 
@@ -4265,7 +4290,7 @@ $widthBlock: 342px;
 
 .popup_likeShopbag {
   border: 2px solid $color_greyHeader;
-  background-color: $color_greyHeader;
+  //background-color: $color_greyHeader;
   padding: 0 0 5px;
   min-height: initial;
 }
