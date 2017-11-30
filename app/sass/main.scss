@@ -2810,21 +2810,39 @@ $widthBlock: 342px;
   overflow: hidden;
 }
 
+.card-product-info__left{
+  display: inline-block;
+  height:auto;
+  font-size: 16px;
+  width: 290px;
+}
+
+.card-product-info__right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+
 .card-product-info__title {
   margin-bottom: 30px;
 }
 
-.card-product-info__min-list {
-  display: flex;
+.min-info-list{
+  display: block;
   margin-bottom: 16px;
-  justify-content: space-between;
-  font-size: 16px;
-  max-width: 460px;
-
-  .min-info-list li:not(:last-child) {
-    margin-bottom: 7px;
-  }
 }
+
+//.card-product-info__min-list {
+//  display: flex;
+//  margin-bottom: 16px;
+//  justify-content: space-between;
+//  font-size: 16px;
+//  max-width: 460px;
+//
+//  .min-info-list li:not(:last-child) {
+//    margin-bottom: 7px;
+//  }
+//}
 
 .grba-sect__color,
 .grba-list {
@@ -3043,6 +3061,7 @@ $widthBlock: 342px;
 }
 
 .counter {
+  margin-top: 10px;
   font-size: 1px;
   display: inline-flex;
   input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
@@ -3112,18 +3131,18 @@ $widthBlock: 342px;
   text-align: center;
 }
 
-.card-product-info__price {
-  max-width: 460px;
-
-  //display: flex;
-  //align-items: flex-end;
-  //justify-content: space-between;
-  margin-bottom: 14px;
-}
-
-.card-product-info__price .counter {
-  float: right;
-}
+//.card-product-info__price {
+//  max-width: 460px;
+//
+//  //display: flex;
+//  //align-items: flex-end;
+//  //justify-content: space-between;
+//  margin-bottom: 14px;
+//}
+//
+//.card-product-info__price .counter {
+//  float: right;
+//}
 
 .btn-buy {
   max-width: 286px;
@@ -3142,7 +3161,7 @@ $widthBlock: 342px;
   font-size: 14px;
 }
 
-.btn-group, .btn-group-vertical{
+.btn-group-vertical{
   width: 100%;
 }
 
@@ -3210,10 +3229,6 @@ $widthBlock: 342px;
 .prior-list__item {
   width: 90px;
   max-width: 90px;
-}
-
-.card-product-info__btn-group {
-
 }
 
 .card-product-info__prior-list {
@@ -4021,7 +4036,7 @@ $widthBlock: 342px;
   margin-top: 10px;
 
   width: 100%;
-  min-height: 120px;
+  min-height: 60px;
   text-align: center;
 
 }
@@ -4037,7 +4052,7 @@ $widthBlock: 342px;
   display: inline-block;
   position: relative;
   height: 100%;
-  min-height: 120px;
+  min-height: 60px;////////////////
 }
 
 .delite_product {
@@ -4080,14 +4095,14 @@ $widthBlock: 342px;
 
   display: flex;
   flex-direction: column;
-  min-height: 120px; // зависит от размеров фотки
+  min-height: 60px; // зависит от размеров фотки
   justify-content: center;
 
 }
 
 .shoppingBasket_product__name {
   text-align: center;
-  padding-top: 34px;
+  //padding-top: 34px;
   margin: 0;
   font-size: 16px;
   color: #000;
