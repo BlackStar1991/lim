@@ -1320,6 +1320,9 @@ body[class^="news"] .bl_breadcrumbs {
   width: 20px;
   min-height: 24px;
 }
+.bl_filters + a {
+  margin-top: 10px;
+}
 
 .decor_triangle,
 .decor_triangle__active {
@@ -1385,13 +1388,14 @@ body[class^="news"] .bl_breadcrumbs {
   position: relative;
   float: left;
   display: inline-block;
-  //border: 1px solid red;
-  width: 20px;
+  width: 16px;
   height: 20px;
+  margin-left: -16px;
 }
 
 .bl_filters__subSubLink {
   display: inline-block;
+  padding-left: 6px;
 }
 
 .decor_plus {
