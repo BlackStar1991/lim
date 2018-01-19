@@ -447,10 +447,6 @@
     }
   }
 
-  .card-product-info__price {
-
-  }
-
   .good-price {
     margin-bottom: 0;
   }
@@ -621,6 +617,12 @@
   .base-list li:before {
     font-size: 28px;
     line-height: 23px;
+  }
+
+  .card-product-info__right{
+    display: block;
+    clear: both;
+
   }
 
 }
@@ -935,11 +937,11 @@
     font-size: 16px;
   }
 
-  .card-product-info__price .counter{
-    float: none;
-    margin-top: 15px;
-    width: 100%;
-  }
+  //.card-product-info__price .counter{
+  //  float: none;
+  //  margin-top: 15px;
+  //  width: 100%;
+  //}
 
   table {
     overflow-x: auto;
