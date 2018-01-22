@@ -365,11 +365,32 @@
   cursor: pointer;
 }
 
+.open-call.open-call--sticker {
+  display: none;
+  position: fixed;
+  left: 50%;
+  margin-left: -112px;
+  bottom: 0;
+  height: 30px;
+  z-index: 200;
+  padding: 5px 15px 5px 15px;
+  box-shadow: 0 0 8px 0 rgba(159, 154, 154, 0.75);
+  border: 2px solid #fff;
+  border-bottom: none;
+  background-color: #FBFAF6;
+}
+
+
+
+
 .open-call__ico {
-  display: block;
   margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
   @include sprite($call);
 }
+
+
 
 .open-call__text {
   font-size: 15rem;
@@ -433,11 +454,13 @@
 }
 
 .cart-head__ico {
+  display: inline-block;
   @include sprite($basket);
   margin-bottom: 10px;
 }
 
 .cart-head__link {
+  display: block;
   text-align: center;
   text-decoration: underline;
   transition: color .3s;
@@ -601,7 +624,8 @@
   display: none;
 }
 
-
-
+.header-page__nav-close {
+  display: none;
+}
 
 
