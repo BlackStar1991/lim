@@ -1399,12 +1399,11 @@ body[class^="news"] .bl_breadcrumbs {
     display: inline-block;
     width: 16px;
     height: 20px;
-    margin-left: -24px;
+    margin-left: -10px;
   }
 
   .bl_filters__subSubLink {
     display: inline-block;
-    //padding-left: 6px;
   }
 
   .decor_plus {
@@ -1438,7 +1437,7 @@ body[class^="news"] .bl_breadcrumbs {
 
   .btn_subSubMenu.decor_lineGorizontal:before {
     top: 1px;
-    left: 6px;
+    left: 3px;
   }
 
   .ocfilter-option .decor_triangle {
@@ -1496,7 +1495,7 @@ body[class^="news"] .bl_breadcrumbs {
   }
 
   .bl_filters__item.bl_filters__subSubItem {
-    padding-left:18px;
+    padding-left: 8px;
   }
 
   .bl_filters__lastChild a {
@@ -1526,7 +1525,7 @@ body[class^="news"] .bl_breadcrumbs {
   }
 
   .bl_filters__subSubList {
-    margin-left: 16px;
+    margin-left: 24px;
   }
 
   .bl_filters__caterogyName_subName {
@@ -1664,12 +1663,13 @@ body[class^="news"] .bl_breadcrumbs {
   }
 
   .bl_numberOfItemShow {
-    margin-left: 7%; ////////
+    margin-left: 2%; //////// 7%
     display: inline-block;
   }
 
   .bl_numberOfItemShow__select {
-    width: 162px;
+    //width: 162px;
+    width: 58px;
     height: 25px;
     border: 1px solid black;
     text-indent: 10px;
@@ -5073,10 +5073,6 @@ body[class^="news"] .bl_breadcrumbs {
   .addedProduct__wrapper {
     height: 100%;
     max-height: 160px;
-    //display: flex;
-    //flex-direction: row;
-    //justify-content: space-between;
-    //flex-wrap: wrap;
   }
 
   .addedProduct_siblingProduct,
@@ -5132,20 +5128,50 @@ body[class^="news"] .bl_breadcrumbs {
 .main-descript-tab__fullTab p,
 .main-descript-tab__fullTab span,
 .main-descript-tab__fullTab a,
-.main-descript-tab__fullTab ul {
+.main-descript-tab__fullTab ul,
+.news_list__fullContent p,
+.news_list__fullContent span,
+.news_list__fullContent a,
+.news_list__fullContent ul{
   font-family: 'Tahoma', sans-serif!important;
   font-style: normal;
   line-height: initial;
   text-indent: 0!important;
+}
+.news_list__fullContent p{
+  margin-bottom: 5px;
 }
 
 
 .bl_ceo ul,
 .description-sect ul,
 .bl_topic__description_text ul,
-.main-descript-tab__fullTab ul{
+.main-descript-tab__fullTab ul,
+.news_list__fullContent ul{
   list-style-type:disc;
 }
+
+
+///////////
+
+
+.serv-baner-item__ico.serv-baner-item--sale {
+  min-width: 25px;
+  height: 25px;
+  background-position: -144px -133px;
+}
+
+.left-name {
+  display: none!important;
+}
+
+
+.up-place{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 
 
 
@@ -5154,7 +5180,7 @@ body[class^="news"] .bl_breadcrumbs {
   /*FOOTER*/
   /*********************************************/
 
-  @import "sections/footer";
+  //@import "sections/footer";
 
   /*********************************************/
   /*@IMPORT MEDIA*/
