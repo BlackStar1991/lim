@@ -259,11 +259,14 @@
 .logo img {
   display: block;
   min-width: 105px;
-  max-width: 262px;
   max-height: 92px;
 }
 
-
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .services-menu {
   display: flex;

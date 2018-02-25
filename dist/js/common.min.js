@@ -254,14 +254,26 @@ $(document).ready(function () {
         });
     }
 
-    var buttonCategory = $(".rubric__title_button__categories"),
-        buttonFilters = $(".rubric__title_button__filters");
+    // var buttonCategory = $(".rubric__title_button__categories"),
+    var buttonCategory = $(".js-btn-categories"),
+        buttonFilters = $(".js-btn-filters");
 
     var blockWithCategories = $(".bl_filters"),
         blockWithFilters = $(".bl_filters__productsFilters");
 
-    sliderEffectForButtons(buttonCategory, blockWithCategories, 1000);
-    sliderEffectForButtons(buttonFilters, blockWithFilters, 1000);
+    // sliderEffectForButtons(buttonCategory, blockWithCategories, 1000);
+
+    buttonCategory.on("click", function () {
+        blockWithCategories.slideToggle(600);
+        $(".btn_categories__show").toggleClass("hidden");
+        $(".btn_categories__hidden").toggleClass("hidden");
+
+    });
+
+
+
+
+    sliderEffectForButtons(buttonFilters, blockWithFilters, 600);
 
 
 //   Toggle switch between view_columns__STYLE & view_list__STYLE
@@ -580,33 +592,33 @@ $(document).ready(function () {
 
 // RESIZE WINDOW
 
-    var body = $("body");
-    var blockWithCategories = $(".bl_filters"),
-        blockWithFilters = $(".bl_filters__productsFilters");
-
-
-
-$(window).resize(function(){
-   if( body.width() >= 992 ){
-
-       blockWithCategories.css("display", "block"); // allways show blocks with categories and filters if window.width > 992px
-       blockWithFilters.css("display", "block");
-   }else {
-       blockWithCategories.css("display", "none"); // allways show blocks with categories and filters if window.width > 992px
-       blockWithFilters.css("display", "none");
-   }
-
-
-    if( body.width() >= 700 ){
-
-        $(".view_list__STYLE .code_forListStyle_view").addClass("col-xs-6")
-    }else {
-        $(".view_list__STYLE .code_forListStyle_view").removeClass("col-xs-6")
-    }
-
-
-});
-$(window).resize();
+//     var body = $("body");
+//     var blockWithCategories = $(".bl_filters"),
+//         blockWithFilters = $(".bl_filters__productsFilters");
+//
+//
+//
+// $(window).resize(function(){
+//    if( body.width() >= 992 ){
+//
+//        blockWithCategories.css("display", "block"); // allways show blocks with categories and filters if window.width > 992px
+//        blockWithFilters.css("display", "block");
+//    }else {
+//        blockWithCategories.css("display", "none"); // allways show blocks with categories and filters if window.width > 992px
+//        blockWithFilters.css("display", "none");
+//    }
+//
+//
+//     if( body.width() >= 700 ){
+//
+//         $(".view_list__STYLE .code_forListStyle_view").addClass("col-xs-6")
+//     }else {
+//         $(".view_list__STYLE .code_forListStyle_view").removeClass("col-xs-6")
+//     }
+//
+//
+// });
+// $(window).resize();
 
 
 
