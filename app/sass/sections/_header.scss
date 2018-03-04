@@ -85,6 +85,17 @@
   margin-right: 10px;
 }
 
+.google-wrapper{
+  position: relative;
+}
+
+.wrapper-icon{
+  display: block;
+  position: absolute;
+  top: -26px;
+}
+
+
 .serv-baner-info__item:not(:last-child) {
   margin-right: 43px;
 }
@@ -112,11 +123,20 @@
   background-position: -150px -75px;
 }
 
+//.serv-baner-item__ico.serv-baner-item--sale {
+//  min-width: 25px;
+//  height: 25px;
+//  background-position: -144px -133px;
+//}
+
 .serv-baner-item__ico.serv-baner-item--sale {
-  min-width: 25px;
-  height: 25px;
-  background-position: -144px -133px;
+  min-width: 27px;
+  height: 27px;
+  background: url(../image/sprite2/icon2_24_7.svg) no-repeat;
+  background-position: initial;
 }
+
+
 
 .leng {
   width: 110px;
