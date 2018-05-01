@@ -275,8 +275,8 @@
     top: 15px;
     right: 15px;
     display: block;
-    width: 15px;
-    height: 15px;
+    width: 24px;
+    height: 24px;
     text-indent: -9999px;
     outline: none;
   }
@@ -498,13 +498,45 @@
     left: 0;
     width: 100%;
     padding: 0 15px;
-    //min-height: 500px;
     height: 100%;
     background-color: #fff;
     overflow-scrolling: auto;
   }
   .bl_filters__productsFilters.active{
     display: block;
+  }
+
+  .popover.right.ocfilter-option-popover{
+    top: -194px!important;
+    left: 20px!important;
+  }
+
+
+  .popover.right>.arrow{
+    transform: rotate(90deg) translate(-31px,-88px);
+  }
+
+
+
+  .popover.top.in{
+    top: -182px!important;
+    left: initial;
+    right: 0;
+  }
+
+  .popover.top>.arrow{
+    transform: rotate(180deg) translateY(92px);
+  }
+
+
+  .bl_filters__allFilters_wrapper{
+    background-color: #fff;
+  }
+
+  .ocfilter-option .option-values{
+    position: relative;
+    height: 335px;
+    overflow-y: auto;
   }
 
 
@@ -542,10 +574,15 @@
     border: 1px solid #ccc;
     font-size: 12px;
     letter-spacing: 1px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
     display: block;
     color: #000;
   }
+
+  .option-values label:before{
+    left: 15px;
+  }
+
 
  .bl_filters__allFilters .decor_triangle:before, .bl_filters__allFilters .decor_triangle__active:before{
     content: "\f107";
