@@ -123,17 +123,11 @@
   background-position: -150px -75px;
 }
 
-//.serv-baner-item__ico.serv-baner-item--sale {
-//  min-width: 25px;
-//  height: 25px;
-//  background-position: -144px -133px;
-//}
-
 .serv-baner-item__ico.serv-baner-item--sale {
   min-width: 27px;
   height: 27px;
   background: url(../image/sprite2/icon2_24_7.svg) no-repeat;
-  background-position: initial;
+  background-position: 0 0;
 }
 
 
@@ -403,6 +397,29 @@
   @include sprite($call);
 }
 
+
+/* + open-call + */
+.open-call.open-call--round-sticker {
+  position: fixed;
+  bottom: 60px;
+  left: 1.5%;
+  z-index: 999;
+}
+
+.open-call.open-call--round-sticker:hover {
+  opacity: 0.9;
+}
+
+.open-call__round-ico {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../image/sprite.png);
+  background-position: 0px -88px;
+  width: 100px;
+  height: 100px;
+}
+
+
 .open-call__text {
   font-size: 15rem;
   transition: color .3s;
@@ -431,6 +448,11 @@
     padding-right: 0;
   }
 }
+
+
+
+
+
 
 .header-desc__phones {
   max-width: 360px;
