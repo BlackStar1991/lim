@@ -1929,7 +1929,7 @@ a.level_1{
 }
 
 .bl_sorter__select {
-  width: 206px;
+  width: 170px;
   height: 25px;
   border: 1px solid black;
 }
@@ -1965,7 +1965,7 @@ a.level_1{
 
 
 .bl_numberOfItemShow {
-  margin-left: 2%; //////// 7%
+  margin-left: 4vw; //////// 7%
   display: inline-block;
 }
 
@@ -4575,7 +4575,7 @@ $widthBlock: 342px;
 }
 
 .shoppingBasket_product__value {
-  text-align: left;
+  text-align: center;
   margin-top: 5px;
   font-size: 14px;
   color: $color_grey2;
@@ -4666,6 +4666,14 @@ $widthBlock: 342px;
     transition: all .3s;
   }
 }
+
+
+.error-warning-cart{
+  margin-bottom: 8px;
+}
+
+
+
 
 .decor_line {
   position: relative;
